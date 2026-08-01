@@ -196,3 +196,10 @@ See [`CITATION.cff`](CITATION.cff).
 ## Licence
 
 MIT — see [`LICENSE`](LICENSE).
+
+## Contact
+
+Brian Naughton, independent researcher — <naughtonb@proton.me> · ORCID
+[0009-0008-3404-610X](https://orcid.org/0009-0008-3404-610X).
+Issues and pull requests are welcome, and so is email — corrections,
+prior-art pointers and referee-style objections especially.
