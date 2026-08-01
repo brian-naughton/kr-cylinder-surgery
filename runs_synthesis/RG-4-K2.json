@@ -1,0 +1,254 @@
+{
+  "block": "RG-4",
+  "date": "2026-07-31",
+  "declared_caps": {
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "k2_filter": "exact Jacobian: det[grad P; grad a1..a5] (6x6) must be nowhere zero on X x A^2; rejections carry an explicit witness point",
+    "k2_pool": [
+      "p",
+      "q",
+      "t",
+      "Z",
+      "x",
+      "y",
+      "z",
+      "w",
+      "H",
+      "v",
+      "x+v",
+      "H+v",
+      "w+v",
+      "Z+v"
+    ],
+    "k2_tuples": "all C(14,5) = 2002 five-subsets",
+    "k2_witness_points": 6,
+    "stability_argument": "exact, no cap"
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0531
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1344
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1548
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0108
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "DECLARED CAPS (before any search ran)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "P does not involve v, so partial extends by partial(v) = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "ker(partial | A[w][v]) = C[p,q,t,v]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0552
+    },
+    {
+      "check": "the plinth is unchanged: partial(A[w][v]) = partial(A[w]) (x) C[v]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0111
+    },
+    {
+      "check": "in C[p,q,t,v]: gcd(t^3, q) is still 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "in C[p,q,t,v]: (p+1) is still irreducible",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "in C[p,q,t,v]: (p+1) is still NOT in (p,q,t)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "H15 boundary: q IS in (p,q,t) there -- the test still passes",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "THEOREM RG-4.1: RG-3.1 is 1-STABLE",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "re-verified in process: pi has an EMPTY fibre",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "re-verified in process: pi has a 2-DIMENSIONAL fibre",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "re-verified in process: the generic fibre is an A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the fibre-product mechanism is UNAVAILABLE here",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "MQ5's boundary cocycle does not exist in the naive form",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "all 6 witness points lie on X x A^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0022
+    },
+    {
+      "check": "POSITIVE CONTROL: the filter PASSES on a genuine C^[5]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Jacobian filter over all 2002 five-subsets",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the point filter is not vacuous: it rejects some and not all",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "cap-bounded k=2 hunt: NO candidate",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "k=2 verdict: flow_compatible_route",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "k=2 verdict: danielewski_template",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "k=2 verdict: cap_bounded_hunt",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "k=2 verdict: what_remains_open",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "DECLARED CAPS (before any search ran)": "{\"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"k2_filter\": \"exact Jacobian: det[grad P; grad a1..a5] (6x6) must be nowhere zero on X x A^2; rejections carry an explicit witness point\", \"k2_pool\": [\"p\", \"q\", \"t\", \"Z\", \"x\", \"y\", \"z\", \"w\", \"H\", \"v\", \"x+v\", \"H+v\", \"w+v\", \"Z+v\"], \"k2_tuples\": \"all C(14,5) = 2002 five-subsets\", \"k2_witness_points\": 6, \"stability_argument\": \"exact, no cap\"}",
+    "Jacobian filter over all 2002 five-subsets": "rejected by an explicit witness point: 1852; rejected by the exact test: 150; survivors: none",
+    "MQ5's boundary cocycle does not exist in the naive form": "A23/MQ5 re-aimed the stable question at 'the boundary cocycle' of the {t(p+1)=0} gluing. A cocycle in that sense presupposes TWO fibrations over the base agreeing on the overlap. RG-1(b) shows A[w] is not a fibration over Spec(ker partial) at all, so there is no such cocycle to compute. Routed to master as MASTER-QUERY.",
+    "POSITIVE CONTROL: the filter PASSES on a genuine C^[5]": "graph y = x^2+ztwv with coordinates (x,z,t,w,v): det = -1",
+    "THEOREM RG-4.1: RG-3.1 is 1-STABLE": "pl(partial | A[w][v]) = pl(partial | A[w]) C[v] still contains t^3(p+1) and q(p+1), still sits inside (p,q,t), and gcd(t^3,q) = 1 with (p+1) irreducible and outside (p,q,t) in C[p,q,t,v] as well. So the plinth is still NOT principal and A[w][v] is NOT C[p,q,t,v][s] for any s. The flow-compatible route does not open by adding a variable.",
+    "cap-bounded k=2 hunt: NO candidate": "no five-subset of the declared pool passes the Jacobian necessary condition. A cap-bounded non-finding, NOT a negative claim: the pool is fourteen named elements, not a degree-bounded sweep of A[w][v].",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "k=2 verdict: cap_bounded_hunt": "no candidate at the declared pool.",
+    "k=2 verdict: danielewski_template": "UNAVAILABLE through this presentation, because pi is not an A^1-bundle.",
+    "k=2 verdict: flow_compatible_route": "CLOSED at k = 2 as well (RG-4.1, exact). Adding a variable does not make the plinth principal.",
+    "k=2 verdict: what_remains_open": "everything that does not go through this flow. X x A^2 = A^5 is untouched by all of the above; so is X x A^1 = A^4. Honest fence, A23.",
+    "ker(partial | A[w][v]) = C[p,q,t,v]": "v joins the kernel; p, q, t stay in it",
+    "re-verified in process: pi has a 2-DIMENSIONAL fibre": "over (0,0,0)",
+    "re-verified in process: pi has an EMPTY fibre": "over (-1,3,0)",
+    "the fibre-product mechanism is UNAVAILABLE here": "the Danielewski/Asanuma template makes the extra coordinate absorb the twist by forming the fibre product of two A^1-bundles over a COMMON base that agree over the overlap. Here the two sides are A[w] and C[p,q,t,Z] over A^3 = Spec C[p,q,t]. The second is an A^1-bundle; the first is NOT -- pi has an empty fibre and a jump fibre. So the template cannot be set up through this presentation. This is a statement about the PRESENTATION, not about X x A^2 = A^5.",
+    "the plinth is unchanged: partial(A[w][v]) = partial(A[w]) (x) C[v]": "partial is C[v]-linear, so pl picks up C[v] and nothing else",
+    "the point filter is not vacuous: it rejects some and not all": "so the rejections carry information"
+  },
+  "plan": "RG-OPS.md (A24)",
+  "sections": {
+    "rg41": {
+      "reading": "the k=1 obstruction of RG-3.1 is 1-stable, so the MQ5 hope -- k=2 yields where k=1 resists -- does NOT materialise along the flow-compatible route. It remains open along any route that does not keep the kernel as part of the coordinate system.",
+      "statement": "A[w][v] is not C[p,q,t,v][s] for any s"
+    },
+    "rg4b": {
+      "consequence": "no boundary cocycle in the MQ5 sense exists through this presentation",
+      "missing_hypothesis": "pi : X x A^1 -> A^3 is not an A^1-bundle (empty fibre over (-1,3,0), 2-dimensional fibre over (0,0,0))",
+      "template": "Danielewski/Asanuma fibre product over a common base"
+    },
+    "rg4c": {
+      "pool": [
+        "p",
+        "q",
+        "t",
+        "Z",
+        "x",
+        "y",
+        "z",
+        "w",
+        "H",
+        "v",
+        "x+v",
+        "H+v",
+        "w+v",
+        "Z+v"
+      ],
+      "rejected_by_exact_test": 150,
+      "rejected_by_witness_point": 1852,
+      "status": "cap-bounded non-finding (MEASURED), not a negative",
+      "survivors": [],
+      "tuples_tested": 2002
+    },
+    "verdict": {
+      "cap_bounded_hunt": "no candidate at the declared pool.",
+      "danielewski_template": "UNAVAILABLE through this presentation, because pi is not an A^1-bundle.",
+      "flow_compatible_route": "CLOSED at k = 2 as well (RG-4.1, exact). Adding a variable does not make the plinth principal.",
+      "what_remains_open": "everything that does not go through this flow. X x A^2 = A^5 is untouched by all of the above; so is X x A^1 = A^4. Honest fence, A23."
+    }
+  },
+  "source": "derivation DMJP arXiv:0903.4278; 1-stable framework Lewis arXiv:1304.1765; hypothesis grid Masuda arXiv:2512.06687; the results are ours",
+  "tally": {
+    "MEASURED": 9,
+    "PASS": 21,
+    "THEOREM": 1
+  },
+  "total_checks": 31
+}

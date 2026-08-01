@@ -1,0 +1,291 @@
+{
+  "block": "RF-2",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "declared_scope": "algebraic identities machine-certified; the topological steps are numbered lemmas over them, each with its citations and its consumed checks.",
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "groebner_variables_max": 5,
+    "searches_run": 0
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.052
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1333
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1593
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0107
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0087
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0032
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.0188
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0101
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0804
+    },
+    {
+      "check": "RM carry-over: W = t^3 H - p - p^2 - qZ defines Y_1, irreducible",
+      "outcome": "PASS",
+      "wall_time_s": 0.0102
+    },
+    {
+      "check": "RM carry-over: Y_1 is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.0039
+    },
+    {
+      "check": "RM carry-over: X_1 x A^1 is SINGULAR along a line",
+      "outcome": "PASS",
+      "wall_time_s": 0.0021
+    },
+    {
+      "check": "RM carry-over: the transition identity holds in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0079
+    },
+    {
+      "check": "RM carry-over: R4  2(p+1)w = HZ + q  in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "RM carry-over: the compressed divisor F = t^3(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "RS carry-over: [Y_1] = L^4 + L^2 and chi_c(Y_1) = 2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "RS carry-over: Y_1 = V(W) is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "RS carry-over: the shear identities for P, p+1 and q",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "RS carry-over: on E_4 the image coordinate is q = -H Z",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "RS carry-over: E_4 lies over the cusp Z^2 + t^3 = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "DECLARED SCOPE / CAPS",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "A1: the origin fibre is p+p^2 = 0, REDUCED, two components",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "A2: the generic fibre is IRREDUCIBLE (a single plane)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "A3: F_0 and F_{-1} are disjoint planes of dimension 2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0016
+    },
+    {
+      "check": "A4: iota : p -> -1-p preserves Y_1 and swaps the components",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "A5: classes -- [F] = 2L^2, [W] = L^4 - L^2, [Y_1] = L^4 + L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "A6: chi_c bookkeeping -- 2 + 0 = 2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "LEMMA 1 (homotopy types)",
+      "outcome": "LEMMA",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "LEMMA 2 (the groups)",
+      "outcome": "LEMMA",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "LEMMA 3 (the relation [F_0] + [F_{-1}] = 0)",
+      "outcome": "LEMMA",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "LEMMA 4 (the localisation sequence)",
+      "outcome": "LEMMA",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CROSS-CHECK (H15): the two independent computations of H^BM_5(W) agree",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "LEMMA 5 (the kernel is generated by (1,1))",
+      "outcome": "LEMMA",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THEOREM RF-2 (Part 1, CORRECTED)",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CORRECTION to Sol's inference (A30 asked for exactly this)",
+      "outcome": "CORRECTION",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "ROBUSTNESS (H15 boundary on the correction)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "COROLLARY: iota acts by -1 on H^BM_4(Y_1)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the Mayer-Vietoris reading (same answer, singular homology)",
+      "outcome": "LEMMA",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "STOP RULE 1 (noncanonical compactification)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "STOP RULE 2 (singular centre / IC programme)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "A2: the generic fibre is IRREDUCIBLE (a single plane)": "graphs over A^2, hence irreducible; so the special fibre has TWO components where the generic one has ONE",
+    "COROLLARY: iota acts by -1 on H^BM_4(Y_1)": "iota sends [F_0] to [F_{-1}] = -[F_0], so it acts as -1 on Z. Consistent: iota is an involution and (-1)^2 = 1. A further independent consistency check on LEMMA 5.",
+    "CORRECTION to Sol's inference (A30 asked for exactly this)": "Sol's proposed cycle [F_{-1}] - [F_0] does NOT represent the generator; it represents twice one. The natural cycle is a SINGLE component, [F_0] (equivalently [F_{-1}] = -[F_0]). The inference was reasonable -- a difference of branches is the usual shape -- but here the two branches are already NEGATIVES of one another, because the fibre class vanishes (LEMMA 3), so the difference doubles instead of cancelling.",
+    "CROSS-CHECK (H15): the two independent computations of H^BM_5(W) agree": "the sequence forces H^BM_5(W) = ker(Z^2 -> Z) = Z; independently LEMMA 2 gives H^BM_5(W) = H^3(S^3) = Z. They agree. Had the fibre or the homotopy type been wrong, this would not close.",
+    "DECLARED SCOPE / CAPS": "{\"declared_scope\": \"algebraic identities machine-certified; the topological steps are numbered lemmas over them, each with its citations and its consumed checks.\", \"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"groebner_variables_max\": 5, \"searches_run\": 0}",
+    "LEMMA 1 (homotopy types)": "Y_1 ~ P^1 smash P^1, complex realisation S^4 [ADO arXiv:2112.08241 Ex. 4.2.5, verified verbatim at A28; identification of Y_1 as Q_{(3,1),z^2-1/4} certified at RS-1]. W ~ A^2 minus origin ~ S^3 [RF-1 LEMMA RF-1.3, from the two certified trivialising graphs]. Y_1 is a smooth complex 4-fold, so of real dimension 8 and canonically oriented.",
+    "LEMMA 2 (the groups)": "By Poincare duality on the smooth oriented 8-manifold Y_1, H^BM_k(Y_1) = H^{8-k}(Y_1), so H^BM_k(Y_1) = Z for k = 8 and k = 4 and 0 otherwise. For the closed subset F = F_0 disjoint-union F_{-1}, each component is C^2, so H^BM_k(F) = Z^2 for k = 4 and 0 otherwise [consumes A3]. For the open W ~ S^3: H^BM_k(W) = H^{8-k}(S^3) = Z for k = 8 and k = 5, 0 otherwise [consumes LEMMA 1].",
+    "LEMMA 3 (the relation [F_0] + [F_{-1}] = 0)": "pi : Y_1 -> A^2 is FLAT [RF-1 LEMMA RF-1.2] of relative dimension 2, so flat pullback pi^! : H^BM_j(A^2) -> H^BM_{j+4}(Y_1) is defined and sends the class of a closed point to the class of its scheme-theoretic fibre. The origin fibre is REDUCED with the two components F_0, F_{-1} [consumes A1], so pi^![origin] = [F_0] + [F_{-1}]. But H^BM_0(A^2) = H^4(C^2) = 0, so the point class is ZERO. Hence [F_0] + [F_{-1}] = 0 in H^BM_4(Y_1).",
+    "LEMMA 4 (the localisation sequence)": "For the closed F with open complement W in Y_1: ... -> H^BM_5(Y_1) -> H^BM_5(W) -> H^BM_4(F) -> H^BM_4(Y_1) -> H^BM_4(W) -> ... . By LEMMA 2 this reads 0 -> Z -> Z^2 -> Z -> 0, exact. So the map Z^2 -> Z is SURJECTIVE with kernel of rank one, and H^BM_4(Y_1) = Z^2 / (that kernel).",
+    "LEMMA 5 (the kernel is generated by (1,1))": "The kernel has rank one and, by LEMMA 3, contains (1,1) = [F_0] + [F_{-1}]. Since Z^2/ker = Z is torsion-free, the kernel is a PRIMITIVE rank-one sublattice; (1,1) is primitive; so the kernel is exactly <(1,1)>. Hence H^BM_4(Y_1) = Z^2/<(1,1)> = Z via (a,b) -> a - b.",
+    "ROBUSTNESS (H15 boundary on the correction)": "the involution iota swaps the two components [A4], so the kernel must be iota-stable, leaving only <(1,1)> or <(1,-1)> as primitive rank-one options. LEMMA 3 selects <(1,1)>. Under the OTHER option the difference would be ZERO. So on EITHER reading Sol's cycle fails to generate, and the correction does not depend on LEMMA 3 alone.",
+    "STOP RULE 1 (noncanonical compactification)": "NOT TRIGGERED. Poincare duality and the localisation sequence are canonical; no compactification was chosen.",
+    "STOP RULE 2 (singular centre / IC programme)": "NOT TRIGGERED. Every space appearing in RF-2 is smooth (Y_1, C^2, W) and no intersection cohomology arises. The modification centre has not entered yet.",
+    "THEOREM RF-2 (Part 1, CORRECTED)": "H^BM_4(Y_1; Z) = Z, and under the isomorphism of LEMMA 5: [F_0] -> 1 and [F_{-1}] -> -1. So EACH of [F_0] and [F_{-1}] is a GENERATOR, they satisfy [F_0] = -[F_{-1}], and [F_{-1}] - [F_0] -> -2 is TWICE a generator: an index-2 class, NOT a generator.",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "the Mayer-Vietoris reading (same answer, singular homology)": "with the cover V_0 = Y_1 minus F_{-1} and V_{-1} = Y_1 minus F_0 [RF-1], both A^1-contractible by ADO Prop 4.3.1 (deleting all but one component over the centre), MV gives H~_4(Y_1) = H~_3(V_0 cap V_{-1}) = H~_3(W) = H~_3(S^3) = Z. This is A30's binding description: the generator IS the Mayer-Vietoris connecting class of A^2_{t,q} minus the origin. The Borel-Moore statement above is its cycle-level counterpart."
+  },
+  "plan": "RF-OPS.md (A30)",
+  "sections": {
+    "algebra": {
+      "A1": "origin fibre reduced, two components p = 0 and p = -1",
+      "A2": "generic fibre irreducible (a plane)",
+      "A3": "F_0, F_{-1} disjoint planes",
+      "A4": "iota swaps them",
+      "A5/A6": "[F] = 2L^2, [W] = L^4-L^2, chi_c 2 = 2 + 0"
+    },
+    "part_1": {
+      "cross_checks": [
+        "H^BM_5(W) = Z from the sequence and from H^3(S^3) independently",
+        "iota acts by -1, and squares to +1"
+      ],
+      "natural_cycle": "[F_0] alone",
+      "result": "H^BM_4(Y_1) = Z with [F_0] and [F_{-1}] each a generator and [F_0] + [F_{-1}] = 0",
+      "robustness": "under the only other iota-stable relation the difference would be 0; either way it does not generate",
+      "sol_inference": "[F_{-1}] - [F_0] -- CORRECTED: it is twice a generator (index 2), not a generator"
+    },
+    "stop_rules_RF2": {
+      "rule_1": "not triggered",
+      "rule_2": "not triggered"
+    }
+  },
+  "source": "ADO arXiv:2112.08241 (homotopy type, Prop 4.3.1); DMJP arXiv:0903.4278 s7; the cycle computation and the correction are ours",
+  "tally": {
+    "CORRECTION": 1,
+    "LEMMA": 6,
+    "MEASURED": 6,
+    "PASS": 31,
+    "THEOREM": 1
+  },
+  "total_checks": 45
+}

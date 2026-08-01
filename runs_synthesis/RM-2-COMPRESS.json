@@ -1,0 +1,298 @@
+{
+  "block": "RM-2",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "compressed_divisor_candidate": "F = t^3 (p+1)",
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "monomial_range_for_canonical_centre": "x^i H^j W^k with i+k <= 1 and j+k <= 1 (exactly the ones landing in A^4; higher ones proved to fall back in)",
+    "radical_power_cap": 8,
+    "rectification_family": "triangular/affine automorphisms of A^4 in the declared list below"
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0521
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1364
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1772
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0109
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0088
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0034
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.019
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0102
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0808
+    },
+    {
+      "check": "DECLARED CAPS (before anything ran)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "F = t^3(p+1) divides (t(p+1))^3  -- verified, not assumed",
+      "outcome": "PASS",
+      "wall_time_s": 0.0604
+    },
+    {
+      "check": "x  = -t^3(Z^2+t^3) / F",
+      "outcome": "PASS",
+      "wall_time_s": 0.0025
+    },
+    {
+      "check": "H  = (p+1) N1 / F",
+      "outcome": "PASS",
+      "wall_time_s": 0.0026
+    },
+    {
+      "check": "2w = M / F,  M = p(p+1)Z + q(Z^2+t^3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0012
+    },
+    {
+      "check": "H15 boundary: F does NOT clear y (which needs t^6)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0113
+    },
+    {
+      "check": "F = t^3(p+1) lies in F*A[w]: its quotient by F is in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0028
+    },
+    {
+      "check": "t^3(Z^2+t^3) lies in F*A[w]: its quotient by F is in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0049
+    },
+    {
+      "check": "(p+1)N1 lies in F*A[w]: its quotient by F is in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0085
+    },
+    {
+      "check": "M lies in F*A[w]: its quotient by F is in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0204
+    },
+    {
+      "check": "(Z^2+t^3)N1 lies in F*A[w]: its quotient by F is in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0316
+    },
+    {
+      "check": "the fifth generator is xH, not a product of the others",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "MINIMISATION: (Z^2+t^3)N1 = Z*M + p*F, an exact identity",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "and the ideal test agrees: it lies in the other four",
+      "outcome": "PASS",
+      "wall_time_s": 0.0019
+    },
+    {
+      "check": "H15 boundary: N1 alone is NOT in the four -- the test discriminates",
+      "outcome": "PASS",
+      "wall_time_s": 0.001
+    },
+    {
+      "check": "minimised Rees data",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THEOREM RM-2.1: the canonical compressed centre",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the centre is a SURFACE in A^4 (codimension 2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "component 1: V(t, N1) -- the step-2 centre, pushed down",
+      "outcome": "PASS",
+      "wall_time_s": 0.0019
+    },
+    {
+      "check": "component 2: V(p+1, Z^2+t^3) -- the step-1 centre",
+      "outcome": "PASS",
+      "wall_time_s": 0.0017
+    },
+    {
+      "check": "N1 is irreducible, so (t, N1) is prime",
+      "outcome": "PASS",
+      "wall_time_s": 0.001
+    },
+    {
+      "check": "Z^2+t^3 is irreducible, so (p+1, Z^2+t^3) is prime",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "sqrt(I) = V(t,N1) cap V(p+1,Z^2+t^3): powers all found",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: 1 has no power in I",
+      "outcome": "PASS",
+      "wall_time_s": 0.0023
+    },
+    {
+      "check": "component 1 V(t,N1) is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "component 2 V(p+1, Z^2+t^3) is SINGULAR ALONG A LINE",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THEOREM RM-2.2: a cap-free rectification obstruction",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THE RECTIFICATION QUESTION, stated",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the centre is NOT a complete intersection: it needs > 2 generators up to radical",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: the two-generator test CAN succeed -- V(t,N1) alone needs exactly 2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0365
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "DECLARED CAPS (before anything ran)": "{\"compressed_divisor_candidate\": \"F = t^3 (p+1)\", \"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"monomial_range_for_canonical_centre\": \"x^i H^j W^k with i+k <= 1 and j+k <= 1 (exactly the ones landing in A^4; higher ones proved to fall back in)\", \"radical_power_cap\": 8, \"rectification_family\": \"triangular/affine automorphisms of A^4 in the declared list below\"}",
+    "F = t^3(p+1) divides (t(p+1))^3  -- verified, not assumed": "quotient (p+1)^2; so N = 3 works",
+    "H15 boundary: F does NOT clear y (which needs t^6)": "so F is doing real work and is not a blanket denominator",
+    "MINIMISATION: (Z^2+t^3)N1 = Z*M + p*F, an exact identity": "so the fifth generator is redundant: I needs only FOUR",
+    "THE RECTIFICATION QUESTION, stated": "Is there psi in Aut(A^4) with psi(I, F) a centre whose modification is visibly A^4? RM-2.2 removes every SMOOTH target. What survives is the possibility of a singular standard centre -- and note the surviving singularity is exactly the CUSP that has obstructed this programme at every previous turn (X_1's singular point, Masuda's factoriality, RG-3's rescaling block).",
+    "THEOREM RM-2.1: the canonical compressed centre": "I = F A[w] cap C^[4] = (F, t^3(Z^2+t^3), (p+1)N1, M), and C[X x A^1] = C^[4][I/F] with F = t^3(p+1). Exactly, by the RM-1 divisibility argument: F x^i H^j W^k lies in C^[4] iff i+k <= 1 and j+k <= 1, and every other monomial forces (p+1)^{i+k-1} t^{3(j+k-1)} to divide its coefficient (the numerators are coprime to both p+1 and t) and then lands back in the listed ones. The one extra monomial that lands in C^[4], namely F x H = -(Z^2+t^3)N1, is REDUNDANT by the identity (Z^2+t^3)N1 = Z M + p F -- so the minimised Rees data is FOUR generators.",
+    "THEOREM RM-2.2: a cap-free rectification obstruction": "Aut(A^4) carries centres to centres and preserves the singular locus of the centre. The compressed centre has a component that is SINGULAR along a line (the cuspidal surface V(p+1, Z^2+t^3)). Therefore (I, F) is NOT equivalent under Aut(A^4) to ANY centre whose components are smooth -- in particular not to a linear subspace, nor to any smooth complete intersection. The obvious 'standard centre' targets are ruled out with no degree cap.",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "component 1 V(t,N1) is SMOOTH": "N1 = p(p+1) + qZ has nowhere-vanishing gradient on N1 = 0",
+    "component 2 V(p+1, Z^2+t^3) is SINGULAR ALONG A LINE": "the cuspidal edge {Z = t = 0}, q free -- dim 1",
+    "minimised Rees data": "I = (F, t^3(Z^2+t^3), (p+1)N1, M) -- four generators; the smallest subset with the same radical has 4 of them.",
+    "sqrt(I) = V(t,N1) cap V(p+1,Z^2+t^3): powers all found": "{'(P_ + 1)*(P_**2 + P_ + Q_*ZZ)': 1, 'P_**2*ZZ + P_*ZZ + Q_*T_**3 + Q_*ZZ**2': 1, 'T_*(P_ + 1)': 3, 'T_*(T_**3 + ZZ**2)': 3}",
+    "the centre is NOT a complete intersection: it needs > 2 generators up to radical": "smallest subset of the four generating the same radical: 4 (codimension is 2)",
+    "the centre is a SURFACE in A^4 (codimension 2)": "dim = 2",
+    "the fifth generator is xH, not a product of the others": "(Z^2+t^3)N1 / F = -x H"
+  },
+  "plan": "RM-OPS.md (A26)",
+  "sections": {
+    "centre_geometry": {
+      "dimension": 2,
+      "intersection_generators": [
+        "(P_ + 1)*(P_**2 + P_ + Q_*ZZ)",
+        "P_**2*ZZ + P_*ZZ + Q_*T_**3 + Q_*ZZ**2",
+        "T_*(P_ + 1)",
+        "T_*(T_**3 + ZZ**2)"
+      ],
+      "minimal_primes": [
+        "(t, N1)  -- the step-2 centre",
+        "(p+1, Z^2+t^3)  -- the step-1 centre"
+      ]
+    },
+    "compressed": {
+      "F": "t^3 (p+1)   (divides (t(p+1))^3)",
+      "I_generators": [
+        "F = t^3(p+1)",
+        "t^3(Z^2+t^3)",
+        "(p+1)N1",
+        "M"
+      ],
+      "minimisation": "the natural fifth generator (Z^2+t^3)N1 = -F x H is REDUNDANT, by the exact identity (Z^2+t^3)N1 = Z M + p F; the Rees data minimises to four",
+      "statement": "C[X x A^1] = C^[4][I/F]"
+    },
+    "rectification": {
+      "not_a_complete_intersection": 4,
+      "question": "is (I,F) Aut(A^4)-equivalent to a standard centre?",
+      "ruled_out_cap_free": "every smooth centre (RM-2.2)",
+      "surviving_target": "a singular standard centre carrying a cusp"
+    },
+    "singularity": {
+      "component_1": "V(t, N1): SMOOTH",
+      "component_2": "V(p+1, Z^2+t^3): singular along the line {p=-1, Z=t=0} -- the cuspidal edge",
+      "obstruction": "singularity type of the centre is an Aut(A^4)-invariant, so no smooth standard centre is reachable"
+    }
+  },
+  "source": "p, q, Z and the t-localised bridge are DMJP arXiv:0903.4278 s7; the compression, the canonical centre and the obstruction are ours",
+  "tally": {
+    "MEASURED": 3,
+    "PASS": 39,
+    "THEOREM": 2
+  },
+  "total_checks": 44
+}

@@ -1,0 +1,1692 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks,bookmarksnumbered,bookmarksopen]{hyperref}
+\hypersetup{
+  pdftitle={The Koras-Russell cylinder as an affine modification of A^4:
+            a commuting square through a motivic 4-sphere and a one-point
+            Borel-Moore defect},
+  pdfauthor={Brian Naughton},
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Aff}[1]{\mathbb{A}^{#1}}
+\newcommand{\Gm}{\mathbb{G}_m}
+\newcommand{\Ga}{\mathbb{G}_a}
+\newcommand{\Lef}{\mathbb{L}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\HBM}[1]{H^{\mathrm{BM}}_{#1}}
+\newcommand{\ML}{\operatorname{ML}}
+\newcommand{\pl}{\operatorname{pl}}
+\newcommand{\Sing}{\operatorname{Sing}}
+\newcommand{\Crit}{\operatorname{Crit}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\chic}{\chi_c}
+
+\title{The Koras--Russell cylinder as an affine modification of $\Aff{4}$:\\
+a commuting square through a motivic $4$-sphere\\
+and a one-point Borel--Moore defect}
+
+\author{Brian Naughton\thanks{The work was carried out with an AI research
+harness, described in full in Appendix~\ref{app:methods}. All computations are
+reproducible from the repository accompanying this paper. Errors that remain
+are mine.}}
+
+\date{2 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $X=V(x^2y+z^2+x+t^3)\subset\Aff{4}$ be the Koras--Russell cubic
+threefold. Dubouloz, Moser-Jauslin and Poloni exhibited a locally nilpotent
+derivation $\partial$ on $\C[X\times\Aff{1}]$ whose kernel does not contain
+$x$; together with the standard $x$-preserving derivations this gives
+$\ML(\C[X\times\Aff{1}])=\C$. We dissect that action globally and follow where
+it leads. Its kernel is a polynomial ring in three variables,
+$\ker\partial=\C[p,q,t]$; it has no slice, exactly and with no degree bound,
+because it degenerates along a line; its plinth ideal is \emph{not} principal,
+and the known subideal $(p+1)(t^3,q)$ it contains \emph{encloses} the plinth's
+zero locus in $V(p+1)\cup V(t,q)$ --- divisorial in one component and of
+codimension two in the other, an asymmetry we state of that subideal rather
+than of the plinth, whose exact value we do not determine; the quotient
+morphism to $\Aff{3}$ is neither surjective nor equidimensional; and after
+inverting the single function $t(p+1)$ the cylinder becomes a trivial
+$\Aff{1}$-bundle over $\Aff{3}$.
+Reading that localisation as gluing data presents $X\times\Aff{1}$ as an
+explicit \emph{canonical affine modification} of $\Aff{4}$ with divisor
+$F=t^3(p+1)$ and a four-generator centre, one of whose two components is
+singular along a line --- an obstruction, with no degree bound, to carrying
+the centre to any smooth one by an automorphism of $\Aff{4}$. The two
+components of the divisor give two commuting modification steps. One order
+factors through the singular cylinder $X_1\times\Aff{1}$ over Dubouloz--
+Moser-Jauslin--Poloni's auxiliary threefold; the other factors through a
+\emph{smooth} fourfold $Y_1$, which we identify with the member
+$Q_{(3,1),\,z^2-1/4}$ of the Asok--Dubouloz--{\O}stv{\ae}r family of geometric
+models of algebraic suspensions --- a model of the motivic $4$-sphere. A
+four-corner motivic ledger then makes the surgery visible: the singular route
+is $K_0$-neutral at each step, while the smooth route creates an $\Lef^2$
+packet at the $t$-step and removes it at the $(p+1)$-step, and the removing
+step's exceptional locus fails to cover exactly one point of its centre.
+Finally, at integral Borel--Moore level, $\HBM{4}(Y_1;\Z)\cong\Z$ is generated
+by the fundamental class of \emph{either} component of the doubled fibre over
+the origin, with $[F_0]=-[F_{-1}]$. The generator is supported on the
+modification divisor, having the representative $F_{-1}$ contained in it, and
+restricts to zero on the common open set. Its inverse image
+$\sigma_4^{-1}(F_{-1})$ is $\Gm\times\Aff{1}$ --- the same plane with the fibre
+over the defect point $(-1,0,0,0,0)$ deleted --- and the fundamental class of
+that locus, pushed forward along its \emph{closed immersion} into the source,
+lands in $\HBM{4}(X\times\Aff{1})=0$. We do not push classes forward along the
+modification itself: it is not proper, as we prove. The defect thus accounts
+exactly for the Euler and Grothendieck-class change and locates, at a single
+named point, the cycle-level content of the change. This is a concrete
+singular-defect instance of the established cofiber mechanism for affine
+modifications. Nothing here bears on whether $X\times\Aff{1}\cong\Aff{4}$, and
+no claim about that question is made.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}\label{sec:intro}
+
+\subsection{The setting}
+
+Let
+\begin{equation}\label{eq:X}
+X = V(P)\subset\Aff{4}_{x,y,z,t},\qquad P = x^2y+z^2+x+t^3,
+\end{equation}
+be the Koras--Russell cubic threefold. It is smooth and contractible, and it
+is not isomorphic to $\Aff{3}$: Makar-Limanov's invariant separates them,
+$\ML(\C[X])=\C[x]$~\cite{MakarLimanov1996}. Whether the cylinder
+$X\times\Aff{1}$ is isomorphic to $\Aff{4}$ is a well-known open question,
+and a positive answer would refute the Zariski cancellation problem in
+characteristic zero and dimension three (see Gupta's survey~\cite{Gupta2022}).
+The classical obstruction does not survive the cylinder: Dubouloz proved that
+$\ML(\C[X\times\Aff{1}])=\C$~\cite{Dubouloz2009}. Topology does not separate
+the two either. $X$ is topologically contractible, and so is $\Aff{4}$; more
+strongly, Koras--Russell threefolds of the first kind are
+$\Aff{1}$-contractible by Dubouloz--Fasel~\cite{DF2015}, extending
+Hoyois--Krishna--{\O}stv{\ae}r~\cite{HKO2014}, whose theorem is for
+\emph{finite suspensions}. Only the topological statement is used anywhere in
+this paper, and only in Remark~\ref{rem:vanishing}.
+
+The witness for the triviality of the Makar-Limanov invariant of the cylinder
+is a locally nilpotent derivation that moves $x$. Such a derivation is
+written down explicitly in \S7 of Dubouloz, Moser-Jauslin and
+Poloni~\cite{DMJP2009}. Their construction runs through an auxiliary
+threefold
+\begin{equation}\label{eq:X1}
+X_1 = V(xy+z^2+x+t^3)\subset\Aff{4},
+\end{equation}
+an explicit conjugacy $\Phi,\Psi$ between the $t$-localised cylinders
+$A_t[w]\cong B_t[w]$ (Proposition~7.1), a triangular locally nilpotent
+derivation $\Delta$ on the $X_1$-side transported to $\partial=\Phi\circ
+\Delta\circ\Psi$ on $A[w]$ with $\partial(x)=-2t^6(z+xw)\ne 0$
+(Proposition~7.2), and the conclusion $\ML(A[w])=\C$ (Corollary~7.3). Here
+and throughout,
+\begin{equation}\label{eq:rings}
+A = \C[x,y,z,t]/(P),\qquad A[w]=\C[X\times\Aff{1}],\qquad
+B = \C[X_1],\qquad B[w]=\C[X_1\times\Aff{1}].
+\end{equation}
+
+Everything in \S\ref{sec:prelim} below --- the conjugacy, the derivation
+$\partial$, the derivations $\partial_1,\partial_2$, and the elements
+$p,q,Z$ --- is theirs. No novelty is claimed for any of it at any point in
+this paper.
+
+\subsection{What this paper does}
+
+This paper takes that published action as its starting datum and asks what
+the geometry underneath it looks like. The answer turns out to be a single
+connected picture, and the paper is organised as its six parts.
+
+\begin{enumerate}
+\item \textbf{The action, globally dissected} (\S\ref{sec:action}).
+$\ker\partial=\C[p,q,t]$ is a polynomial ring in three variables; the content
+of $\partial$ is exactly $t^3$; the content-free derivation
+$\partial_{\mathrm{red}}$ has \emph{no slice}, exactly and with no degree
+bound, because every component of it vanishes along a line of
+$X\times\Aff{1}$; the plinth ideal is not principal, and contains
+$(p+1)(t^3,q)$, which already encloses its zero locus in $V(p+1)\cup V(t,q)$;
+the quotient morphism $\pi\colon X\times\Aff{1}\to\Aff{3}$ is
+neither surjective nor equidimensional, for one certified reason; and
+$A[w][1/(t(p+1))]=\C[p,q,t][1/(t(p+1))][Z]$, so after inverting one explicit
+function the cylinder \emph{is} a trivial $\Aff{1}$-bundle over $\Aff{3}$.
+Two exact theorems then close the flow-compatible route at $k=1$, and a third
+shows the obstruction is $1$-stable.
+
+\item \textbf{The cylinder as a canonical affine modification}
+(\S\ref{sec:modification}). Reading that localisation as gluing data yields
+$\C[X\times\Aff{1}]=\C^{[4]}[I/F]$ with $F=t^3(p+1)$ and an explicit
+four-generator centre $I$, canonical in the sense recalled in
+\S\ref{sec:modification}. The centre is a surface with exactly two minimal
+primes; one is smooth, the other is singular along a line. Since
+$\Aut(\Aff{4})$ carries centres to centres and preserves the singular locus
+of the centre, $(I,F)$ is equivalent to no centre with smooth components ---
+an obstruction to rectification with no degree bound.
+
+\item \textbf{The commuting square} (\S\ref{sec:square}). The two components
+of the divisor give two modification steps, and the steps commute. In one
+order the intermediate model is $X_1\times\Aff{1}$, which is singular, and
+$X_1\times\Aff{k}\not\cong\Aff{3+k}$ for every $k\ge0$. In the other order the
+intermediate model
+\[
+Y_1=V\bigl(t^3H-p-p^2-qZ\bigr)\subset\Aff{5}_{p,q,t,Z,H}
+\]
+is \emph{smooth}. Its defining equation is the governing identity of
+\S\ref{sec:action} rewritten. The two components of the centre meet
+non-reducedly, with multiplicity two, along one line.
+
+\item \textbf{The smooth middle identified} (\S\ref{sec:Y1}). Under an
+explicit linear change of coordinates of $\Aff{5}$, $Y_1$ is the member
+$Q_{(3,1),\,z^2-1/4}$ of the family $Q_{m,P}$ of Asok, Dubouloz and
+{\O}stv{\ae}r~\cite{ADO2021}. Their results then give its smoothness and its
+$\Aff{1}$-homotopy type $\PP^1\wedge\PP^1$, with complex realisation $S^4$.
+Independently, a motivic computation of our own gives
+$Y_1\times\Aff{r}\not\cong\Aff{4+r}$ for every $r\ge0$, and a differential one
+shows that its defining polynomial is not a variable of $\C^{[5]}$, nor
+stably.
+
+\item \textbf{The motivic ledger} (\S\ref{sec:ledger}). Classes in the
+Grothendieck ring for all four corners of the square, and for the divisor and
+exceptional locus of all four arrows. The singular route is $K_0$-neutral at
+each step; the smooth route creates an $\Lef^2$ packet at the $t$-step and
+removes it at the $(p+1)$-step. Every stratum in the square is Hodge--Tate, so
+Hodge--Deligne polynomials carry nothing beyond the classes; what they do
+sharpen is that the packet is a Tate class of weight $4$ and type $(2,2)$,
+matching the reduced motive of $\PP^1\wedge\PP^1$. At Euler-characteristic
+level the mechanism is exact, and it reduces to a single point: the removing
+arrow's exceptional locus is empty over exactly one point of its centre.
+
+\item \textbf{The final theorem} (\S\ref{sec:generator}). At integral
+Borel--Moore level, $\HBM{4}(Y_1;\Z)\cong\Z$, generated by the fundamental
+class of \emph{either} component of the doubled fibre over the origin of
+$\Aff{2}_{t,q}$, with $[F_0]=-[F_{-1}]$. The generator is supported on the
+modification divisor --- it has the representative $F_{-1}$ contained in it ---
+and restricts to zero on the common open set. Its inverse image is
+$\sigma_4^{-1}(F_{-1})\cong\Gm\times\Aff{1}$, the same plane with the fibre
+over the defect point $(-1,0,0,0,0)$ deleted, and that locus has fundamental
+class zero in $\HBM{4}(X\times\Aff{1})=0$, by the pushforward along its closed
+immersion. Dually and without any properness hypothesis, the cohomological
+pullback $\sigma_4^{*}$ of the Poincar\'e dual of $[F_{-1}]$ vanishes.
+\end{enumerate}
+
+A word on what \emph{is not} asserted there, because an earlier draft of this
+paper asserted it. The modification $\sigma_4$ is \emph{not proper}
+(Lemma~\ref{lem:notproper}), so there is no Borel--Moore pushforward along it
+and no sense in which a class on $Y_1$ ``pushes forward'' to $X\times\Aff{1}$.
+What is proved is the list above: a support statement, a restriction
+statement, an identification of the inverse-image locus, the vanishing of that
+locus's own fundamental class, and a functorial statement in cohomology. The
+one-point defect is what ties them together.
+
+\subsection{Positioning, and what is not claimed}\label{sec:positioning}
+
+What \S\ref{sec:generator} exhibits is \emph{a concrete singular-defect
+instance of the established cofiber mechanism for affine modifications}. The
+mechanism by which deleting branches over a modification centre destroys
+suspension summands is published: it is Proposition~4.3.1 of~\cite{ADO2021},
+where for $\pi\colon X_{I,a}\to\Aff{n}$ with reduced smooth $Y$, deleting all
+but one component over the centre yields a strictly quasi-affine,
+$\Aff{1}$-contractible variety. Modifications along singular and non-reduced
+centres have been studied by Dubouloz, Pauli and
+{\O}stv{\ae}r~\cite{DPO2018}; we quote no result of theirs, because our centre
+is singular exactly at the point that carries the phenomenon, which their
+hypotheses exclude. What this paper contributes is an explicit case in which
+every object is written down, the defect is a single named point, and the
+cycle that dies is identified.
+
+The following are \emph{not} claimed, anywhere, in any form.
+
+\begin{itemize}
+\item Nothing here bears on whether $X\times\Aff{1}\cong\Aff{4}$, or whether
+$X\times\Aff{2}\cong\Aff{5}$. Both remain exactly as open as before. The
+results of \S\ref{sec:action} are properties of the \emph{action}, not
+separating invariants of the space, and must not be read as if they might be.
+\item $Y_1$ is not a new fourfold, not a previously unknown deformed quadric,
+and not a new model of the motivic sphere. It is a member of a published
+family, cited at every use. What appears to be new is its \emph{role}: it is
+the smooth intermediate completion of a commuting affine-modification square
+attached to the Koras--Russell cylinder.
+\item Several statements below are the outcome of searches at declared,
+bounded caps. Those are recorded as measurements of what was searched, never
+as negative results, and are marked as such wherever they occur.
+\end{itemize}
+
+\subsection{Reproducibility}
+
+Every algebraic identity in this paper is verified by machine. The
+accompanying repository contains the runners, the frozen ledgers they emit,
+and a single script that re-runs the whole suite in a fresh environment and
+reports the pass counts. Appendix~\ref{app:verify} lists the layer and states
+the expected totals; Appendix~\ref{app:methods} describes the harness that
+produced it, and the disciplines --- twin implementations, positive controls,
+boundary counter-checks, declared caps, replay-identical ledgers --- that the
+work was held to.
+
+\section{Notation, and the published starting datum}\label{sec:prelim}
+
+\subsection{The objects of~\cite{DMJP2009}, \S7}
+
+With $P=x^2y+z^2+x+t^3$ and $S=xy+z^2+x+t^3$ the defining polynomials of $X$
+and $X_1$, \cite[Prop.~7.1]{DMJP2009} gives mutually inverse isomorphisms
+$\Phi\colon B_t[w]\to A_t[w]$ and $\Psi$ between the $t$-localised cylinders,
+with
+\begin{equation}\label{eq:Phi}
+\begin{aligned}
+&\Phi(x)=x,\qquad \Phi(y)=xy-xw^2-2zw,\qquad \Phi(z)=z+xw,\qquad \Phi(t)=t,\\
+&\Phi(w)=2w+yz+3xyw-3zw^2-xw^3 .
+\end{aligned}
+\end{equation}
+\cite[Prop.~7.2]{DMJP2009} transports the triangular locally nilpotent
+derivation $\Delta=t^6\bigl(-2z\,\partial_x+(y+1)\,\partial_z\bigr)$ to a
+locally nilpotent derivation $\partial=\Phi\circ\Delta\circ\Psi$ on $A[w]$
+with
+\begin{equation}\label{eq:dx}
+\partial(x)=-2t^6(z+xw)\ne0 ,
+\end{equation}
+and \cite[Cor.~7.3]{DMJP2009}, with $\partial_1=2z\partial_y-x^2\partial_z$
+and $\partial_2=3t^2\partial_y-x^2\partial_t$, concludes $\ML(A[w])=\C$.
+
+Throughout we write
+\begin{equation}\label{eq:pqZ}
+\begin{aligned}
+&p=\Phi(y)=xy-xw^2-2zw,\qquad
+Z=\Phi(z)=z+xw,\\
+&q=\Phi(w)=2w+yz+3xyw-3zw^2-xw^3,
+\end{aligned}
+\end{equation}
+and set
+\begin{equation}\label{eq:H}
+H := -(y+w^2).
+\end{equation}
+The elements $p,q,Z$ and the $t$-localised bridge are~\cite{DMJP2009}'s. The
+element $H$, and everything that follows, is ours.
+
+\begin{remark}[Two errata in the printed source, disclosed with
+thanks]\label{rem:errata}
+The starting datum was machine-verified against the paper's own printed
+identities before anything downstream used it --- a routine gate, and both
+findings below are consequences of it rather than of any search. Both are
+harmless to the conclusions of~\cite{DMJP2009}, and we record them only so
+that a reader who recomputes finds the same thing we did.
+\begin{enumerate}
+\item[(i)] \cite[Prop.~7.1]{DMJP2009} prints, as the sixth of its composition
+identities, $\Phi\circ\Psi(w)=w-\tfrac{1}{t^3}P$. The verified value is
+$\Phi\circ\Psi(w)=w-\tfrac{w}{t^3}P$: the numerator is $w$, not $1$. The
+transcription was re-read from the source in layout mode before this was
+concluded, and the remaining seven identities over-determine every component
+of $\Phi$ and $\Psi$, so the maps themselves are certified. Both forms are
+congruent to $w$ modulo $(P)$, so the conclusion of Proposition~7.1 is
+unaffected. It is a typographical slip.
+\item[(ii)] \cite[Cor.~7.3]{DMJP2009} states $\Ker(\partial_1)\cap
+\Ker(\partial_2)=\C[x]$ for the derivations \emph{on $A[w]$}; but $w$ lies in
+both kernels, so on $A[w]$ the intersection contains $\C[x][w]$. The classical
+statement is the one on $A$; on $A[w]$ one adjoins $\partial_w$, which the
+paper's own framework supplies, and the conclusion $\ML(A[w])=\C$ stands. We
+verified the repair by machine: $x$ is killed by all three of
+$\partial_1,\partial_2,\partial_w$, and $\partial(x)\ne0$.
+\end{enumerate}
+\end{remark}
+
+\subsection{Conventions}
+
+$\C^{[n]}$ denotes a polynomial ring in $n$ variables over $\C$. For a locally
+nilpotent derivation $\delta$ of a domain $R$, $\ker\delta$ is its ring of
+constants, the \emph{content} of $\delta$ is the greatest common divisor of
+its values on a generating set, a \emph{slice} is an $s$ with $\delta(s)=1$, a
+\emph{local slice} is an $s$ with $\delta^2(s)=0\ne\delta(s)$, and the
+\emph{plinth ideal} is $\pl(\delta)=\delta(R)\cap\ker\delta$. $\Lef$ denotes
+the class of $\Aff{1}$ in the Grothendieck ring of complex varieties and
+$\chic$ the compactly supported Euler characteristic. $\HBM{\ast}$ denotes
+Borel--Moore homology with $\Z$ coefficients, of the associated complex
+analytic space.
+
+Following~\cite{ADO2021} we write $Q_{m,P}$ for the members of their family of
+geometric models of algebraic suspensions; the notation is recalled at
+\eqref{eq:ADO} below.
+
+\begin{definition}[Affine modification, and canonical centre]\label{def:mod}
+Let $R$ be a $\C$-algebra, $f\in R$ non-zero and $I\ni f$ an ideal. The
+\emph{affine modification} of $R$ with divisor $f$ and centre $I$ is the
+subalgebra $R[I/f]\subset R_f$ generated by $R$ and $\{g/f: g\in I\}$; see
+Kaliman--Zaidenberg~\cite{KZ1998}. We call the centre \emph{canonical} when
+$I=f\cdot R[I/f]\cap R$. This is the right normalisation here: the naive
+saturation $I:f^\infty$ is vacuous, since it equals $(1)$ whenever $f\in I$,
+which it must be for $R[I/f]$ to be defined.
+\end{definition}
+
+\begin{remark}[Terminology, adopted deliberately]\label{rem:terminology}
+Two phrases are used below in a restricted sense, and never loosely. We say
+\emph{flat family with generic fibre $\Aff{3}$ and one quadric degeneration},
+and never ``$\Aff{3}$-fibration'' unqualified, for the morphism of
+Proposition~\ref{prop:Y1fibration}; the degenerate fibre is smooth but not
+contractible, so it is not an $\Aff{3}$. And we use \emph{standard centre}
+only with the following explicit equivalence, which is what
+Theorem~\ref{thm:rectification} rules on: the pairs $(I,f)$ and $(I',f')$ over
+$R=\C^{[4]}$ are \emph{equivalent} when some $\alpha\in\Aut(\Aff{4})$ carries
+$f$ to a unit multiple of $f'$ and carries the canonical centre
+$f\cdot R[I/f]\cap R$ of the first to the canonical centre of the second. The
+third clause is the canonicalisation of Definition~\ref{def:mod}, and nothing
+else; in particular it is \emph{not} a saturation, for the reason recorded
+there.
+\end{remark}
+
+\section{The action, globally dissected}\label{sec:action}
+
+Throughout this section $\partial$ is the derivation~\eqref{eq:dx}
+of~\cite{DMJP2009}.
+
+\subsection{Content, kernel, and the reduced derivation}
+
+Multiplying a locally nilpotent derivation by a kernel element moves the
+plinth but not the orbits, so the slice question belongs to the content-free
+derivation and the content must be stripped first --- inside $A[w]$, not on
+representatives. For ``the content'' to be well defined at all, $A[w]$ must be
+a unique factorisation domain, which we record first.
+
+\begin{lemma}[Factoriality]\label{lem:ufd}
+$A[w]$ is a unique factorisation domain.
+\end{lemma}
+
+\begin{proof}
+By Nagata's criterion it suffices to exhibit a prime element $f$ of the
+Noetherian domain $A[w]$ with $A[w]_f$ a UFD. Take $f=x$. Both hypotheses are
+certified.
+
+\emph{$x$ is prime.} $P\equiv z^2+t^3 \bmod (x)$, so
+$A[w]/(x)=\C[y,z,t,w]/(z^2+t^3)$; and $z^2+t^3$ is irreducible over $\C$,
+since as a quadratic in $z$ over the UFD $\C[t]$ it would otherwise factor,
+which needs $-t^3$ to be a square in $\C[t]$, and it is not (odd degree). So
+this is a domain.
+
+\emph{$A[w]_x$ is a UFD.} $P$ has degree one in $y$ with leading coefficient
+$x^2$, which is a unit after inverting $x$; solving gives
+$y=-(z^2+x+t^3)/x^2$ and hence $A_x=\C[x^{\pm1},z,t]$, so
+$A[w]_x=\C[x^{\pm1},z,t][w]$ --- a localisation of a polynomial ring, and
+therefore a UFD.
+\end{proof}
+
+The irreducibility test carries its own control: the same routine reports
+$z^2-t^2$ reducible, so the verdict on $z^2+t^3$ is not vacuous.
+
+\begin{proposition}[Content]\label{prop:content}
+The $t$-adic valuations in $A[w]$ of $\partial(x),\partial(y),\partial(z),
+\partial(w)$ are $6,3,3,3$, each maximal and each certified by an explicit
+witness quotient. The content of $\partial$ is exactly $t^3$, and
+$\partial_{\mathrm{red}}:=\partial/t^3$ is content-free with
+$\partial_{\mathrm{red}}(x)=-2t^3(xw+z)$.
+\end{proposition}
+
+The exclusion of further content is by a \emph{closed} candidate list, not a
+sample: any common divisor divides $\partial(x)=-2t^6(z+xw)$; $t$ is prime in
+$A[w]$; and $xw+z$ is irreducible in $A[w]$, being of degree one in $w$ and
+primitive because $V(x,z)\cap X=\{x=z=t=0\}$ is the $y$-line, of
+\emph{codimension two in $X$} --- so $x$ and $z$ have no common factor in the
+UFD $A$. Hence $(xw+z)$ divides only the $x$-component.
+
+\begin{remark}\label{rem:representative}
+The polynomial \emph{representative} of $\partial(y)$ is $t$-free, while its
+\emph{class} in $A[w]$ has $t$-valuation $3$. The representative is not the
+invariant, and the strip must be done in $A[w]$. One immediate consequence:
+$\partial$ itself can never have a slice, since $\partial(A[w])\subseteq
+t^3A[w]$, so the slice question below is asked of
+$\partial_{\mathrm{red}}$, whose kernel is the same.
+\end{remark}
+
+\begin{theorem}[The kernel]\label{thm:kernel}
+$\ker(\partial\mid A[w])=\C[p,q,t]\cong\C^{[3]}$.
+\end{theorem}
+
+\begin{proof}[Proof, as certified]
+On the $X_1$-side put $u=y+1$, so that $S$ becomes $xu+z^2+t^3$; inverting $u$
+solves the relation for $x$ and gives $B_t[w][1/u]=\C[t^{\pm1},w,u^{\pm1},z]$
+with $\Delta=t^6u\,\partial_z$, a polynomial ring in the \emph{single}
+variable $z$ over its ring of constants. Hence $\ker(\Delta\mid
+B_t[w][1/u])=\C[t^{\pm1},w,u^{\pm1}]$. Now $u$ is prime in $B_t[w]$, because
+$B_t[w]/(u)=\C[x,z,t^{\pm1},w]/(z^2+t^3)$ is a domain, $z^2+t^3$ being
+irreducible over $\C[t^{\pm1}]$; therefore $\ker(\Delta\mid B_t[w])=
+\C[t^{\pm1}][y,w]$. Since $\Phi(S)=P$ and $\Psi(P)\in(S)$, the maps $\Phi$ and
+$\Psi$ are mutually inverse between $B_t[w]$ and $A_t[w]$, and
+$\partial=\Phi\circ\Delta\circ\Psi$, so $\ker(\partial\mid A_t[w])=
+\C[t^{\pm1}][p,q]$. Finally the $t$-saturation is trivial: $p$ and $q$ remain
+algebraically independent modulo $t$ (Jacobian rank two) in the \emph{domain}
+$A[w]/(t)=\C[x,y,z,w]/(x^2y+z^2+x)$, so $\mathcal H(p,q,t)\in tA[w]$ forces the
+$t$-free part $\mathcal H_0$ to vanish, i.e.\ $t\mid \mathcal H$ in $\C[p,q,t]$;
+induct.
+\end{proof}
+
+The route deliberately avoids elimination: it is a conjugacy transport
+followed by a saturation argument, and no Gr\"obner basis is computed in it.
+Independently, $\partial(p)=\partial(q)=0$ was verified through two
+independent implementations, and $\Psi(p)=y$, $\Psi(q)=w$ modulo $(S)$.
+
+\subsection{No slice, and the degeneracy locus}
+
+\begin{proposition}[Degeneracy locus]\label{prop:degeneracy}
+The degeneracy ideal of $\partial_{\mathrm{red}}$ contains $t^6$, so its zero
+locus is supported on $\{t=0\}$; and the locus is non-empty, since the line
+$\{x=z=t=w=0\}\cong\Aff{1}_y$ consists of common zeros of all components. In
+particular the $\Ga$-action is \emph{not free}. Chart by chart: on
+$\{x\ne0,\,t=0\}$ the locus is exactly $V(Z^2(Z^2+x))=V(Z)\cup V(p)$, using
+$Z^2+x\equiv-xp$ modulo $(P,t)$; on $\{x=0\}$ the fibre forces $z=0$ and the
+locus is exactly $\{w=0\}$, the line above, which is the $w=0$ slice of the
+cuspidal edge $\{z=t=0\}$ of the $x=0$ cusp-cylinder fibre.
+\end{proposition}
+
+Each of $x,z,y,w$ was verified \emph{not} to lie in the radical of the
+degeneracy ideal; only $t$ is forced. The radical test can fail silently, and
+the check that it does not is part of the certificate.
+
+\begin{theorem}[No slice]\label{thm:noslice}
+$\partial_{\mathrm{red}}$, and hence $\partial$, admits no slice on $A[w]$.
+The statement is exact and carries no degree bound.
+\end{theorem}
+
+\begin{proof}[Proof, as certified]
+Two independent routes. (i) Every component of $\partial_{\mathrm{red}}$
+vanishes at the origin of $X\times\Aff{1}$, so by the chain rule
+$\partial_{\mathrm{red}}(F)$ vanishes there for \emph{every} $F\in A[w]$,
+while $1$ does not. (ii) A slice would give $A[w]=(\ker\partial)[s]$, so the
+$\Ga$-action would be a translation and hence free; Proposition
+\ref{prop:degeneracy} exhibits a line of fixed points.
+\end{proof}
+
+A bounded exact search over $\Q$ in degrees $\le1,2,3$ ($6$, $21$ and $56$
+unknowns; a linear nullspace computation, not an elimination) agrees, and
+carries a positive control: the same solver does find the slice $w$ for
+$\partial_w$, so the empty verdicts are not vacuous.
+
+Since $\ker\partial\cong\C^{[3]}$ by Theorem~\ref{thm:kernel}, a slice would
+have given $A[w]\cong\C^{[4]}$ outright. Theorem~\ref{thm:noslice} closes that
+route, and only that route: nothing is claimed or implied about
+$X\times\Aff{1}\cong\Aff{4}$.
+
+\subsection{The localisation theorem}
+
+\begin{theorem}[Localisation]\label{thm:localisation}
+With $Z=z+xw$ one has $\partial_{\mathrm{red}}(Z)=t^3(p+1)$ and
+\[
+A[w]\bigl[\tfrac{1}{t(p+1)}\bigr]
+= \C[p,q,t]\bigl[\tfrac{1}{t(p+1)}\bigr][Z].
+\]
+\end{theorem}
+
+The proof is by exhibiting $x,y,z,w$ explicitly in those generators, which is
+what the certificate does. Geometrically: $X\times\Aff{1}$ \emph{is} a trivial
+$\Aff{1}$-bundle over the complement of the single divisor $\{t(p+1)=0\}$ in
+$\Aff{3}=\Spec(\ker\partial)$. The whole obstruction through this flow is a
+boundary-globalisation problem across one explicit reducible divisor. That
+reading is what \S\ref{sec:modification} makes into a modification.
+
+\subsection{The plinth, and the quotient morphism}
+
+\begin{proposition}[Values of $\partial_{\mathrm{red}}$]\label{prop:values}
+On the natural generators, $\partial_{\mathrm{red}}$ is given by
+\[
+\partial_{\mathrm{red}}(Z)=t^3(p+1),\quad
+\partial_{\mathrm{red}}(x)=-2t^3Z,\quad
+\partial_{\mathrm{red}}(w)=\tfrac12\bigl(p^2+p+2qZ\bigr),\quad
+\partial_{\mathrm{red}}(H)=q(p+1),
+\]
+with $p,q,t$ killed; and on the localisation of Theorem~\ref{thm:localisation}
+it is $t^3(p+1)\cdot d/dZ$. Every value was checked on both sides of the
+conjugacy.
+\end{proposition}
+
+\begin{proposition}[The plinth is not principal]\label{prop:plinth}
+$H=-(y+w^2)$ is a local slice: $\partial_{\mathrm{red}}^2(y+w^2)=0$ and
+$\partial_{\mathrm{red}}(y+w^2)=-q(p+1)$. Since $q(p+1)\notin(t^3(p+1))$ ---
+it survives $t=0$ ---
+\[
+\pl(\partial_{\mathrm{red}})\supseteq (p+1)\,(t^3,\,q),
+\]
+and $\pl(\partial_{\mathrm{red}})\subseteq(p,q,t)$ is proper, so $1$ is not in
+the plinth. Whether the first containment is an equality is not decided.
+\end{proposition}
+
+The containment $\pl\subseteq(p,q,t)$ follows from
+$\partial_{\mathrm{red}}(A[w])\subseteq(x,z,t,w)A[w]$, which is proper and
+sharply so: the image is \emph{not} inside $(x,z,t)$. A search at a cap
+declared before it was run --- total degree $\le4$ in $x,y,z,t,w$, $126$
+monomials, a $20$-dimensional solution space --- returned seven plinth values,
+all inside $(p+1)(t^3,q)$; that is a measurement of what was searched, and
+settles nothing about equality.
+
+\begin{proposition}[Enclosure of the plinth's zero locus]\label{prop:walls}
+Write $J=(p+1)(t^3,q)\subseteq\pl(\partial_{\mathrm{red}})$ for the subideal of
+Proposition~\ref{prop:plinth}. Then
+\[
+\emptyset\ \ne\ V\bigl(\pl(\partial_{\mathrm{red}})\bigr)\ \subseteq\ V(J)
+\ =\ V(p+1)\cup V(t,q).
+\]
+The inclusion holds because a larger ideal has a smaller zero locus, so no
+component of $V(\pl)$ can lie outside $V(J)$; and $V(\pl)$ is non-empty
+because $\pl\subseteq(p,q,t)$ is proper. Moreover $\sqrt{J}=(p+1)\cap(t,q)$,
+with minimal primes $(p+1)$ of codimension one and $(t,q)$ of codimension two.
+\end{proposition}
+
+\begin{remark}[What the asymmetry is, and is not, a statement about]
+\label{rem:asymmetry}
+The two minimal primes of $\sqrt{J}$ are of different kinds: $(p+1)$ is
+divisorial, while $(t,q)$ has codimension two --- the $t$-wall enters only cut
+against $q=0$. \emph{This is a statement about the known subideal $J$, not
+about $\pl(\partial_{\mathrm{red}})$ itself}, whose exact value we do not
+determine (Proposition~\ref{prop:plinth}); a larger plinth could only shrink
+$V(\pl)$ further inside $V(J)$, and we make no claim about which of the two
+components survives in $V(\pl)$. What is unconditional is the enclosure.
+\end{remark}
+
+Shakhmatov identifies the zero locus of the plinth ideal with the complement
+of the union of the principal invariant cylinders~\cite{Shakhmatov2026}. In
+that reading the enclosure is the useful direction, and it survives intact:
+since $V(\pl)\subseteq V(p+1)\cup V(t,q)$, the principal invariant cylinders
+\emph{cover} the complement of $V(p+1)\cup V(t,q)$ --- everywhere off those two
+loci, the action has a principal invariant cylinder through the point. The
+converse reading, which would need the exact plinth, is not available to us
+and is not used.
+
+\begin{proposition}[The quotient morphism]\label{prop:quotient}
+Let $\pi\colon X\times\Aff{1}\to\Aff{3}=\Spec\C[p,q,t]$. Then $\pi$ is
+\emph{not surjective} and \emph{not equidimensional}: the fibres over
+$(2,0,0)$ and $(-1,3,0)$ are empty, and the fibres over $(0,0,0)$ and
+$(-1,0,0)$ are surfaces, against the generic dimension one. The image is
+nonetheless dense.
+\end{proposition}
+
+\begin{proposition}[The governing identity]\label{prop:governing}
+In $A[w]$,
+\begin{equation}\label{eq:governing}
+qZ+p+p^2+t^3(y+w^2)=0,
+\end{equation}
+equivalently $t^3H=p+p^2+qZ$. At $t=0$ this reads $qZ=-p(1+p)$, so $q=0$
+forces $p(1+p)=0$; the measured fibre table matches exactly, the fibre over
+$t=0$ being an $\Aff{1}$ where $q\ne0$ except at $p=-1$ where it is empty, and
+empty where $q=0$ except at $p=0$ and $p=-1$, which are precisely the two
+dimension jumps.
+\end{proposition}
+
+Identity~\eqref{eq:governing} is the single reason for
+Proposition~\ref{prop:quotient}, and it is also, rewritten, the defining
+equation of the smooth intermediate model of \S\ref{sec:square}. It is worth
+recording which component of the divisor misbehaves, because the natural guess
+is wrong: \emph{$\{p+1=0\}$ is tame on its own} --- over $t\ne0$ the fibres are
+$\Aff{1}$ even along $p=-1$. Every failure lives over $\{t=0\}$, and $p=-1$
+bites only in combination with it.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lll}
+\hline
+hypothesis of~\cite[Thm.~4.3]{Masuda2025} & verdict & source \\
+\hline
+free $\Ga$-action & fails & Proposition~\ref{prop:degeneracy}\\
+affine quotient exists and is $\Aff{3}$ & holds & Theorem~\ref{thm:kernel}\\
+quotient morphism surjective & fails & Proposition~\ref{prop:quotient}\\
+quotient morphism equidimensional & fails & Proposition~\ref{prop:quotient}\\
+$\Aff{3}$-fibration with factorial closed fibres & fails at the cusp &
+\cite[Ex.~4.2]{Masuda2025}\\
+\hline
+\end{tabular}
+\caption{Masuda's dimension-four partial positive theorem, tested against this
+action. One hypothesis holds and four fail. This says nothing about
+$X\times\Aff{1}\cong\Aff{4}$; it says that \emph{this} action cannot carry
+\emph{that} theorem.}\label{tab:masuda}
+\end{table}
+
+\subsection{Two exact theorems at $k=1$, and stability}
+
+\begin{theorem}\label{thm:nonprincipal}
+$\pl(\partial_{\mathrm{red}})$ is not principal. Consequently there is no
+$s\in A[w]$ with $A[w]=\C[p,q,t][s]$.
+\end{theorem}
+
+\begin{proof}
+The plinth contains $t^3(p+1)$ and $q(p+1)$. If $\pl=(g)$ then $g$ divides
+their greatest common divisor, which is $(p+1)$ because $\gcd(t^3,q)=1$. As
+$(p+1)$ is irreducible, $g$ is a unit or an associate of $p+1$; a unit puts
+$1$ in the plinth, and an associate puts $p+1$ in the plinth, and both
+contradict $\pl\subseteq(p,q,t)$. For the consequence: $A[w]=R[s]$ with
+$R=\ker\partial_{\mathrm{red}}$ forces $\partial_{\mathrm{red}}=
+\partial_{\mathrm{red}}(s)\cdot d/ds$, hence a principal plinth.
+\end{proof}
+
+The refutation of the principal-plinth guess in Proposition~\ref{prop:plinth}
+is the essential input here: without the second generator $q(p+1)$ the
+argument does not run.
+
+\begin{theorem}\label{thm:nonprincipal2}
+Independently: a coordinate projection $\Aff{4}\to\Aff{3}$ is surjective with
+every fibre an $\Aff{1}$, and Proposition~\ref{prop:quotient} exhibits an
+empty fibre and a surface fibre. Hence again $A[w]\ne\C[p,q,t][s]$.
+\end{theorem}
+
+\begin{theorem}[$1$-stability, in the sense of~\cite{Lewis2013}]\label{thm:stable}
+Extending $\partial$ to $A[w][v]$ by $\partial(v)=0$ gives
+$\ker=\C[p,q,t,v]$ and $\pl(\partial\mid A[w][v])=\pl(\partial\mid
+A[w])\cdot\C[v]$, which still contains both generators and still lies inside
+$(p,q,t)$; and $\gcd(t^3,q)=1$, the irreducibility of $p+1$, and
+$p+1\notin(p,q,t)$ all persist in $\C[p,q,t,v]$. Hence
+$A[w][v]\ne\C[p,q,t,v][s]$ for any $s$: the obstruction of
+Theorem~\ref{thm:nonprincipal} is $1$-stable.
+\end{theorem}
+
+\begin{remark}[The classification, and a cocycle that does not
+exist]\label{rem:classification}
+The two components of the divisor obstruct in different ways.
+$\{t=0\}$ blocks the flow-compatible route \emph{exactly, at order three}: the
+non-principality of the plinth \emph{is} the failure of $t^3$ and $q$ to share
+a factor, and both witnesses of Theorem~\ref{thm:nonprincipal2} lie over
+$t=0$. $\{p+1=0\}$ blocks the elementary moves, and the reason is the cusp:
+under every shear $Z\mapsto Z+f$ the leading $Z$-coefficient of $x$ is the
+invariant $-1/(p+1)$ --- verified with $f$ symbolic, hence exactly over the
+whole family --- and a rescaling that would fix it needs $Z/(p+1)\in A[w]$,
+while $\dim\{p+1=0\}=3$ against $\dim\{p+1=0,Z=0\}=2$. $Z$ does not vanish
+there because $R1$ of Proposition~\ref{prop:intrinsic} restricted to
+$\{p+1=0\}$ is the cuspidal curve $Z^2+t^3=0$ --- the same cusp that carries
+$X_1$'s singularity and breaks factoriality in
+Table~\ref{tab:masuda}. Finally, a boundary cocycle in the
+Danielewski--Asanuma sense presupposes two $\Aff{1}$-fibrations over a common
+base agreeing on an overlap; $\C[p,q,t,Z]$ is such a fibration but $A[w]$ is
+not, by Proposition~\ref{prop:quotient}, so that template cannot be set up
+through this presentation at all.
+\end{remark}
+
+\begin{remark}[Brackets: Corollary~7.3 as linear algebra]\label{rem:brackets}
+All six brackets among $\{\partial_{\mathrm{red}},\partial_1,\partial_2,
+\partial_w\}$ were computed. \emph{Exactly} three pairs commute, and they are
+exactly the triple $\{\partial_1,\partial_2,\partial_w\}$
+of~\cite[Cor.~7.3]{DMJP2009}; $\partial_{\mathrm{red}}$ commutes with none of
+them. The four derivations do form a generic frame on $X\times\Aff{1}$, in
+that the $4\times4$ determinant of their values on the coordinates is non-zero
+in the model, and dropping $\partial_{\mathrm{red}}$ drops the rank to three.
+So $\partial_{\mathrm{red}}$ is precisely the direction the commuting triple
+cannot reach --- which is Corollary~7.3's Makar-Limanov argument seen as
+linear algebra. No triangular flag through $\partial_{\mathrm{red}}$ was found;
+that is a statement about what these six brackets show, and not a claim that
+none exists.
+\end{remark}
+
+\begin{remark}[Bounded searches, recorded as
+measurements]\label{rem:sweeps1}
+All $126$ four-element subsets of a nine-element pool declared in advance were
+filtered at $k=1$ by the exact criterion that
+$\det[\nabla P;\nabla a_1,\dots,\nabla a_4]$ vanish nowhere on
+$X\times\Aff{1}$ --- valid because $X\times\Aff{1}$ is smooth, which was
+verified. No subset survived: nine determinants were identically zero and
+$117$ vanished somewhere. At $k=2$, all $2002$ five-element subsets of a
+declared fourteen-element pool were filtered by the same criterion in six
+variables; $1852$ were rejected by an explicit witness point on
+$X\times\Aff{2}$ and $150$ by the exact test. A positive control --- a graph
+hypersurface whose coordinate ring genuinely is $\C^{[4]}$ --- passes the same
+filter in both settings, so the rejections are not vacuous. These are
+measurements at declared caps and prove nothing beyond their pools.
+\end{remark}
+
+\section{The cylinder as a canonical affine modification}\label{sec:modification}
+
+\subsection{$A[w]$ inside its localisation}
+
+\begin{proposition}[Intrinsic description]\label{prop:intrinsic}
+$A[w]=\C[p,q,t,Z][x,w,H]$, certified in both directions: $x,w,H$ are
+polynomials in $x,y,z,t,w$, and conversely $z=Z-xw$ and $y=-H-w^2$. Each of
+$x,w,H$ is certified not to lie in $\C[p,q,t,Z]$ by an explicit pole. The
+pole orders along the two components, measured separately, are
+\[
+\begin{array}{l|ccccc}
+ & x & H & w & y & z\\\hline
+\ord \text{ along } \{t=0\} & 0 & -3 & -3 & -6 & -3\\
+\ord \text{ along } \{p+1=0\} & -1 & 0 & -1 & -2 & -2
+\end{array}
+\]
+with $p,q,t,Z$ of non-negative order along both. Four relations hold in
+$A[w]$:
+\begin{align}
+&R1:\quad x(p+1)+Z^2+t^3=0, &&R2:\quad 2t^3w=pZ-xq,\label{eq:R12}\\
+&R3:\quad t^3H=p+p^2+qZ, &&R4:\quad 2(p+1)w=HZ+q.\label{eq:R34}
+\end{align}
+\end{proposition}
+
+So each component of the divisor contributes exactly one \emph{primitive}
+division --- $x$ for $\{p+1=0\}$, $H$ for $\{t=0\}$ --- and $w$ is the mixed
+one. Note also:
+
+\begin{proposition}\label{prop:novaluation}
+$A[w]$ is not cut out of $\C[p,q,t,Z][1/(t(p+1))][x,w,H]$ by any valuation
+condition: pole orders are unbounded on both sides,
+$\ord_{p+1}(x^k)=-k$ and $\ord_t(H^k)=-3k$, both verified. What cuts it out is
+an affine modification.
+\end{proposition}
+
+\begin{remark}
+$R1$ is exactly~\cite{DMJP2009}'s own $S$, renamed by $y\mapsto p$,
+$z\mapsto Z$, $u=p+1$. The middle term of the natural factorisation is
+therefore their auxiliary threefold, not a new object; see
+\S\ref{sec:square}. $R3$ is the governing identity~\eqref{eq:governing}.
+\end{remark}
+
+\subsection{The compression}
+
+\begin{theorem}[The compressed modification]\label{thm:compression}
+Set
+\[
+F=t^3(p+1),\qquad
+N_1=p+p^2+qZ,\qquad
+M=p(p+1)Z+q(Z^2+t^3),
+\]
+\[
+I=\bigl(F,\;t^3(Z^2+t^3),\;(p+1)N_1,\;M\bigr).
+\]
+Then $\C[X\times\Aff{1}]=\C^{[4]}[I/F]$, an affine modification of
+$\C^{[4]}=\C[p,q,t,Z]$ with divisor $F$ and centre $I$; the centre is
+canonical in the sense of Definition~\ref{def:mod}; and the three adjoined
+generators are exactly
+\[
+x=-\frac{t^3(Z^2+t^3)}{F},\qquad H=\frac{(p+1)N_1}{F},\qquad
+2w=\frac{M}{F}.
+\]
+Moreover $F$ divides $(t(p+1))^3$, with quotient $(p+1)^2$.
+\end{theorem}
+
+Canonicity is proved exactly, not sampled: for the $(p+1)$-step because $p+1$
+is prime and does not divide $Z^2+t^3$, and for the $t$-step because $t$ is
+prime in the intermediate ring --- $x(p+1)+Z^2$ being irreducible --- and
+divides neither numerator. That $t^3$ is the least power of $t$ clearing the
+new generators is decided rather than assumed, and so is the failure of the
+smaller choice: $N_1\notin I^3+tI^2+t^2I+(t^3)$, with the control that $t^3$
+does lie in the corresponding ideal. A further control: $F$ does \emph{not}
+clear $y$, which needs $t^6$.
+
+\begin{remark}[A correction, logged]\label{rem:fourgen}
+The centre was expected by hand to need five generators, the fifth being
+$F\cdot xH=-(Z^2+t^3)N_1$. It needs four: the machine returned the exact
+identity
+\[
+(Z^2+t^3)\,N_1 = Z\cdot M + p\cdot F .
+\]
+\end{remark}
+
+\subsection{The centre, and a rectification obstruction}
+
+\begin{proposition}[Geometry of the centre]\label{prop:centre}
+$V(I)$ is a surface with exactly two minimal primes, and they are the two
+steps of \S\ref{sec:square} pushed into $\Aff{4}$:
+\[
+V(t,N_1)\quad\text{which is \emph{smooth}},\qquad\qquad
+V(p+1,\,Z^2+t^3)\quad\text{which is \emph{singular along a line}},
+\]
+the singular line being the cuspidal edge $\{Z=t=0\}$ with $q$ free.
+\end{proposition}
+
+\begin{theorem}[A rectification obstruction with no degree
+bound]\label{thm:rectification}
+An automorphism $\alpha\in\Aut(\Aff{4})$ carrying $(I,F)$ to $(I',F')$ in the
+sense of Remark~\ref{rem:terminology} carries the canonical centre of the one
+to the canonical centre of the other, hence restricts to an isomorphism
+$V(I)\to V(I')$ of the centres as schemes, and therefore matches their
+singular loci. One component of $V(I)$ is singular along a line
+(Proposition~\ref{prop:centre}). Hence $(I,F)$ is \emph{not} equivalent to any
+pair whose centre has smooth components: not to a linear subspace, and not to
+any smooth complete intersection.
+\end{theorem}
+
+Every obvious standard-centre target is removed, and with no degree bound.
+What survives as a possible rectification target is a \emph{singular} standard
+centre carrying a cusp --- and the surviving singularity is the same cusp that
+appears in Proposition~\ref{prop:degeneracy}, in
+Remark~\ref{rem:classification}, and in Table~\ref{tab:masuda}.
+
+\section{The commuting square}\label{sec:square}
+
+\subsection{The tower, and the singular middle}
+
+The two components of the divisor $\{t(p+1)=0\}$ carry one modification step
+each. Taking the $(p+1)$-step first gives the tower of inclusions
+\begin{equation}\label{eq:tower}
+\C[p,q,t,Z]=\C^{[4]}\;\subset\;B[w]=\C[X_1\times\Aff{1}]\;\subset\;A[w]=
+\C[X\times\Aff{1}],
+\end{equation}
+that is, birational morphisms $X\times\Aff{1}\to X_1\times\Aff{1}\to\Aff{4}$,
+each an isomorphism off exactly one component. Step one has divisor $p+1$ and
+centre $(p+1,Z^2+t^3)$ and adjoins $x$; step two has divisor $t^3$ and centre
+$(t^3,N_1,N_2)$ with $N_2=pZ-xq$, because relative to $B[w]$ both remaining
+generators $H=N_1/t^3$ and $w=N_2/(2t^3)$ are $t^3$-divisions.
+
+\begin{theorem}\label{thm:X1kill}
+$X_1$ is singular exactly at the origin, so $X_1\times\Aff{1}$ is a fourfold
+whose singular locus is the line $\{\text{origin of }X_1\}\times\Aff{1}_q$.
+Singularity survives $\times\Aff{k}$ and $\Aff{3+k}$ is smooth, so
+\[
+X_1\times\Aff{k}\not\cong\Aff{3+k}\qquad\text{for every }k\ge0 .
+\]
+In particular neither step of the tower is an isomorphism.
+\end{theorem}
+
+The control for the routine that produced this is that it reports an empty
+singular locus for a smooth graph hypersurface.
+
+\subsection{The other order, and a smooth middle}
+
+\begin{theorem}\label{thm:Y1}
+The two steps commute --- away from each divisor the other step is trivial,
+over $D(t)$ only the $(p+1)$-step surviving and over $D(p+1)$ only the
+$t$-step --- and running the $t$-step first gives a second intermediate model
+\begin{equation}\label{eq:Y1}
+Y_1 = V(W)\subset\Aff{5}_{p,q,t,Z,H},\qquad W = t^3H-p-p^2-qZ,
+\end{equation}
+with $A[w]=\C^{[4]}[H][x,2w]$, the second stage being the $(p+1)$-division
+$2w=(HZ+q)/(p+1)$, which is relation $R4$ of
+Proposition~\ref{prop:intrinsic}. And $Y_1$ is \emph{smooth}: the Jacobian
+forces $p=-\tfrac12$, $Z=q=t=0$, and at such a point $W=\tfrac14\ne0$.
+\end{theorem}
+
+The control here is that the same routine still finds $X_1\times\Aff{1}$
+singular.
+
+\begin{remark}[A framing corrected]\label{rem:framing}
+So the same birational morphism $X\times\Aff{1}\to\Aff{4}$ factors through the
+\emph{singular} $X_1\times\Aff{1}$ and through the \emph{smooth} $Y_1$.
+Theorem~\ref{thm:X1kill} is untouched --- $X_1\times\Aff{k}$ is never affine
+space --- but the reading that the factorisation must pass through a singular
+model is presentation-dependent, and we record it as such.
+\end{remark}
+
+\begin{proposition}[The transition equation]\label{prop:transition}
+The governing identity~\eqref{eq:governing} rewrites as $Zq-t^3H=-p(1+p)$,
+which is precisely the defining equation of $Y_1$; completing the square,
+\[
+Zq-t^3H+P'^2=\tfrac14,\qquad P'=p+\tfrac12,
+\]
+a deformed affine quadric with $t^3$ where a variable would be. What the
+identity transitions between is $\C^{[4]}$ and $Y_1$.
+\end{proposition}
+
+\begin{proposition}\label{prop:Y1fibration}
+$Y_1\to\Aff{1}_t$ has fibre $\Aff{3}$ over $t\ne0$, where $H$ is a graph, and
+degenerates over $t=0$ to (smooth affine quadric surface) $\times\Aff{1}_H$,
+which is smooth but not contractible, hence not an $\Aff{3}$. In the language
+of Remark~\ref{rem:terminology}: a flat family with generic fibre $\Aff{3}$
+and one quadric degeneration.
+\end{proposition}
+
+\begin{proposition}[The crossing]\label{prop:crossing}
+On $V(t,p+1)=\Aff{2}_{q,Z}$ the compressed centre $I$ of
+Theorem~\ref{thm:compression} restricts to $(qZ^2)$. The smooth and cuspidal
+components of $V(I)$ meet exactly along the line $\{t=0,\,p=-1,\,Z=0\}$, and
+they meet \emph{non-reducedly}: $Z^2$ lies in the intersection ideal and $Z$
+does not. The multiplicity-two doubling is the cusp $Z^2+t^3$ read at $t=0$.
+\end{proposition}
+
+All the genuinely coupled geometry of the square concentrates,
+scheme-theoretically, at that crossing.
+
+\begin{remark}[The transition datum, and a method
+acknowledged]\label{rem:blancpoloni}
+The two trivialisations are the two models of Theorem~\ref{thm:Y1}: over
+$D(t)$ the singular $X_1\times\Aff{1}$, over $D(p+1)$ the smooth $Y_1$,
+agreeing over the common open set. The transition is therefore a change of
+\emph{integral model}, not a bundle automorphism, and the two models disagree
+over the crossing. Blanc and Poloni~\cite{BP2020} study the
+Daigle--Freudenburg family containing the V\'en\'ereau polynomials, show after
+Kaliman--Zaidenberg that these are locally trivial $\Aff{2}$-bundles over a
+punctured plane of a specific form $X_f$, and put bivariables in bijection with
+the trivial ones. We record explicitly that no theorem of theirs applies here
+--- their objects are $\Aff{2}$-bundles over a punctured plane, ours a
+birational modification of $\Aff{4}$ along a codimension-two centre with
+four-dimensional hypersurface models. Only the method transfers, and we say so
+in order that a method not be mistaken for a citation. See also
+Kaliman--V\'en\'ereau--Zaidenberg~\cite{KVZ2001} for the rectification framing
+of simple birational extensions.
+\end{remark}
+
+\begin{remark}[Bounded searches, again recorded as
+measurements]\label{rem:sweeps2}
+Three further cap-bounded sweeps, with declared pools, the exact Jacobian
+criterion, explicit witness points for rejections and positive controls
+throughout: $A[w]\cong\C^{[4]}$? --- $495$ four-subsets of a twelve-element
+pool, no survivors. $A[w][v]\cong\C^{[5]}$? --- $4368$ five-subsets of a
+sixteen-element pool, no survivors. $Y_1\cong\Aff{4}$? --- $210$ four-subsets
+of a ten-element pool, no survivors. All recorded as measurements, never as
+negative results. The third question is settled instead, and negatively, in
+\S\ref{sec:Y1}, by three arguments that carry no cap at all.
+\end{remark}
+
+\section{The smooth middle identified}\label{sec:Y1}
+
+\subsection{Three independent kills}
+
+\begin{theorem}\label{thm:Y1kills}
+Three independent computations bear on whether $Y_1$ is affine space. Routes
+(i) and (iii) each give $Y_1\not\cong\Aff{4}$, and (i) gives it for all
+stabilisations; route (ii) gives the separate statement recorded there.
+\begin{enumerate}
+\item[(i)] \emph{Motivic.} $[Y_1]=\Lef^4+\Lef^2$ in the Grothendieck ring, by
+two independent stratifications (along $t$, and along $q$ as a cross-check),
+every stratum carrying an explicit two-way parametrisation. Hence
+$\chic(Y_1)=2$ against $\chic(\Aff{4})=1$, and since $\chic$ is multiplicative
+with $\chic(\Aff{r})=1$,
+\[
+Y_1\times\Aff{r}\not\cong\Aff{4+r}\qquad\text{for every }r\ge0,
+\]
+so the conclusion covers all stabilisations.
+\item[(ii)] \emph{Differential.} $\nabla W=(-1-2p,\,-Z,\,3t^2H,\,-q,\,t^3)$
+and $\Crit(W)$ is the line $\{p=-\tfrac12,\,q=Z=t=0\}$, on which
+$W\equiv\tfrac14$. A variable of $\C^{[5]}$ has nowhere-vanishing
+differential, and adjoining further variables leaves that line critical, so
+$W$ is not a variable of $\C^{[5]}$, nor stably. The non-zero critical value
+is also exactly why $Y_1=V(W)$ is smooth. We note explicitly that this does
+not by itself give $Y_1\not\cong\Aff{4}$: the passage from ``$V(f)\cong
+\Aff{n-1}$'' to ``$f$ is a variable'' is the Abhyankar--Sathaye problem, which
+we do not invoke. What (ii) rules out is that $Y_1$ arise as a coordinate
+hyperplane, stably included.
+\item[(iii)] \emph{Homotopical, and prior art.} See
+Theorem~\ref{thm:ADO} below: $Y_1$ is a member of the
+Asok--Dubouloz--{\O}stv{\ae}r family whose $\Aff{1}$-homotopy type is
+$\PP^1\wedge\PP^1$, with complex realisation $S^4$; in particular $Y_1$ is not
+contractible.
+\end{enumerate}
+\end{theorem}
+
+In (i), the cuspidal curve is certified once and reused: $(Z,t)=(s^3,-s^2)$
+with inverse $s=-Z/t$ away from the cusp point, so $[\text{cusp}]=\Lef$ ---
+with the recorded control that the curve is genuinely singular and not an
+$\Aff{1}$ in disguise.
+
+\subsection{The identification}
+
+\begin{theorem}[\cite{ADO2021}, applied]\label{thm:ADO}
+Under the linear change of coordinates
+\begin{equation}\label{eq:ADO}
+(x_1,t_1,x_2,t_2,z)=(t,\;H,\;q,\;-Z,\;p+\tfrac12),
+\end{equation}
+certified an isomorphism of $\Aff{5}$ in both directions, the equation
+$x_1^3t_1+x_2t_2=z^2-\tfrac14$ of~\cite[Ex.~4.2.5]{ADO2021} \emph{is} $W$
+exactly. The polynomial $z^2-\tfrac14$ has distinct roots and unit
+discriminant, which is their smoothness hypothesis. Hence
+\[
+Y_1=Q_{(3,1),\,z^2-1/4},
+\]
+and by~\cite{ADO2021} its $\Aff{1}$-homotopy type is $\PP^1\wedge\PP^1$, with
+complex realisation $S^4$.
+\end{theorem}
+
+The family $Q_{m,P}=\{\sum_i x_i^{m_i}t_i=P(z)\}$, its smoothness criterion,
+its $\Aff{1}$-homotopy type $(\PP^{1\wedge n})^{\vee(\deg P-1)}$ and the open
+classification Question~4.2.6 --- can non-isomorphic $Q_{m,P}$ be
+distinguished as $m$ varies, for fixed $P$? --- are all~\cite{ADO2021}'s. We
+reprove none of them and we make no claim on the classification question.
+
+\begin{remark}[Prior art, stated plainly]\label{rem:priorart}
+$Y_1$ is prior art as a variety: it is a member of a published family, and its
+smoothness and homotopy type are published. What appears to be new is its
+role, namely that this known $Q_{m,P}$-fourfold arises as the smooth
+intermediate completion in a commuting affine-modification square attached to
+the Koras--Russell cylinder. Accordingly the following are \emph{not} claimed
+and are false: that this is a new fourfold of this form, a previously unknown
+deformed quadric, a new motivic-sphere model, or a first study of this class.
+\end{remark}
+
+Combining: the square of \S\ref{sec:square} realises the chain
+\begin{equation}\label{eq:chain}
+\Aff{4}\;\longleftarrow\;Y_1\;(\text{a motivic }S^4)\;\longleftarrow\;
+X\times\Aff{1}\;(\Aff{1}\text{-contractible, by \cite{DF2015,HKO2014}}),
+\end{equation}
+with each arrow an affine modification. The rest of the paper is about how the
+middle term's sphere is created and then destroyed.
+
+\section{The motivic ledger}\label{sec:ledger}
+
+\subsection{Four corners, four arrows}
+
+\begin{proposition}[The corners]\label{prop:corners}
+\[
+\begin{array}{l|ccc}
+ & \text{class} & \chic & \Sing\\\hline
+\Aff{4} & \Lef^4 & 1 & \emptyset\\
+X_1\times\Aff{1} & \Lef^4 & 1 & \text{a line}\\
+Y_1 & \Lef^4+\Lef^2 & 2 & \emptyset\\
+X\times\Aff{1} & \Lef^4 & 1 & \emptyset
+\end{array}
+\]
+Every entry is computed by explicit stratification with two-way
+parametrisations and an independent cross-check. The units and the class group
+of $Y_1$ were not determined and are not needed.
+\end{proposition}
+
+\begin{proposition}[The arrows]\label{prop:arrows}
+Every arrow is verified to be an isomorphism off its divisor, so the scissor
+relation $[V']-[V]=[E]-[D]$ applies to all four, with $D$ the divisor in the
+target and $E$ the exceptional locus in the source:
+\[
+\begin{array}{l|l|ccc}
+\text{arrow} & \text{along} & [D] & [E] & [E]-[D]\\\hline
+\sigma_1\colon X_1\times\Aff{1}\to\Aff{4} & \{p+1=0\} & \Lef^3 & \Lef^3 & 0\\
+\sigma_2\colon X\times\Aff{1}\to X_1\times\Aff{1} & \{t=0\} & \Lef^3 &
+\Lef^3 & 0\\
+\sigma_3\colon Y_1\to\Aff{4} & \{t=0\} & \Lef^3 & \Lef^3+\Lef^2 & +\Lef^2\\
+\sigma_4\colon X\times\Aff{1}\to Y_1 & \{p+1=0\} & \Lef^3+\Lef^2-\Lef &
+\Lef^3-\Lef & -\Lef^2
+\end{array}
+\]
+So the singular route is $K_0$-neutral at each step, while the smooth route
+creates an $\Lef^2$ packet and then removes it.
+\end{proposition}
+
+Throughout the rest of the paper, $D_i$ denotes the divisor of $\sigma_i$ in
+its target, $E_i$ the exceptional locus of $\sigma_i$ in its source, and $C_i$
+the centre of $\sigma_i$. In particular $D_4=Y_1\cap\{p+1=0\}$, a threefold,
+and $C_4=\text{cusp}\times\Aff{1}_H$.
+
+\subsection{Where the packet enters, and where it dies}
+
+\begin{proposition}[Entry]\label{prop:entry}
+The surface $Q$ appearing in $\sigma_3$'s exceptional locus has
+$[Q]=\Lef^2+\Lef$, against $\Lef^2$ for a plane. The map $Q\to\Aff{1}_q$ has
+fibre $\Aff{1}$ over $q\ne0$ but splits into the \emph{two disjoint lines}
+$\{p=0\}$ and $\{p=-1\}$ over $q=0$. That extra line, times $\Aff{1}_H$, is
+exactly the $+\Lef^2$ --- the class-level shadow of the $(\deg P-1)=1$ wedge
+summand of~\cite{ADO2021}.
+\end{proposition}
+
+\begin{proposition}[Exit]\label{prop:exit}
+In shear coordinates, in which $P$ becomes
+$x_s(1-x_sH_s-2w_sZ_s)+Z_s^2+T_s^3$ and $p+1$ becomes $1-x_sH_s-2w_sZ_s$, the
+exceptional locus of $\sigma_4$ is
+\[
+E_4=\{\,x_sH_s+2w_sZ_s=1,\;\;Z_s^2+T_s^3=0\,\},
+\]
+and on it the image coordinate $q$ collapses to $-HZ$ --- certified by ideal
+membership, with a boundary check confirming that this is no identity off
+$E_4$. Consequently $E_4$ maps onto only the cusp locus
+$\{Z^2+t^3=0,\;q=-HZ\}$ inside the threefold $D_4$, \emph{missing a single
+point}, and is an $\Aff{1}$-bundle over its image; the cross-check
+$[\text{image}]\cdot\Lef=(\Lef^2-1)\Lef$ holds.
+\end{proposition}
+
+\begin{proposition}[Where the surgery is centred]\label{prop:centred}
+$D_4$ meets the $t=0$ fibre of $Y_1$ in $\{p=-1,\;t=0,\;qZ=0\}\times
+\Aff{1}_H$, whose $q=0$ branch \emph{is} the $p=-1$ line of the very pair whose
+doubling produced the packet in Proposition~\ref{prop:entry}. The surgery is
+centred on one of the two components that created the class, and
+Proposition~\ref{prop:crossing}'s $(qZ^2)$ restriction is the same locus read
+with its multiplicity.
+\end{proposition}
+
+\subsection{Hodge--Deligne polynomials, and why they add nothing}
+
+\begin{proposition}[A collapse, and it is the answer]\label{prop:epoly}
+A twenty-one entry ledger --- four corners, four divisors, four exceptional
+loci, four centres, the compressed centre, the crossing and its reduced
+restriction, the packet and the cusp --- shows that every stratum occurring in
+the square is a product of affine spaces, tori and points, hence Hodge--Tate.
+Therefore $E(V)$ is just $[V]$ with $\Lef\mapsto uv$, verified entry by entry,
+and Hodge--Deligne polynomials carry nothing beyond the class level: the exact
+symbolic machinery tops out there. Two centres are classed here for the first
+time, $[C_2]=\Lef^2+\Lef$ and $[C_4]=\Lef^2$.
+\end{proposition}
+
+What the computation does sharpen is the type of the packet: $+\Lef^2\mapsto
+(uv)^2$ is a Tate class of weight $4$ and Hodge type $(2,2)$ --- exactly the
+reduced motive of $\PP^1\wedge\PP^1$, which is what the homotopy type of
+Theorem~\ref{thm:ADO} predicts. The class ledger and the homotopy statement
+agree at the only level at which both are visible. We record, as an
+observation and explicitly not as a law, that $[C_4]=\Lef^2$ equals the packet
+class; $\sigma_1$'s centre also has class $\Lef^2$ and removes nothing, so the
+coincidence is flagged and not interpreted.
+
+\subsection{The mechanism at Euler-characteristic level}
+
+\begin{theorem}\label{thm:mechanism}
+Let $U$ be the common open set of $Y_1$ and $X\times\Aff{1}$, with
+$[U]=\Lef^4-\Lef^3+\Lef$. Then
+\[
+\chic(Y_1)=\chic(D_4)+\chic(U)=1+1=2,\qquad
+\chic(X\times\Aff{1})=\chic(E_4)+\chic(U)=0+1=1,
+\]
+so the entire Euler difference is $\chic(D_4)-\chic(E_4)=1$. And
+$\chic(E_4)=0$ rather than $1$ for exactly one reason: $E_4$ is an
+$\Aff{1}$-bundle over $C_4=\text{cusp}\times\Aff{1}_H$ \emph{minus a single
+point}, and is empty over that point,
+\[
+(p,q,t,Z,H)=(-1,0,0,0,0),
+\]
+which lies on the carrier of the packet. Over every other point of $C_4$ the
+fibre is verified to be an $\Aff{1}$.
+\end{theorem}
+
+The load-bearing check is the counterfactual: were the exceptional locus the
+full $\Aff{1}$-bundle over $C_4$, the target would have $\chic=2$ rather than
+$1$. \emph{The missing point is necessary for contractibility to be possible.}
+
+At this level of resolution one can go no further, and we said so at the time:
+$\chic$ and Grothendieck classes see Euler characteristics, not cycles. The
+reading suggested by the bookkeeping --- that the $S^4$ generator is carried
+by the packet, and that the exceptional locus missing that one point is what
+destroys it --- was recorded as a candidate and asserted of nothing.
+\S\ref{sec:generator} replaces it with cycle-level statements. It does
+\emph{not} establish the causal reading: what it proves is that the generator
+is supported on the modification divisor, that the inverse image of its
+divisor representative is a punctured plane whose own fundamental class
+vanishes in the source, and that the defect point is that puncture. Deriving
+the vanishing \emph{from} the defect would require the computation named in
+\S\ref{sec:gap}, which we do not carry out.
+
+\section{The generator, and the cycle that dies}\label{sec:generator}
+
+In this section $\HBM{\ast}$ is integral Borel--Moore homology of the complex
+points. Every algebraic identity used is machine-certified; the topological
+steps are numbered lemmas over those identities.
+
+\subsection{Groundwork}
+
+\begin{lemma}\label{lem:notproper}
+$\sigma_4\colon X\times\Aff{1}\to Y_1$ is \emph{not proper}.
+\end{lemma}
+
+\begin{proof}
+A proper affine morphism is finite, and a finite birational morphism onto a
+normal target is an isomorphism. $Y_1$ is smooth, hence normal; $\sigma_4$ is
+birational; and $\sigma_4$ is not an isomorphism, since the classes differ by
+Proposition~\ref{prop:arrows}.
+\end{proof}
+
+So there is no Borel--Moore pushforward along $\sigma_4$, and the comparison
+must go through the common open set. The organising choice of this section,
+and the reason it stays elementary, is this: \emph{localise at the fibre over
+the origin, not at the singular modification centre.} The fibre is two
+disjoint smooth planes; the centre is singular. The singular centre never
+enters the argument below.
+
+Let
+\begin{equation}\label{eq:pi}
+\pi\colon Y_1\longrightarrow\Aff{2}_{t,q}
+\end{equation}
+be the projection, and write $Y_1^{*}=\pi^{-1}(\Aff{2}\setminus\{0\})$.
+
+\begin{lemma}\label{lem:fibres}
+The fibre of $\pi$ over a point with $t\ne0$ or $q\ne0$ is a plane, by the
+explicit graphs $H=(p+p^2+qZ)/t^3$ and $Z=(t^3H-p-p^2)/q$ respectively. Over
+the origin the fibre degenerates to $p+p^2=0$, giving the \emph{doubled fibre}
+with components
+\[
+F_0=\{p=0\},\qquad F_{-1}=\{p=-1\},
+\]
+each isomorphic to $\Aff{2}_{Z,H}$, disjoint, and \emph{reduced} --- the
+discriminant of $p+p^2$ being $1$.
+
+Moreover $\pi$ is a \emph{smooth} morphism of relative dimension two. In the
+fibre coordinates $(p,Z,H)$ the relative differential of $W$ is
+\[
+\Bigl(\tfrac{\partial W}{\partial p},\ \tfrac{\partial W}{\partial Z},\
+\tfrac{\partial W}{\partial H}\Bigr)=(-1-2p,\ -q,\ t^3),
+\]
+which vanishes exactly on $\{p=-\tfrac12,\ q=0,\ t=0\}$ with $Z,H$ free; there
+$W\equiv\tfrac14\ne0$, so that locus is disjoint from $Y_1=V(W)$. Hence the
+relative differential is nowhere zero on $Y_1$, $\pi$ is smooth, and in
+particular flat.
+\end{lemma}
+
+\begin{lemma}\label{lem:S3}
+$V_0=Y_1\setminus F_{-1}$ and $V_{-1}=Y_1\setminus F_0$ form an open cover of
+$Y_1$ with $V_0\cap V_{-1}=Y_1^{*}$; the two graphs of
+Lemma~\ref{lem:fibres} trivialise $Y_1^{*}$ over $\{t\ne0\}$ and over
+$\{q\ne0\}$, so $Y_1^{*}$ is an $\Aff{2}$-bundle over
+$\Aff{2}\setminus\{0\}$ and hence $Y_1^{*}\simeq S^3$.
+\end{lemma}
+
+The involution $\iota\colon p\mapsto-1-p$ is certified an automorphism of
+$Y_1$ that swaps the two components. Class-level consistency was checked
+throughout: $[V_0]=[V_{-1}]=\Lef^4$, with $\chic=1$, consistent with the
+$\Aff{1}$-contractibility of the one-branch deletion
+in~\cite[Prop.~4.3.1]{ADO2021}; and $[Y_1^{*}]=\Lef^4-\Lef^2$, with
+$\chic=0$, consistent with $S^3$. The entire $\Lef^2$ packet sits off
+$\{t\ne0\}$: the support datum is the origin fibre, precisely.
+
+\subsection{The generator}
+
+\begin{theorem}\label{thm:generator}
+$\HBM{4}(Y_1;\Z)\cong\Z$, with $[F_0]\mapsto1$ and $[F_{-1}]\mapsto-1$. Each
+component class is a \emph{generator}; they satisfy $[F_0]=-[F_{-1}]$; and
+$[F_{-1}]-[F_0]\mapsto-2$ is twice a generator --- of index two, and not a
+generator.
+\end{theorem}
+
+\begin{proof}[Proof, as certified]
+\begin{enumerate}
+\item[(1)] $Y_1\simeq S^4$ by Theorem~\ref{thm:ADO}, and $Y_1^{*}\simeq S^3$
+by Lemma~\ref{lem:S3}.
+\item[(2)] Poincar\'e duality on the smooth oriented $8$-manifold gives
+$\HBM{4}(Y_1)=\Z$, $\HBM{4}(F_0\sqcup F_{-1})=\Z^2$ and
+$\HBM{5}(Y_1^{*})=\Z$.
+\item[(3)] $\pi$ is \emph{smooth} of relative dimension two with reduced fibre
+over the origin (Lemma~\ref{lem:fibres}), so the smooth Gysin map
+$\pi^{!}\colon\HBM{k}(\Aff{2})\to\HBM{k+4}(Y_1)$ is defined and carries the
+class of the origin to $[F_0]+[F_{-1}]$. Hence
+$[F_0]+[F_{-1}]=\pi^{!}[\text{origin}]=0$, because
+$\HBM{0}(\Aff{2})=H^4(\C^2)=0$. (Smoothness, rather than flatness alone, is
+what makes the Gysin map available here; see~\cite[\S19.1]{Fulton1998} for the
+cycle map and the localisation sequence, and~\cite[\S2.6]{ChrissGinzburg1997}
+for Borel--Moore homology and its duality.)
+\item[(4)] The localisation sequence for the closed doubled fibre inside
+$Y_1$ with open complement $Y_1^{*}$ reads $0\to\Z\to\Z^2\to\Z\to0$.
+\item[(5)] The kernel of $\Z^2\to\HBM{4}(Y_1)$ is primitive of rank one and
+contains $(1,1)$ by (3), hence \emph{is} $\langle(1,1)\rangle$; so
+$\HBM{4}(Y_1)=\Z^2/\langle(1,1)\rangle\cong\Z$ with the stated images.
+\end{enumerate}
+\end{proof}
+
+Two independent cross-checks close, and neither is automatic. First, the
+sequence in (4) forces $\HBM{5}(Y_1^{*})\cong\Z$, while Poincar\'e duality
+gives $H^3(S^3)=\Z$ independently; had the fibre structure or the homotopy
+type been wrong, this would not have closed. Second, $\iota$ acts by $-1$ on
+$\HBM{4}(Y_1)$ and squares to $+1$. A Mayer--Vietoris reading of the same
+cover gives the same answer and the same description of the generator, as the
+connecting class of $\Aff{2}_{t,q}\setminus\{0\}$.
+
+\begin{remark}[Robustness, and why the natural guess
+fails]\label{rem:robust}
+Since $\iota$ swaps the components, the kernel in step (5) must be
+$\iota$-stable, and the only primitive options are $\langle(1,1)\rangle$ and
+$\langle(1,-1)\rangle$. Step (3) selects the first; under the second the
+difference $[F_{-1}]-[F_0]$ would be \emph{zero}. So on either reading the
+difference class fails to generate, and the conclusion does not rest on step
+(3) alone. The reason the difference is the natural guess, and the reason it is
+wrong, are the same: a difference of branches is the usual shape, but here the
+two branches are already negatives of one another --- because the fibre class
+vanishes --- so the difference doubles instead of cancelling.
+\end{remark}
+
+\subsection{The cycle that dies}
+
+\begin{theorem}\label{thm:dies}
+Let $D_4\subset Y_1$ be the divisor of $\sigma_4$ and $U$ the common open set.
+\begin{enumerate}
+\item[(i)] $[F_0]=-[F_{-1}]$ generates $\HBM{4}(Y_1;\Z)\cong\Z$
+(Theorem~\ref{thm:generator}).
+\item[(ii)] $F_0$ is \emph{disjoint} from $D_4$, and $F_{-1}$ lies
+\emph{entirely inside} it. So the generator is the pushforward of the
+fundamental class of $F_{-1}$ from inside the surgery locus --- even though it
+also has a representative disjoint from that locus. That is the structural
+reason the surgery can reach it.
+\item[(iii)] Hence the generator restricts to \emph{zero} on $U$.
+\item[(iv)] The inverse image of that representative is
+$\sigma_4^{-1}(F_{-1})\cong\Gm\times\Aff{1}$ --- the same plane with the fibre
+over the defect point $(-1,0,0,0,0)$ deleted. It is a closed subvariety of
+$X\times\Aff{1}$, and the pushforward of its fundamental class along that
+closed immersion is zero, because $\HBM{4}(X\times\Aff{1})=0$.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}[What (iv) does \emph{not} say]\label{rem:notproper}
+$\sigma_4$ is not proper (Lemma~\ref{lem:notproper}), so there is no
+Borel--Moore pushforward $\sigma_{4*}$ and no sense in which the generator of
+$\HBM{4}(Y_1)$ ``pushes forward'' to $X\times\Aff{1}$. Statement (iv) is about
+the class of the locus $\sigma_4^{-1}(F_{-1})$ in its \emph{own} ambient
+space, pushed forward along a closed immersion --- which is proper, so the map
+exists. Nothing is transported along $\sigma_4$ in homology.
+\end{remark}
+
+\begin{remark}[The vanishing, minimally cited]\label{rem:vanishing}
+$\HBM{4}(X\times\Aff{1};\Z)=0$ needs nothing motivic. $X\times\Aff{1}$ is a
+smooth complex fourfold, so Poincar\'e duality for Borel--Moore homology
+\cite[\S2.6]{ChrissGinzburg1997} gives
+$\HBM{4}(X\times\Aff{1})\cong H^{4}(X\times\Aff{1};\Z)$; and $X$ is
+topologically contractible, hence so is $X\times\Aff{1}$, so that cohomology
+group vanishes. That is the whole argument, and it is elementary.
+
+The contractibility of $X$ is classical, and is the only input here. It is
+recorded as well known in~\cite[\S1]{DMJP2009}, who observe that $X$ is
+consequently diffeomorphic to $\Aff{3}$, citing Dimca~\cite{Dimca1990}. For
+context rather than as an input: $X$ is $\Aff{1}$-contractible by
+Dubouloz--Fasel~\cite{DF2015}, extending Hoyois--Krishna--{\O}stv{\ae}r
+\cite{HKO2014}, whose theorem is stated for \emph{finite suspensions} of
+Koras--Russell threefolds. Neither motivic statement is used anywhere in this
+paper.
+\end{remark}
+
+\begin{remark}[The functorial form, with no properness]\label{rem:functorial}
+There is a dual statement that does travel along $\sigma_4$, because
+cohomological pullback is functorial for \emph{every} morphism. Let
+$\mathrm{PD}[F_{-1}]\in H^{4}(Y_1;\Z)$ be the Poincar\'e dual of
+$[F_{-1}]\in\HBM{4}(Y_1)$, available because $Y_1$ is a smooth oriented
+$8$-manifold~\cite[\S2.6]{ChrissGinzburg1997}; the cycle class itself and the
+localisation sequence are as in~\cite[\S19.1]{Fulton1998}. Then
+\[
+\sigma_4^{*}\,\mathrm{PD}[F_{-1}]\ =\ 0\quad\text{in } H^{4}(X\times\Aff{1};\Z),
+\]
+simply because $H^{4}(X\times\Aff{1};\Z)=0$ by Remark~\ref{rem:vanishing}. No
+properness hypothesis enters, and the generator of $H^4(Y_1;\Z)$ --- the dual
+of the generator of $\HBM{4}(Y_1)$ --- is what dies under pullback. This is the
+precise sense in which the modification kills the class, and it is the form we
+recommend a reader carry away.
+\end{remark}
+
+The defect is completely explicit: $\sigma_4^{-1}(F_{-1})$ maps onto the
+\emph{punctured line} $\{Z=0,\;H\ne0\}$ inside $F_{-1}$ with $\Aff{1}$ fibres;
+every point of $F_{-1}$ with $Z\ne0$ has \emph{empty} preimage; and the
+puncture \emph{is} the defect point of Theorem~\ref{thm:mechanism}. The origin
+fibre's $\HBM{3}$ jumps from $0$ to $\Z$ --- the loop in $\Gm$ that the defect
+creates.
+
+Set against \S\ref{sec:ledger}: Theorem~\ref{thm:mechanism} gave the Euler
+bookkeeping, that the whole difference is $\chic(D_4)-\chic(E_4)=1$ and is
+caused by one missing point. Theorem~\ref{thm:dies} upgrades that to integral
+homology and names the cycle carrying it. The missing point is now the
+puncture of an explicit cycle rather than a numerical shadow.
+
+\subsection{The statement, and the gap inside it}\label{sec:gap}
+
+The result of this section, stated once and completely, with its limitation
+inside it rather than after it:
+
+\begin{quote}
+$\HBM{4}(Y_1;\Z)\cong\Z$ is generated by the fundamental class of either
+component of the doubled fibre over the origin of $\Aff{2}_{t,q}$, with
+$[F_0]=-[F_{-1}]$. The generator is \emph{supported on the modification
+divisor} --- it has the representative $F_{-1}$ contained in $D_4$ --- and
+restricts to zero on the common open set. The inverse image of that
+representative is $\sigma_4^{-1}(F_{-1})\cong\Gm\times\Aff{1}$, the same plane
+with the fibre over the defect point $(-1,0,0,0,0)$ deleted, and the
+fundamental class of that locus, pushed forward along its closed immersion
+into $X\times\Aff{1}$, is zero, since $\HBM{4}(X\times\Aff{1})=0$ by duality
+and topological contractibility. Dually, and with no properness hypothesis,
+$\sigma_4^{*}\mathrm{PD}[F_{-1}]=0$ in $H^4(X\times\Aff{1};\Z)$. The
+exceptional defect thus accounts exactly for the Euler and
+Grothendieck-class change, and locates its cycle-level content at one named
+point. Two things are \emph{not} asserted: no class is pushed forward along
+$\sigma_4$, which is not proper; and deriving the vanishing from the
+modification geometry alone, rather than from the contractibility of
+$X\times\Aff{1}$, would require the Borel--Moore homology of the modified
+punctured family, which we do not compute.
+\end{quote}
+
+The reason for that last clause is worth stating precisely, because it is a
+real limitation and not a formality. The modification changes the fibre of
+$\pi$ over \emph{every} point of $\Aff{2}_{t,q}$, not only over the origin:
+over $t\ne0$ the plane loses its $p=-1$ line and gains two lines exchanged by
+the double cover $Z_s^2=-t^3$; over $t=0$ with $q\ne0$ it simply loses that
+line. All three facts are certified. Hence the two localisation sequences do
+not differ only at the defect, and step (iv) leans on the cited
+contractibility. To make the implication run \emph{from} the modification
+geometry \emph{to} the vanishing one needs $\HBM{\ast}$ of the modified
+punctured family $(\pi\circ\sigma_4)^{-1}(\Aff{2}\setminus\{0\})$ computed
+independently: a monodromy computation over $\Aff{2}\setminus\{0\}$ with the
+double cover as its only non-elementary ingredient. It is well posed and
+elementary in kind; we have not carried it out.
+
+\section{What this does and does not say}\label{sec:scope}
+
+It says that the published action on the Koras--Russell cylinder has a
+completely mapped quotient geometry; that the cylinder is an explicit
+canonical affine modification of $\Aff{4}$ whose centre cannot be rectified to
+a smooth one; that the modification factors in two orders, through a singular
+threefold cylinder and through a smooth fourfold; that the smooth fourfold is a
+known model of the motivic $4$-sphere and that its sphere is created by one
+step of the square and destroyed by the other; that at Euler-characteristic
+level the destruction reduces to a single missing point; and that at integral
+Borel--Moore level that point is the puncture of an explicit cycle
+representing the generator, whose Poincar\'e dual pulls back to zero.
+
+It does not say anything about whether $X\times\Aff{1}\cong\Aff{4}$ or
+$X\times\Aff{2}\cong\Aff{5}$. Both remain exactly as open as they were. What
+is closed is one route: the flow-compatible route through this action, at
+$k=1$ and at $k=2$, by Theorems~\ref{thm:nonprincipal},
+\ref{thm:nonprincipal2} and~\ref{thm:stable}, which carry no degree bound. The
+further elementary moves we looked for were sought \emph{within declared,
+bounded pools} (Remarks~\ref{rem:sweeps1} and~\ref{rem:sweeps2}); those
+searches found nothing, and that is a statement about the pools searched and
+not about the existence of such a move. The dissection results are properties
+of the action and do not separate $X\times\Aff{1}$ from $\Aff{4}$.
+
+Positioned once more, and in the terms of \S\ref{sec:positioning}: this is a
+concrete singular-defect instance of the established cofiber mechanism for
+affine modifications.
+
+\appendix
+
+\section{Methods}\label{app:methods}
+
+\subsection{The harness}
+
+This paper was written with substantial assistance from AI systems, in the
+role and under the disciplines described in this appendix. The author is
+solely responsible for the mathematical content and for every claim made. For
+the archival record, the systems used were: \textbf{Claude Fable~5}
+(\texttt{claude-fable-5}, Anthropic) as mission control; \textbf{Claude
+Opus~5} (\texttt{claude-opus-5}, Anthropic) as the executor of each bounded
+visit and as the author of the manuscript draft; and \textbf{GPT-5.6 Sol}
+(OpenAI) as an adversarial reviewer, in an advisory capacity only. No AI
+system is an author of this paper.
+
+The work was produced by an AI research harness operating under a written
+protocol, and the protocol is part of the result's warrant. A Claude Fable~5
+session acted as mission control: it set the scope of each visit,
+ruled on findings, and never executed. Separate Claude Opus~5 sessions
+executed bounded visits against a written plan, with the human author relaying
+between them. Five such visits produced the content of this paper, one per
+section-group of \S\S\ref{sec:action}--\ref{sec:generator}.
+
+\subsection{Certification discipline}
+
+Every algebraic identity in the paper is verified by machine, in exact
+arithmetic over $\Q$, by a runner that emits a ledger of individually named
+checks. The disciplines the work was held to, all of them adopted after they
+had cost something:
+
+\begin{itemize}
+\item \textbf{Twin implementations.} Load-bearing predicates are computed by
+two independent implementations which must agree; the agreement is itself a
+recorded check.
+\item \textbf{Positive controls.} Every search that can return ``nothing
+found'' also runs on an object where something \emph{is} to be found. An empty
+verdict with no passing control is not recorded as a finding.
+\item \textbf{Boundary counter-checks.} For each certified identity, a nearby
+false variant is exhibited and shown to fail, so that a check which would pass
+vacuously is detected.
+\item \textbf{Declared caps.} Bounded searches declare their pool and their
+degree bounds \emph{before} running, and their outcomes are recorded as
+measurements of what was searched, never as negative results. Every such
+statement in this paper is marked.
+\item \textbf{Frozen, replay-verified ledgers.} Ledgers are written read-only
+and re-generated in a fresh process in an isolated directory before the
+corresponding commit; a ledger that does not replay byte-identically is a
+defect. No wall-clock value may appear in a ledger, for that reason.
+\item \textbf{Machine first.} Where a hand expectation and a machine check
+disagreed, the machine was believed and the hand claim was logged rather than
+quietly reworded. This happened in four of the five visits, and the
+corrections are recorded in the write-ups accompanying the repository; two of
+them are visible in this paper as Remark~\ref{rem:fourgen} and
+Proposition~\ref{prop:plinth}.
+\end{itemize}
+
+\subsection{Adversarial review}
+
+Four rounds of adversarial review were carried out by GPT-5.6 Sol (OpenAI) in
+an advisory capacity, each returned to the primary sources for verification
+before anything was adopted; the verification records, including the
+claims that were \emph{not} confirmed and were carried as verify-on-use, are
+in the repository. The reviews contributed the prior-art demarcation that
+Remark~\ref{rem:priorart} states, the terminology restrictions of
+Remark~\ref{rem:terminology}, the invariant battery used in
+Proposition~\ref{prop:corners}, and the question that
+\S\ref{sec:generator} answers. One substantive inference of the review's ---
+that the difference class $[F_{-1}]-[F_0]$ generates --- was overturned by the
+computation, and Theorem~\ref{thm:generator} records the corrected statement;
+see Remark~\ref{rem:robust}.
+
+In the second review round the reviewer also \emph{re-ran} part of the
+verification layer in its own sandbox --- both standing gates and eight of the
+certificate runners --- and obtained ledgers identical to the ones shipped
+here. That is a partial external replication of the computational claims,
+carried out independently of the author, and it is recorded as such.
+
+\subsection{Limitations of the method}
+
+The symbolic machinery is exact but it tops out at the class level, which is
+the content of Proposition~\ref{prop:epoly}: it sees Euler characteristics and
+Grothendieck classes, not cycles. Everything in \S\ref{sec:generator} above
+the certified algebraic identities is human-and-model mathematics on top of
+those identities, in numbered lemmas that state which certified inputs they
+consume. The gap in \S\ref{sec:gap} is stated inside the theorem for the same
+reason.
+
+\section{The verification layer}\label{app:verify}
+
+The accompanying repository contains the runners, their ledgers, and a single
+entry point \texttt{verify.sh} which creates a fresh environment, runs the
+whole suite, and reports pass counts against the expected totals. The layer
+is organised by visit:
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+prefix & content & section here\\\hline
+\texttt{rd\_*} & the action: content, kernel, plinth, slice, brackets &
+\S\ref{sec:action}\\
+\texttt{rg\_*} & the boundary: diagnostics, tower, $k=1$, $k=2$ &
+\S\S\ref{sec:action}--\ref{sec:modification}\\
+\texttt{rm\_*} & the modification: canonical data, compression, crossing &
+\S\S\ref{sec:modification}--\ref{sec:square}\\
+\texttt{rs\_*} & the ledger: invariant battery, arrows, $E$-polynomials &
+\S\S\ref{sec:Y1}--\ref{sec:ledger}\\
+\texttt{rf\_*} & the generator: groundwork, generator, death &
+\S\ref{sec:generator}\\
+\texttt{pub\_*} & the revision repairs: factoriality, smoothness of $\pi$ &
+\S\S\ref{sec:action},~\ref{sec:generator}\\
+\hline
+\end{tabular}
+\end{center}
+
+together with the twin checkers and their cross-validation
+(\texttt{checker.py}, \texttt{checker\_twin.py}, \texttt{cross\_check.py}) and
+the Danielewski isomorphism certificate (\texttt{danielewski.py}) used as a
+standing environment gate. Running \texttt{verify.sh} re-runs all $22$ runners
+in a scratch directory, replays each freshly produced ledger against the
+frozen certificate shipped with it, and checks the tallies; the expected
+totals are $883$ checks with $713$ \textsc{pass} and $0$ \textsc{fail}.
+\texttt{VERIFY.md} in the repository states what each check class means, how
+to read a ledger, and what a discrepancy indicates.
+
+\subsection*{Data and code availability}
+
+All code, ledgers, and the source of this paper are in the repository
+accompanying it. Corrections and prior-art pointers are welcome; if any
+statement here has appeared earlier elsewhere, we will cite it prominently.
+
+\subsection*{Acknowledgements}
+
+The starting datum of this paper --- the conjugacy, the derivation, and the
+elements $p$, $q$, $Z$ --- is due to Adrien Dubouloz, Lucy Moser-Jauslin and
+Pierre-Marie Poloni~\cite{DMJP2009}, and I thank them for a paper whose
+explicit computations made everything here possible. The identification in
+\S\ref{sec:Y1} rests entirely on the family of Aravind Asok, Adrien Dubouloz
+and Paul Arne {\O}stv{\ae}r~\cite{ADO2021}. The final theorem's ambient
+vanishing uses only the classical topological contractibility of $X$ together
+with duality; I record with thanks the $\Aff{1}$-contractibility results of
+Adrien Dubouloz and Jean Fasel~\cite{DF2015}, extending Marc Hoyois, Amalendu
+Krishna and Paul Arne {\O}stv{\ae}r~\cite{HKO2014}, which set the context for
+this circle of questions even though no statement of theirs is used here.
+I thank GPT-5.6 Sol (OpenAI) for four rounds of adversarial review that
+materially shaped the paper: the prior-art demarcation, the terminology
+discipline, the invariant battery, and the question that \S\ref{sec:generator}
+answers. The work was carried out with Claude Fable~5 and Claude Opus~5
+(Anthropic) as described in Appendix~\ref{app:methods}. Errors that remain are
+mine.
+
+\begin{thebibliography}{99}
+
+\bibitem{ADO2021}
+A.~Asok, A.~Dubouloz and P.~A.~{\O}stv{\ae}r, \emph{Geometric models for
+algebraic suspensions}, Int. Math. Res. Not. IMRN \textbf{2023}, no.~20,
+17788--17821; arXiv:2112.08241.
+
+\bibitem{BP2020}
+J.~Blanc and P.-M.~Poloni, \emph{Bivariables and V\'en\'ereau polynomials},
+Ann. Fac. Sci. Toulouse Math. (6) \textbf{31} (2022), no.~5, 1391--1418;
+arXiv:2004.10739.
+
+\bibitem{ChrissGinzburg1997}
+N.~Chriss and V.~Ginzburg, \emph{Representation Theory and Complex Geometry},
+Birkh\"auser, Boston, 1997; \S2.6 (Borel--Moore homology and Poincar\'e
+duality).
+
+\bibitem{Dimca1990}
+A.~Dimca, \emph{Hypersurfaces in $\C^n$ diffeomorphic to $\mathbb{R}^{4n-2}$},
+Max-Planck-Institut f\"ur Mathematik preprint, Bonn, 1990; cited in this
+connection by~\cite{DMJP2009}.
+
+\bibitem{DMJP2009}
+A.~Dubouloz, L.~Moser-Jauslin and P.-M.~Poloni, \emph{Inequivalent embeddings
+of the Koras--Russell cubic $3$-fold}, Michigan Math. J. \textbf{59} (2010),
+no.~3, 679--694; arXiv:0903.4278.
+
+\bibitem{Dubouloz2009}
+A.~Dubouloz, \emph{The cylinder over the Koras--Russell cubic threefold has a
+trivial Makar-Limanov invariant}, Transform. Groups \textbf{14} (2009), no.~3,
+531--539; arXiv:0807.4085.
+
+\bibitem{DF2015}
+A.~Dubouloz and J.~Fasel, \emph{Families of $\mathbb{A}^1$-contractible affine
+threefolds}, Algebr. Geom. \textbf{5} (2018), no.~1, 1--14; arXiv:1512.01933.
+
+\bibitem{DPO2018}
+A.~Dubouloz, S.~Pauli and P.~A.~{\O}stv{\ae}r,
+\emph{$\mathbb{A}^1$-contractibility of affine modifications}, Internat. J.
+Math. \textbf{30} (2019), no.~14, 1950069, 34 pp.; arXiv:1805.08959.
+
+\bibitem{Fulton1998}
+W.~Fulton, \emph{Intersection Theory}, 2nd ed., Ergeb. Math. Grenzgeb. (3)
+\textbf{2}, Springer, 1998; Ch.~19, \S19.1 (the cycle map and Borel--Moore
+homology).
+
+\bibitem{Gupta2022}
+N.~Gupta, \emph{The Zariski cancellation problem and related problems in
+affine algebraic geometry}, arXiv:2208.14736.
+
+\bibitem{HKO2014}
+M.~Hoyois, A.~Krishna and P.~A.~{\O}stv{\ae}r,
+\emph{$\mathbb{A}^1$-contractibility of Koras--Russell threefolds}, Algebr.
+Geom. \textbf{3} (2016), no.~4, 407--423; arXiv:1409.1293.
+
+\bibitem{KZ1998}
+S.~Kaliman and M.~Zaidenberg, \emph{Affine modifications and affine
+hypersurfaces with a very transitive automorphism group}, Transform. Groups
+\textbf{4} (1999), no.~1, 53--95; arXiv:math/9801076.
+
+\bibitem{KVZ2001}
+Sh.~Kaliman, St.~V\'en\'ereau and M.~Zaidenberg, \emph{Simple birational
+extensions of the polynomial ring $\C^{[3]}$}, arXiv:math/0104204.
+
+\bibitem{Lewis2013}
+D.~Lewis, \emph{Strongly residual coordinates over $A[x]$}, arXiv:1304.1765.
+
+\bibitem{MakarLimanov1996}
+L.~Makar-Limanov, \emph{On the hypersurface $x+x^2y+z^2+t^3=0$ in $\C^4$ or a
+$\C^3$-like threefold which is not $\C^3$}, Israel J. Math. \textbf{96}
+(1996), 419--429.
+
+\bibitem{Masuda2025}
+K.~Masuda, \emph{Faithfully flat quotient morphisms by $\Ga$-actions on
+factorial affine varieties}, to appear in J. Algebra; arXiv:2512.06687.
+
+\bibitem{Shakhmatov2026}
+K.~Shakhmatov, \emph{Cylinders and the zero locus of the plinth ideal},
+arXiv:2605.00138.
+
+\end{thebibliography}
+
+\end{document}

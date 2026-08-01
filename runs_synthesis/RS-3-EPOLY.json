@@ -1,0 +1,354 @@
+{
+  "block": "RS-3",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "note": "RS-3 is exact bookkeeping only. Every stratum is a product of affine spaces, tori and points, so E is the class under L -> uv; no mixed-Hodge input is used or improvised.",
+    "searches_run": 0
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0518
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1328
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1274
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0109
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0089
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0033
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.0188
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.01
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.079
+    },
+    {
+      "check": "RM carry-over: W = t^3 H - p - p^2 - qZ defines Y_1, irreducible",
+      "outcome": "PASS",
+      "wall_time_s": 0.0052
+    },
+    {
+      "check": "RM carry-over: Y_1 is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.0039
+    },
+    {
+      "check": "RM carry-over: X_1 x A^1 is SINGULAR along a line",
+      "outcome": "PASS",
+      "wall_time_s": 0.0021
+    },
+    {
+      "check": "RM carry-over: the transition identity holds in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0083
+    },
+    {
+      "check": "RM carry-over: R4  2(p+1)w = HZ + q  in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "RM carry-over: the compressed divisor F = t^3(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "DECLARED CAPS",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "C_2 stratum {q != 0}: Z and X determined, and R1 is then AUTOMATIC",
+      "outcome": "PASS",
+      "wall_time_s": 0.0038
+    },
+    {
+      "check": "C_2 stratum {q = 0}: p(1+p) = 0, two branches",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "C_2 branch p = 0: X = -Z^2, Z free -- an A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "C_2 branch p = -1: N2 forces Z = 0, X free -- an A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "[C_2] = L^2 + L",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "H15 cross-check: dim C_2 = 2, matching a class of top term L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "C_4 = {p=-1, Z^2+t^3=0, q=-HZ} inside Y_1: the Y_1 equation is then automatic",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "[C_4] = [cusp] * L = L^2 (the cusp times A^1_H)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[C_4] equals the packet class exactly",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the two components of the compressed centre meet in a LINE",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "that line is {t=0, p=-1, Z=0} with q free",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "[compressed centre] = (L^2+L) + L^2 - L = 2L^2 (inclusion-exclusion)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the crossing V(t,p+1) is A^2_{q,Z}, class L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the crossing restriction (qZ^2) has reduced locus V(qZ), class 2L-1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "every E-polynomial is a polynomial in the product uv",
+      "outcome": "PASS",
+      "wall_time_s": 0.0061
+    },
+    {
+      "check": "H15 additivity: [Y_1] = [E_3] + [Y_1 minus E_3] with the open part (L-1)L^3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "H15 additivity: [X x A^1] = [E_4] + [(X x A^1) minus E_4]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "H15 additivity: the compressed centre's two components and their line intersection",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THE E-POLYNOMIAL LEDGER ADDS NOTHING",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "what the ledger DOES sharpen",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "C_2 stratum {q != 0}: Z and X determined, and R1 is then AUTOMATIC": "Z = -(p+p^2)/q, X = pZ/q; then X(p+1)+Z^2 vanishes identically",
+    "C_4 = {p=-1, Z^2+t^3=0, q=-HZ} inside Y_1: the Y_1 equation is then automatic": "t^3 H - qZ becomes H(t^3 + Z^2)",
+    "DECLARED CAPS": "{\"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"note\": \"RS-3 is exact bookkeeping only. Every stratum is a product of affine spaces, tori and points, so E is the class under L -> uv; no mixed-Hodge input is used or improvised.\", \"searches_run\": 0}",
+    "H15 additivity: [X x A^1] = [E_4] + [(X x A^1) minus E_4]": "the open part is X x A^1 minus E_4, isomorphic to Y_1 minus D_4, class L^4+L^2-(L^3+L^2-L) = L^4-L^3+L",
+    "H15 cross-check: dim C_2 = 2, matching a class of top term L^2": "dim = 2",
+    "THE E-POLYNOMIAL LEDGER ADDS NOTHING": "every stratum in the whole square is a product of affine spaces, tori and points, so E(V) = [V] with L -> uv and the E-polynomial ledger is the class ledger relabelled. The exact symbolic machinery tops out at the class level. This is the answer to RS-3, not a shortfall: anything finer requires genuine mixed-Hodge or homotopy input, which RS-4 routes.",
+    "[C_4] equals the packet class exactly": "[C_4] = L^2 = the packet removed by arrow 4. Recorded as an observation, NOT as a structural law: arrow 1 has centre of class L^2 too and removes nothing. Flagged for the MASTER-QUERY rather than interpreted here.",
+    "[compressed centre] = (L^2+L) + L^2 - L = 2L^2 (inclusion-exclusion)": "2*L**2",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "every E-polynomial is a polynomial in the product uv": "so all classes are of Hodge-Tate type; no (p,q) off the diagonal appears",
+    "the crossing restriction (qZ^2) has reduced locus V(qZ), class 2L-1": "two lines meeting in a point",
+    "what the ledger DOES sharpen": "the packet is +L^2 -> (uv)^2: a TATE class of weight 4 and Hodge type (2,2). That is exactly the reduced motive of P^1 smash P^1, which is what ADO's A^1-homotopy type predicts -- so the class ledger and the homotopy statement agree at the only level where both are visible."
+  },
+  "plan": "RS-OPS.md (A28)",
+  "sections": {
+    "E_ledger": {
+      "A^4": {
+        "E_polynomial": "u**4*v**4",
+        "chi_c": 1,
+        "class": "L**4"
+      },
+      "C_1 = V(p+1, Z^2+t^3)": {
+        "E_polynomial": "u**2*v**2",
+        "chi_c": 1,
+        "class": "L**2"
+      },
+      "C_2 = V(t,N1,N2) in X_1xA^1": {
+        "E_polynomial": "u**2*v**2 + u*v",
+        "chi_c": 2,
+        "class": "L**2 + L"
+      },
+      "C_3 = V(t, N1) = Q": {
+        "E_polynomial": "u**2*v**2 + u*v",
+        "chi_c": 2,
+        "class": "L**2 + L"
+      },
+      "C_4 = V(p+1,Z^2+t^3,HZ+q)": {
+        "E_polynomial": "u**2*v**2",
+        "chi_c": 1,
+        "class": "L**2"
+      },
+      "D_1 = {p+1=0} in A^4": {
+        "E_polynomial": "u**3*v**3",
+        "chi_c": 1,
+        "class": "L**3"
+      },
+      "D_2 = {t=0} in X_1xA^1": {
+        "E_polynomial": "u**3*v**3",
+        "chi_c": 1,
+        "class": "L**3"
+      },
+      "D_3 = {t=0} in A^4": {
+        "E_polynomial": "u**3*v**3",
+        "chi_c": 1,
+        "class": "L**3"
+      },
+      "D_4 = {p+1=0} in Y_1": {
+        "E_polynomial": "u**3*v**3 + u**2*v**2 - u*v",
+        "chi_c": 1,
+        "class": "L**3 + L**2 - L"
+      },
+      "E_1": {
+        "E_polynomial": "u**3*v**3",
+        "chi_c": 1,
+        "class": "L**3"
+      },
+      "E_2": {
+        "E_polynomial": "u**3*v**3",
+        "chi_c": 1,
+        "class": "L**3"
+      },
+      "E_3 = Y_0 = Q x A^1_H": {
+        "E_polynomial": "u**3*v**3 + u**2*v**2",
+        "chi_c": 2,
+        "class": "L**3 + L**2"
+      },
+      "E_4": {
+        "E_polynomial": "u**3*v**3 - u*v",
+        "chi_c": 0,
+        "class": "L**3 - L"
+      },
+      "X x A^1": {
+        "E_polynomial": "u**4*v**4",
+        "chi_c": 1,
+        "class": "L**4"
+      },
+      "X_1 x A^1": {
+        "E_polynomial": "u**4*v**4",
+        "chi_c": 1,
+        "class": "L**4"
+      },
+      "Y_1": {
+        "E_polynomial": "u**4*v**4 + u**2*v**2",
+        "chi_c": 2,
+        "class": "L**4 + L**2"
+      },
+      "compressed centre V(I)": {
+        "E_polynomial": "2*u**2*v**2",
+        "chi_c": 2,
+        "class": "2*L**2"
+      },
+      "crossing V(t,p+1)": {
+        "E_polynomial": "u**2*v**2",
+        "chi_c": 1,
+        "class": "L**2"
+      },
+      "crossing restriction V(qZ)": {
+        "E_polynomial": "2*u*v - 1",
+        "chi_c": 1,
+        "class": "2*L - 1"
+      },
+      "the cusp curve": {
+        "E_polynomial": "u*v",
+        "chi_c": 1,
+        "class": "L"
+      },
+      "the packet (p=-1 line x A^1_H)": {
+        "E_polynomial": "u**2*v**2",
+        "chi_c": 1,
+        "class": "L**2"
+      }
+    },
+    "reading": {
+      "beyond": "mixed-Hodge or homotopy input required; routed at RS-4",
+      "collapse": "E-polynomials = classes under L -> uv; no extra separation available",
+      "sharpening": "the packet is Tate of weight 4, type (2,2) = the reduced motive of P^1 smash P^1"
+    }
+  },
+  "source": "ADO arXiv:2112.08241; DMJP arXiv:0903.4278 s7; the ledger is ours",
+  "tally": {
+    "MEASURED": 4,
+    "PASS": 37
+  },
+  "total_checks": 41
+}

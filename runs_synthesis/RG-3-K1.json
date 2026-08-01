@@ -1,0 +1,297 @@
+{
+  "block": "RG-3",
+  "date": "2026-07-31",
+  "declared_caps": {
+    "coordinate_search_filter": "Jacobian: det[grad P; grad a1..a4] must be nowhere zero on X x A^1",
+    "coordinate_search_pool": [
+      "p",
+      "q",
+      "t",
+      "Z",
+      "x",
+      "y",
+      "z",
+      "w",
+      "H"
+    ],
+    "coordinate_search_tuples": "all C(9,4) = 126 four-subsets",
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "rescaling_family_alpha": "alpha = t^m (p+1)^n, -3 <= m,n <= 3",
+    "shear_family": "Z -> Z + f with f a GENERIC element of K (symbolic): exact, no cap"
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0527
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1344
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1556
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0108
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "DECLARED CAPS (before any search ran)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "t^3(p+1) is in the plinth: it is partial_red(Z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0041
+    },
+    {
+      "check": "q(p+1) is in the plinth: it is -partial_red(y + w^2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0053
+    },
+    {
+      "check": "the plinth is inside (p, q, t): p, q, t die on the fixed line",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "gcd(t^3, q) = 1 in C[p,q,t]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "(p+1) is irreducible in C[p,q,t]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "(p+1) is NOT in (p,q,t) -- it is a unit at the origin",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "H15 boundary: p IS in (p,q,t) -- the membership test passes",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "THEOREM RG-3.1",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "re-verified: fibre over (-1,3,0) is EMPTY",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "re-verified: fibre over (0,0,0) is a SURFACE",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "re-verified: the generic fibre is an A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THEOREM RG-3.2",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "under Z -> Z + f, x stays quadratic in Z' with leading coefficient -1/(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "-1/(p+1) is NOT in C[p,q,t], so x is never reached",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "shear family: BLOCKED at {p+1 = 0}, order 1",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "some rescalings DO fix the leading coefficient",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Z is NOT divisible by (p+1) in A[w], so Z/(p+1) is not there",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "indeed R1 restricted to {p+1=0} is exactly the cusp Z^2+t^3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "H15 boundary: the cusp Z^2+t^3 is irreducible and singular at the origin",
+      "outcome": "PASS",
+      "wall_time_s": 0.0013
+    },
+    {
+      "check": "rescaling family: BLOCKED at {p+1 = 0}, and the reason is the CUSP",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "X x A^1 is SMOOTH, so the Jacobian criterion is valid here",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "POSITIVE CONTROL: the filter PASSES on a genuine C^[4]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Jacobian filter over all 126 four-subsets",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the filter discriminates: both rejection modes occur",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "cap-bounded coordinate search: NO candidate",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "classification: {t = 0}",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "classification: {p+1 = 0}",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "classification: what_is_NOT_shown",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "DECLARED CAPS (before any search ran)": "{\"coordinate_search_filter\": \"Jacobian: det[grad P; grad a1..a4] must be nowhere zero on X x A^1\", \"coordinate_search_pool\": [\"p\", \"q\", \"t\", \"Z\", \"x\", \"y\", \"z\", \"w\", \"H\"], \"coordinate_search_tuples\": \"all C(9,4) = 126 four-subsets\", \"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"rescaling_family_alpha\": \"alpha = t^m (p+1)^n, -3 <= m,n <= 3\", \"shear_family\": \"Z -> Z + f with f a GENERIC element of K (symbolic): exact, no cap\"}",
+    "Jacobian filter over all 126 four-subsets": "survivors: none",
+    "POSITIVE CONTROL: the filter PASSES on a genuine C^[4]": "graph hypersurface y = x^2+ztw with coordinates (x,z,t,w): det = -1",
+    "THEOREM RG-3.1": "Suppose pl(partial_red) = (g). Both t^3(p+1) and q(p+1) lie in it, so g divides their gcd, which is (p+1) because gcd(t^3,q) = 1. As (p+1) is irreducible, g is a unit or an associate of (p+1). A unit gives 1 in pl, contradicting pl inside (p,q,t); an associate of (p+1) gives pl = (p+1), also contradicting pl inside (p,q,t) since (p+1) is not there. So pl is NOT PRINCIPAL. But if A[w] = R[s] with R = ker partial_red, then partial_red = partial_red(s) d/ds and pl = (partial_red(s)) IS principal. Hence there is NO s with A[w] = C[p,q,t][s]. Exact; no degree cap.",
+    "THEOREM RG-3.2": "If A[w] = C[p,q,t][s] then Spec A[w] = A^4 with pi the coordinate projection to A^3, which is surjective with every fibre an A^1. RG-1(b), re-verified above, exhibits an EMPTY fibre and a two-dimensional one. Contradiction. This is independent of RG-3.1 and reaches the same conclusion (A16-5 discipline: two routes, one result).",
+    "X x A^1 is SMOOTH, so the Jacobian criterion is valid here": "V(P, grad P) is empty",
+    "Z is NOT divisible by (p+1) in A[w], so Z/(p+1) is not there": "dim{p+1=0} = 3 but dim{p+1=0, Z=0} = 2: Z does not vanish identically on {p+1=0}, because R1 there is the CUSP Z^2 + t^3 = 0",
+    "cap-bounded coordinate search: NO candidate": "no four-subset of the declared pool passes the Jacobian necessary condition, so none can be a coordinate system. A cap-bounded non-finding, NOT a negative claim: the pool is nine named elements, not a degree-bounded sweep of A[w].",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "classification: what_is_NOT_shown": "Nothing here bears on whether X x A^1 = A^4. What is closed is the route through THIS flow's quotient structure -- and, at the declared caps, the elementary moves. Honest fence, A23.",
+    "classification: {p+1 = 0}": "BLOCKS THE ELEMENTARY MOVES, and the obstruction is the CUSP. Shears cannot help because the leading Z-coefficient of x is the invariant -1/(p+1); rescalings that would fix it need Z/(p+1) in A[w], but the fibre over {p+1 = 0} is the cuspidal curve Z^2 + t^3 = 0. This is the same cusp that carries X_1's singularity (RG-2's tower) and that breaks Masuda's factoriality.",
+    "classification: {t = 0}": "BLOCKS THE FLOW-COMPATIBLE ROUTE, EXACTLY, at order 3. Two independent proofs: (RG-3.1) the plinth contains t^3(p+1) and q(p+1) and is therefore non-principal, which no presentation C[p,q,t][s] permits; (RG-3.2) pi has an empty fibre and a jump fibre, both over t = 0, which no coordinate projection permits.",
+    "rescaling family: BLOCKED at {p+1 = 0}, and the reason is the CUSP": "a rescaling with a (p+1)-pole would fix the leading coefficient, but it needs alpha*Z inside A[w], and over {p+1 = 0} the modification's fibre is the cuspidal curve Z^2 + t^3 = 0 rather than a point, so Z does not vanish there. The cusp blocks the (p+1) side exactly as it blocks Masuda's factoriality (RG-1c).",
+    "shear family: BLOCKED at {p+1 = 0}, order 1": "for EVERY f, x is not in C[p,q,t][Z+f], because the leading Z-coefficient of x is the shear-invariant -1/(p+1). Exact over the whole family.",
+    "some rescalings DO fix the leading coefficient": "12 of 49 in the declared family",
+    "the filter discriminates: both rejection modes occur": "9 identically zero, 117 vanishing somewhere",
+    "the plinth is inside (p, q, t): p, q, t die on the fixed line": "partial_red(A[w]) is inside (x,z,t,w)A[w]; C[p,q,t] maps to C[y] killing p, q and t",
+    "under Z -> Z + f, x stays quadratic in Z' with leading coefficient -1/(p+1)": "independent of f: the shear cannot touch it"
+  },
+  "plan": "RG-OPS.md (A24)",
+  "sections": {
+    "classification": {
+      "what_is_NOT_shown": "Nothing here bears on whether X x A^1 = A^4. What is closed is the route through THIS flow's quotient structure -- and, at the declared caps, the elementary moves. Honest fence, A23.",
+      "{p+1 = 0}": "BLOCKS THE ELEMENTARY MOVES, and the obstruction is the CUSP. Shears cannot help because the leading Z-coefficient of x is the invariant -1/(p+1); rescalings that would fix it need Z/(p+1) in A[w], but the fibre over {p+1 = 0} is the cuspidal curve Z^2 + t^3 = 0. This is the same cusp that carries X_1's singularity (RG-2's tower) and that breaks Masuda's factoriality.",
+      "{t = 0}": "BLOCKS THE FLOW-COMPATIBLE ROUTE, EXACTLY, at order 3. Two independent proofs: (RG-3.1) the plinth contains t^3(p+1) and q(p+1) and is therefore non-principal, which no presentation C[p,q,t][s] permits; (RG-3.2) pi has an empty fibre and a jump fibre, both over t = 0, which no coordinate projection permits."
+    },
+    "coordinate_search": {
+      "criterion": "det[grad P; grad a1..a4] must be nowhere zero on X x A^1 -- valid because X x A^1 is smooth; positive control passed on a graph hypersurface",
+      "pool": [
+        "H",
+        "Z",
+        "p",
+        "q",
+        "t",
+        "w",
+        "x",
+        "y",
+        "z"
+      ],
+      "status": "cap-bounded non-finding (MEASURED), not a negative",
+      "survivors": [],
+      "tuples_tested": 126
+    },
+    "rg31": {
+      "blocking_component": "{t = 0}: the non-principality is exactly the failure of t^3 and q to share a factor, and the t^3 is the {t=0} datum. The (p+1) is a harmless common factor.",
+      "essential_input": "RG-1(a)'s refutation -- without the second generator q(p+1) the argument does not run.",
+      "route": "pl(partial_red) contains (p+1)(t^3,q) and sits inside (p,q,t); (t^3,q) is not principal, so pl is not principal; a presentation ker[s] forces a principal plinth.",
+      "statement": "A[w] is not C[p,q,t][s] for any s"
+    },
+    "rg32": {
+      "blocking_component": "{t = 0}: both witnesses lie over t = 0.",
+      "statement": "same conclusion as RG-3.1, by an independent route",
+      "witnesses": {
+        "empty_fibre_over": "(-1,3,0)",
+        "generic": "A^1",
+        "jump_fibre_over": "(0,0,0)"
+      }
+    },
+    "shear_and_rescaling": {
+      "rescaling": "BLOCKED at {p+1=0}; the fix needs Z/(p+1) in A[w], and the fibre over {p+1=0} is the cusp Z^2+t^3 = 0.",
+      "rescalings_fixing_the_leading_coefficient": [
+        "alpha=t^-3(p+1)^-3",
+        "alpha=t^-3(p+1)^-2",
+        "alpha=t^-3(p+1)^-1",
+        "alpha=t^-2(p+1)^-3",
+        "alpha=t^-2(p+1)^-2",
+        "alpha=t^-2(p+1)^-1",
+        "alpha=t^-1(p+1)^-3",
+        "alpha=t^-1(p+1)^-2",
+        "alpha=t^-1(p+1)^-1",
+        "alpha=t^0(p+1)^-3",
+        "alpha=t^0(p+1)^-2",
+        "alpha=t^0(p+1)^-1"
+      ],
+      "shear": "BLOCKED at {p+1=0}, order 1; leading coefficient -1/(p+1) is shear-invariant. Exact over the whole family."
+    }
+  },
+  "source": "the derivation is DMJP arXiv:0903.4278 Prop 7.2; the theorems and the classification are ours",
+  "tally": {
+    "MEASURED": 8,
+    "PASS": 27,
+    "THEOREM": 2
+  },
+  "total_checks": 37
+}

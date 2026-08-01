@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+message: "If you use these certificates or the results of this paper, please cite it."
+title: "The Koras-Russell cylinder as an affine modification of A^4: a commuting square through a motivic 4-sphere and a one-point Borel-Moore defect"
+abstract: >-
+  A global dissection of the Dubouloz-Moser-Jauslin-Poloni locally nilpotent
+  derivation on the Koras-Russell cylinder, presenting the cylinder as a
+  canonical affine modification of A^4 with a centre that cannot be rectified
+  to a smooth one; a commuting square whose two intermediate models are the
+  singular X_1 x A^1 and the smooth Y_1 = Q_{(3,1),z^2-1/4} of
+  Asok-Dubouloz-Ostvaer; a four-corner motivic ledger in which the smooth
+  route creates and then removes an L^2 packet; and, at integral Borel-Moore
+  level, the identification of the generator of H^BM_4(Y_1;Z) with the
+  fundamental class of either component of the doubled fibre, together with
+  the explicit cycle that the modification destroys. Nothing is claimed about
+  whether X x A^1 is isomorphic to A^4. All computational claims are
+  machine-certified and reproducible from this repository.
+authors:
+  - family-names: Naughton
+    given-names: Brian
+date-released: 2026-08-02
+version: "1.0.0"
+license: MIT
+keywords:
+  - Koras-Russell cubic threefold
+  - affine modification
+  - locally nilpotent derivation
+  - Zariski cancellation problem
+  - motivic homotopy theory
+  - Borel-Moore homology
+  - Grothendieck ring of varieties
+  - certified computation
+references:
+  - type: article
+    title: "Inequivalent embeddings of the Koras-Russell cubic 3-fold"
+    authors:
+      - family-names: Dubouloz
+        given-names: Adrien
+      - family-names: Moser-Jauslin
+        given-names: Lucy
+      - family-names: Poloni
+        given-names: Pierre-Marie
+    year: 2010
+    journal: "Michigan Mathematical Journal"
+    volume: 59
+    issue: 3
+    start: 679
+    end: 694
+    url: "https://arxiv.org/abs/0903.4278"
+  - type: article
+    title: "Geometric models for algebraic suspensions"
+    authors:
+      - family-names: Asok
+        given-names: Aravind
+      - family-names: Dubouloz
+        given-names: Adrien
+      - family-names: Ostvaer
+        given-names: Paul Arne
+    year: 2023
+    journal: "International Mathematics Research Notices"
+    issue: 20
+    start: 17788
+    end: 17821
+    url: "https://arxiv.org/abs/2112.08241"
+  - type: article
+    title: "Families of A^1-contractible affine threefolds"
+    authors:
+      - family-names: Dubouloz
+        given-names: Adrien
+      - family-names: Fasel
+        given-names: Jean
+    year: 2018
+    journal: "Algebraic Geometry"
+    volume: 5
+    issue: 1
+    start: 1
+    end: 14
+    url: "https://arxiv.org/abs/1512.01933"

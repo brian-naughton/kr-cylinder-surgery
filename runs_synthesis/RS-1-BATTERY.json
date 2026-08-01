@@ -1,0 +1,498 @@
+{
+  "block": "RS-1",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "h15_rule": "every total class is computed by TWO independent stratifications and the results must agree",
+    "note": "RS-1 is structural and exact: stratifications with explicit two-way parametrisations, plus Groebner dimension calls in <= 5 variables. No coefficient search, so no degree cap on unknowns applies.",
+    "searches_run": 0,
+    "stratification_depth_max": 3
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0534
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1359
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1383
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0111
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0087
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0036
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.0189
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0102
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.079
+    },
+    {
+      "check": "RM carry-over: W = t^3 H - p - p^2 - qZ defines Y_1, irreducible",
+      "outcome": "PASS",
+      "wall_time_s": 0.0024
+    },
+    {
+      "check": "RM carry-over: Y_1 is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.0038
+    },
+    {
+      "check": "RM carry-over: X_1 x A^1 is SINGULAR along a line",
+      "outcome": "PASS",
+      "wall_time_s": 0.0021
+    },
+    {
+      "check": "RM carry-over: the transition identity holds in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0079
+    },
+    {
+      "check": "RM carry-over: R4  2(p+1)w = HZ + q  in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "RM carry-over: the compressed divisor F = t^3(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "DECLARED CAPS",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the cusp parametrisation lands on Z^2 + t^3 = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "it is bijective off the cusp point, with inverse s = -Z/t",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "so [cusp] = (L-1) + 1 = L  (punctured part + the cusp point)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 cross-check: the cusp is NOT smooth (so it is not just an A^1 in disguise)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "stratum A1  {t != 0}: H is determined, so it is G_m x A^3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "stratum A2  {t = 0}: W becomes -(qZ + p + p^2), H free",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "Q-stratum {q != 0}: Z determined, so G_m x A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "Q-stratum {q = 0}: p(1+p) = 0, exactly TWO lines A^1_Z",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "[Q] = (L-1)L + 2L = L^2 + L",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "stratification A gives [Y_1] = L^4 + L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "stratum B1  {q != 0}: Z is determined, so G_m x A^3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "stratum B2a {q = 0, t != 0}: H determined, G_m x A^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "stratum B2b {q = 0, t = 0}: p(1+p) = 0, two copies of A^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "H15 CROSS-CHECK: stratification B gives the SAME class",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "chi_c(Y_1) = 2, against chi_c(A^4) = 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "KILL 1 CERTIFIED",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "grad W = (-1-2p, -Z, 3t^2 H, -q, t^3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "Crit(W) is a LINE (dimension 1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "W is identically 1/4 on Crit(W)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "H15 boundary: the critical value 1/4 is NOT 0, which is why Y_1 = V(W) is smooth",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "KILL 2 CERTIFIED",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "under (x1,t1,x2,t2,z) = (t,H,q,-Z,p+1/2) the ADO equation IS W",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "the change of variables is a LINEAR isomorphism of A^5",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "P(z) = z^2 - 1/4 has DISTINCT roots and unit discriminant",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "KILL 3 CERTIFIED (identification, prior art)",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the three kills are INDEPENDENT",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "battery[A^4]: two stratifications agree -- [A^4] = L**4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "X_1-stratum {p+1 != 0}: X determined, G_m x A^2 (x A^1_q)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0069
+    },
+    {
+      "check": "X_1-stratum {p+1 = 0}: the cusp Z^2+t^3 = 0, X free",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "battery[X_1 x A^1]: two stratifications agree -- [X_1 x A^1] = L**4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "battery[Y_1]: two stratifications agree -- [Y_1] = L**4 + L**2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "KR-stratum {x != 0}: y determined, G_m x A^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "KR-stratum {x = 0}: the cusp z^2+t^3 = 0, y free",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "battery[X x A^1]: two stratifications agree -- [X x A^1] = L**4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "SOL'S LEDGER CONFIRMED: L^4, L^4, L^4+L^2, L^4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "chi_c: 1, 1, 2, 1 -- only Y_1 differs",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the battery, as standing discipline (A28)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Y_1's units and class group",
+      "outcome": "NOT-DETERMINED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "Crit(W) is a LINE (dimension 1)": "{p = -1/2, q = Z = t = 0}, H free",
+    "DECLARED CAPS": "{\"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"h15_rule\": \"every total class is computed by TWO independent stratifications and the results must agree\", \"note\": \"RS-1 is structural and exact: stratifications with explicit two-way parametrisations, plus Groebner dimension calls in <= 5 variables. No coefficient search, so no degree cap on unknowns applies.\", \"searches_run\": 0, \"stratification_depth_max\": 3}",
+    "H15 CROSS-CHECK: stratification B gives the SAME class": "L**4 + L**2",
+    "H15 cross-check: the cusp is NOT smooth (so it is not just an A^1 in disguise)": "singular exactly at the origin; the class still equals L",
+    "KILL 1 CERTIFIED": "[Y_1] = L^4 + L^2 by two independent stratifications, so chi_c(Y_1) = 2. chi_c is motivic and multiplicative with chi_c(A^r) = 1, so chi_c(Y_1 x A^r) = 2 != 1 = chi_c(A^{4+r}) for every r >= 0. Hence Y_1 x A^r is NOT isomorphic to A^{4+r} for any r -- the kill covers every stabilisation.",
+    "KILL 2 CERTIFIED": "a variable of a polynomial ring has nowhere-vanishing differential; W has a whole line of critical points, and adjoining further variables leaves that line (times an affine space) critical. So W is not a variable of C^[5], nor stably. Independent of KILL 1.",
+    "KILL 3 CERTIFIED (identification, prior art)": "Y_1 = Q_{(3,1), z^2-1/4} EXACTLY, in ADO's printed conventions (arXiv:2112.08241 Ex. 4.2.5). With n = 2 and deg P = 2 their result gives A^1-homotopy type (P^1 smash P^1)^{wedge (deg P - 1)} = P^1 smash P^1, complex realisation S^4 -- NOT contractible, so not A^4. The fourfold and its homotopy type are ADO's PRIOR ART; what is ours is its role in the square.",
+    "P(z) = z^2 - 1/4 has DISTINCT roots and unit discriminant": "ADO's smoothness hypothesis, verified",
+    "Q-stratum {q = 0}: p(1+p) = 0, exactly TWO lines A^1_Z": "the two roots p = 0 and p = -1",
+    "SOL'S LEDGER CONFIRMED: L^4, L^4, L^4+L^2, L^4": "no disagreement with the review",
+    "Y_1's units and class group": "not computed this visit; recorded rather than guessed. Neither is needed for the three kills.",
+    "battery[A^4]: two stratifications agree -- [A^4] = L**4": "cross-check L**4",
+    "battery[X x A^1]: two stratifications agree -- [X x A^1] = L**4": "cross-check L**4",
+    "battery[X_1 x A^1]: two stratifications agree -- [X_1 x A^1] = L**4": "cross-check L**4",
+    "battery[Y_1]: two stratifications agree -- [Y_1] = L**4 + L**2": "cross-check L**4 + L**2",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "stratification A gives [Y_1] = L^4 + L^2": "L**4 + L**2",
+    "the battery, as standing discipline (A28)": "battery(V) = stratified class (two independent stratifications) + chi_c + E-polynomial + dim Sing + units + class group. The first four are machine-certified here; units and class group are recorded with their status, NOT-DETERMINED where that is the honest answer.",
+    "the change of variables is a LINEAR isomorphism of A^5": "only a translation in p; t2 = -Z is a sign flip",
+    "the cusp parametrisation lands on Z^2 + t^3 = 0": "(Z,t) = (s^3, -s^2)",
+    "the three kills are INDEPENDENT": "KILL 1 is motivic (chi_c), KILL 2 is differential (critical locus), KILL 3 is homotopical (ADO). Any one suffices; KILL 1 alone also covers all stabilisations.",
+    "under (x1,t1,x2,t2,z) = (t,H,q,-Z,p+1/2) the ADO equation IS W": "x1^3 t1 + x2 t2 - P(z) = t^3H - qZ - p - p^2 = W"
+  },
+  "plan": "RS-OPS.md (A28)",
+  "sections": {
+    "battery": {
+      "A^4": {
+        "E_polynomial": "u**4*v**4",
+        "chi_c": 1,
+        "class": "L**4",
+        "class_group": "0 (trivially)",
+        "crosscheck": [
+          [
+            "{p!=0} G_m x A^3",
+            "L**3*(L - 1)"
+          ],
+          [
+            "{p=0} A^3",
+            "L**3"
+          ]
+        ],
+        "dim_Sing": -1,
+        "sing_note": "smooth",
+        "strata": [
+          [
+            "A^4",
+            "L**4"
+          ]
+        ],
+        "units": "C^* (trivially)"
+      },
+      "X x A^1": {
+        "E_polynomial": "u**4*v**4",
+        "chi_c": 1,
+        "class": "L**4",
+        "class_group": "0 -- UFD (our M5)",
+        "crosscheck": [
+          [
+            "[X] x A^1_w with [X] = L^3",
+            "L**4"
+          ]
+        ],
+        "dim_Sing": -1,
+        "sing_note": "smooth (X is smooth; RG-3 verified V(P, grad P) empty)",
+        "strata": [
+          [
+            "{x!=0} G_m x A^2 x A^1_w",
+            "L**3*(L - 1)"
+          ],
+          [
+            "{x=0}  cusp x A^1_y x A^1_w",
+            "L**3"
+          ]
+        ],
+        "units": "C^* (X contractible)"
+      },
+      "X_1 x A^1": {
+        "E_polynomial": "u**4*v**4",
+        "chi_c": 1,
+        "class": "L**4",
+        "class_group": "0 -- factorial (Sol review #2)",
+        "crosscheck": [
+          [
+            "[X_1] x A^1_q, X_1 by the same split",
+            "L**4"
+          ]
+        ],
+        "dim_Sing": 1,
+        "sing_note": "singular along a line (RM-1)",
+        "strata": [
+          [
+            "{p+1!=0} G_m x A^2 x A^1_q",
+            "L**3*(L - 1)"
+          ],
+          [
+            "{p+1=0}  cusp x A^1_X x A^1_q",
+            "L**3"
+          ]
+        ],
+        "units": "C^* (Sol review #2, cited)"
+      },
+      "Y_1": {
+        "E_polynomial": "u**4*v**4 + u**2*v**2",
+        "chi_c": 2,
+        "class": "L**4 + L**2",
+        "class_group": "NOT DETERMINED here",
+        "crosscheck": [
+          [
+            "q != 0        : G_m x A^3",
+            "L**3*(L - 1)"
+          ],
+          [
+            "q=0, t != 0   : G_m x A^2",
+            "L**2*(L - 1)"
+          ],
+          [
+            "q=0, t = 0    : 2 x A^2",
+            "2*L**2"
+          ]
+        ],
+        "dim_Sing": -1,
+        "sing_note": "smooth (RM-3)",
+        "strata": [
+          [
+            "t != 0 : G_m x A^3",
+            "L**3*(L - 1)"
+          ],
+          [
+            "t = 0  : Q x A^1_H",
+            "L*(L**2 + L)"
+          ]
+        ],
+        "units": "NOT DETERMINED here"
+      }
+    },
+    "kill_1": {
+      "Q_class": "L**2 + L",
+      "chi_c": 2,
+      "class": "L**4 + L**2",
+      "stratification_A": [
+        [
+          "t != 0 : G_m x A^3",
+          "L**3*(L - 1)"
+        ],
+        [
+          "t = 0  : Q x A^1_H",
+          "L*(L**2 + L)"
+        ]
+      ],
+      "stratification_B_crosscheck": [
+        [
+          "q != 0        : G_m x A^3",
+          "L**3*(L - 1)"
+        ],
+        [
+          "q=0, t != 0   : G_m x A^2",
+          "L**2*(L - 1)"
+        ],
+        [
+          "q=0, t = 0    : 2 x A^2",
+          "2*L**2"
+        ]
+      ]
+    },
+    "kill_2": {
+      "consequence": "W is not a variable, nor stably",
+      "crit_dim": 1,
+      "crit_locus": "{p=-1/2, q=Z=t=0}, H free",
+      "critical_value": "1/4"
+    },
+    "kill_3": {
+      "A1_homotopy_type": "P^1 smash P^1 (complex realisation S^4)",
+      "change_of_variables": "x1=t, t1=H, x2=q, t2=-Z, z=p+1/2",
+      "identification": "Y_1 = Q_{(3,1), z^2-1/4}, ADO 2112.08241 Ex. 4.2.5",
+      "open_in_the_literature": "the m-classification, ADO Question 4.2.6",
+      "prior_art": "the family, smoothness and homotopy type are ADO's"
+    }
+  },
+  "source": "ADO arXiv:2112.08241 Ex 4.2.5 for the family, smoothness and A^1-homotopy type (PRIOR ART); DMJP arXiv:0903.4278 s7 for p,q,Z; the role of Y_1 in the square is ours",
+  "tally": {
+    "MEASURED": 3,
+    "NOT-DETERMINED": 1,
+    "PASS": 52,
+    "THEOREM": 3
+  },
+  "total_checks": 59
+}

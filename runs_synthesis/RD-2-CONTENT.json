@@ -1,0 +1,175 @@
+{
+  "block": "RD-2",
+  "date": "2026-07-31",
+  "entries": [
+    {
+      "check": "tripwire: partial(x) = -2 t^6 (z + x w)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "Delta(t) = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Phi(t) = t and Psi(t) = t",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial(t) = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial(x) = t^6 * g  in A[w]  (certificate)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "partial(y) = t^3 * g  in A[w]  (certificate)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0351
+    },
+    {
+      "check": "partial(z) = t^3 * g  in A[w]  (certificate)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0019
+    },
+    {
+      "check": "partial(w) = t^3 * g  in A[w]  (certificate)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0013
+    },
+    {
+      "check": "partial(x)/t^6 is NOT in t*A[w] (H15 boundary)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "partial(y)/t^3 is NOT in t*A[w] (H15 boundary)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0018
+    },
+    {
+      "check": "partial(z)/t^3 is NOT in t*A[w] (H15 boundary)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0015
+    },
+    {
+      "check": "partial(w)/t^3 is NOT in t*A[w] (H15 boundary)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0012
+    },
+    {
+      "check": "t-content of partial",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial_red components are polynomial",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "partial_red preserves the ideal (P)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0156
+    },
+    {
+      "check": "partial_red equals partial / t^K on every generator",
+      "outcome": "PASS",
+      "wall_time_s": 0.0168
+    },
+    {
+      "check": "model consistency: D_red(iota y) = iota(partial_red y)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0204
+    },
+    {
+      "check": "partial_red is locally nilpotent on A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "V(x,z) in X is the codim-3 point set {x=z=t=0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "(xw+z) divides partial_red(x)  [it must -- boundary]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "(xw+z) does NOT divide all components: no further content",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial(A[w]) is contained in t^3 A[w] (so partial has no slice)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "(xw+z) divides partial_red(x)  [it must -- boundary]": "partial_red(x) = -2*t**3*(w*x + z)",
+    "(xw+z) does NOT divide all components: no further content": "divisibility {'x': True, 'y': False, 'z': False, 'w': False}",
+    "V(x,z) in X is the codim-3 point set {x=z=t=0}": "so gcd_A(x,z) = 1 and xw+z is irreducible",
+    "partial(A[w]) is contained in t^3 A[w] (so partial has no slice)": "the slice test in RD-5 must be run on partial_red",
+    "partial(w) = t^3 * g  in A[w]  (certificate)": "t-valuation 3",
+    "partial(x) = t^6 * g  in A[w]  (certificate)": "t-valuation 6",
+    "partial(y) = t^3 * g  in A[w]  (certificate)": "t-valuation 3",
+    "partial(z) = t^3 * g  in A[w]  (certificate)": "t-valuation 3",
+    "partial_red is locally nilpotent on A[w]": "depths {'x': 3, 'y': 5, 'z': 5, 't': 1, 'w': 3}",
+    "t-content of partial": "valuations {'x': 6, 'y': 3, 'z': 3, 'w': 3}; content = t^3"
+  },
+  "plan": "RD-OPS.md (A22)",
+  "sections": {
+    "further_content": {
+      "closed_list_argument": "any common divisor divides partial(x) = -2 t^6 (z+xw); t is prime in A[w]; xw+z is irreducible in A[w] (degree 1 in w, primitive since gcd_A(x,z)=1). Hence the content is exactly t^a (xw+z)^b.",
+      "verdict": "content is exactly t^3; partial_red is content-free",
+      "xw_plus_z_divides": {
+        "w": false,
+        "x": true,
+        "y": false,
+        "z": false
+      }
+    },
+    "note_on_partial_y": "the POLYNOMIAL REPRESENTATIVE of partial(y) has t-valuation 0 (RD-1), but its class in A[w] has t-valuation 3 -- the representative is not the invariant.",
+    "partial_red": {
+      "components": {
+        "t": "0",
+        "w": "(-w**4*x**2 - 4*w**3*x*z + 4*w**2*x**2*y + 3*w**2*x - 2*w**2*z**2 + 4*w*x*y*z + 2*w*z + x**2*y**2 + x*y + 2*y*z**2)/2",
+        "x": "-2*t**3*(w*x + z)",
+        "y": "-w**4*x*z - 4*w**3*z**2 + 6*w**2*x*y*z + 5*w**2*z - 4*w*x**2*y**2 - 6*w*x*y - 2*w - x*y**2*z - y*z",
+        "z": "-(2*t**3*w**2*x + 4*t**3*w*z - 2*t**3*x*y - 2*t**3 - w**4*x**3 - 4*w**3*x**2*z + 8*w**2*x**3*y + 7*w**2*x**2 + 2*w**2*x*z**2 + 8*w*x**2*y*z + 6*w*x*z + 4*w*z**3 + x**3*y**2 + x**2*y + 2*x*y*z**2)/2"
+      },
+      "content_removed": "t^3",
+      "nilpotency_depths": {
+        "t": 1,
+        "w": 3,
+        "x": 3,
+        "y": 5,
+        "z": 5
+      }
+    },
+    "slice_consequence": "partial(A[w]) subset t^3 A[w], so 1 is not in pl(partial) and partial has no slice for trivial reasons. RD-5 must test partial_red.",
+    "t_content": 3,
+    "t_valuations": {
+      "w": 3,
+      "x": 6,
+      "y": 3,
+      "z": 3
+    }
+  },
+  "source": "objects from DMJP arXiv:0903.4278 s7; content analysis is ours",
+  "tally": {
+    "MEASURED": 1,
+    "PASS": 21
+  },
+  "total_checks": 22
+}

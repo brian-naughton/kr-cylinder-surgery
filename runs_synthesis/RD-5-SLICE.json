@@ -1,0 +1,142 @@
+{
+  "block": "RD-5",
+  "date": "2026-07-31",
+  "entries": [
+    {
+      "check": "tripwire: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "criterion",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the origin lies on X x A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "every component of partial_red vanishes at the origin",
+      "outcome": "PASS",
+      "wall_time_s": 0.0019
+    },
+    {
+      "check": "1 does not vanish at the origin: so 1 is not in the image",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "partial_red has NO SLICE",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial has no slice either",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "structural route: a slice would force a FREE action",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "positive control: the solver finds the slice of d/dw",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "no slice of total degree <= 1 (cross-check)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "no slice of total degree <= 2 (cross-check)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "no slice of total degree <= 3 (cross-check)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "search measurement",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the obstruction is supported on {t = 0} (RD-4a)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "failure locus against the RD-4 divisor",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CANDIDATE ending NOT triggered",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "CANDIDATE ending NOT triggered": "RD-3 answers 'is ker partial = C^[3]?' YES, but the slice branch closes exactly, so no candidate isomorphism is assembled and the twin bar is not invoked. Nothing about X x A^1 = A^4 in general is claimed or implied: what closes is the route THROUGH THIS FLOW's slice.",
+    "criterion": "a slice is s with partial_red(s) = 1 (partial itself is excluded a priori: RD-2 showed partial(A[w]) is inside t^3 A[w]). ker(partial_red) = ker(partial) = C[p,q,t], so a slice would give A[w] = C[p,q,t][s] = C^[4].",
+    "every component of partial_red vanishes at the origin": "so partial_red(F)(origin) = 0 for EVERY F, by the chain rule",
+    "failure locus against the RD-4 divisor": "the degeneracy locus lives on {t = 0}; the localisation theorem makes A[w][1/(t(p+1))] = C[p,q,t][1/(t(p+1))][Z] with Z = z+xw. So the slice exists after inverting t(p+1) and the whole failure is concentrated on that one divisor of A^3 = Spec(ker partial).",
+    "no slice of total degree <= 1 (cross-check)": "6 unknowns, exact Q linear solve",
+    "no slice of total degree <= 2 (cross-check)": "21 unknowns, exact Q linear solve",
+    "no slice of total degree <= 3 (cross-check)": "56 unknowns, exact Q linear solve",
+    "partial has no slice either": "a fortiori: partial = t^3 partial_red.",
+    "partial_red has NO SLICE": "exact, unconditional, no degree cap: partial_red(A[w]) is contained in the maximal ideal of the origin, and 1 is not.",
+    "positive control: the solver finds the slice of d/dw": "6 unknowns; solution found",
+    "search measurement": "linear (exact Q nullspace), not an elimination: [6, 21, 56] unknowns at degrees [1, 2, 3]. Agrees with the theorem, which needs no cap.",
+    "structural route: a slice would force a FREE action": "A[w] = ker[s] makes Ga act by translation, hence freely; but RD-4 exhibits the fixed line {x=z=t=w=0}"
+  },
+  "plan": "RD-OPS.md (A22)",
+  "sections": {
+    "bounded_search": {
+      "caps": {
+        "1": {
+          "found": false,
+          "unknowns": 6
+        },
+        "2": {
+          "found": false,
+          "unknowns": 21
+        },
+        "3": {
+          "found": false,
+          "unknowns": 56
+        }
+      },
+      "positive_control": "d/dw slice found"
+    },
+    "ending": {
+      "candidate": false,
+      "scope": "This says nothing about the Zariski cancellation question itself. It closes one explicit route and replaces it with a sharper, bounded one (the localisation theorem's divisor)."
+    },
+    "exact_theorem": {
+      "proof_1": "every component of partial_red vanishes at the origin of X x A^1; by the chain rule so does partial_red(F) for every F; 1 does not.",
+      "proof_2": "a slice makes A[w] = (ker partial)[s], so the Ga-action is a translation and therefore free; RD-4 exhibits a whole line of fixed points.",
+      "status": "EXACT THEOREM -- not a cap-limited search",
+      "verdict": "partial_red (hence partial) admits NO SLICE on A[w]"
+    },
+    "failure_locus": {
+      "slice_after_localisation": "Z = z + x w, partial_red(Z) = t^3(p+1)",
+      "supported_on": "{t = 0} in X x A^1; {t (p+1) = 0} in A^3"
+    }
+  },
+  "source": "the derivation is DMJP arXiv:0903.4278 Prop 7.2; the slice analysis is ours",
+  "tally": {
+    "MEASURED": 6,
+    "PASS": 10
+  },
+  "total_checks": 16
+}

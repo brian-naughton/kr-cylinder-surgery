@@ -1,0 +1,332 @@
+{
+  "block": "RS-4",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "note": "RS-4 certifies only what stratification certifies. No homology group is computed; the topology input needed is ROUTED as a MASTER-QUERY, not improvised.",
+    "searches_run": 0
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0514
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1344
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1677
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0107
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0088
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0033
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.0188
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.01
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0806
+    },
+    {
+      "check": "RM carry-over: W = t^3 H - p - p^2 - qZ defines Y_1, irreducible",
+      "outcome": "PASS",
+      "wall_time_s": 0.0025
+    },
+    {
+      "check": "RM carry-over: Y_1 is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.004
+    },
+    {
+      "check": "RM carry-over: X_1 x A^1 is SINGULAR along a line",
+      "outcome": "PASS",
+      "wall_time_s": 0.0021
+    },
+    {
+      "check": "RM carry-over: the transition identity holds in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.008
+    },
+    {
+      "check": "RM carry-over: R4  2(p+1)w = HZ + q  in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "RM carry-over: the compressed divisor F = t^3(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "DECLARED CAPS",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the packet carrier is the p = -1 line of the degenerate fibre, times A^1_H",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "C_4 = cusp x A^1_H, class L^2, and it lies in the divisor D_4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "the point (p,q,t,Z,H) = (-1,0,0,0,0) lies on C_4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "it also lies ON the packet carrier (Z = 0, H = 0 there)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "the exceptional fibre over it is EMPTY: Xs Hs = 1 with Hs = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: over any OTHER point of C_4 the fibre is an A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "the common open U = Y_1 minus D_4 = (X x A^1) minus E_4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "chi_c(Y_1) = chi_c(D_4) + chi_c(U) = 1 + 1 = 2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "chi_c(X x A^1) = chi_c(E_4) + chi_c(U) = 0 + 1 = 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "so the ENTIRE difference is chi_c(D_4) - chi_c(E_4) = 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "chi_c(C_4) = chi_c(cusp x A^1) = 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "chi_c(C_4 minus one point) = 0, and E_4 is an A^1-bundle over it",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "THE MECHANISM, CERTIFIED AT chi_c LEVEL",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 COUNTERFACTUAL: a full A^1-bundle over C_4 would give chi_c(target) = 2, not 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CERTIFIED (1)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CERTIFIED (2)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CERTIFIED (3)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CERTIFIED (4)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CERTIFIED (5)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CERTIFIED (6)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CERTIFIED (7)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "CANDIDATE MECHANISM STATEMENT",
+      "outcome": "CANDIDATE-STATEMENT",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "why it is not established",
+      "outcome": "NOT-DETERMINED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "MASTER-QUERY input_1_properness",
+      "outcome": "NOT-DETERMINED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "MASTER-QUERY input_2_two_localisation_triangles",
+      "outcome": "NOT-DETERMINED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "MASTER-QUERY input_3_the_two_stratified_groups",
+      "outcome": "NOT-DETERMINED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "MASTER-QUERY input_4_the_generator_as_a_cycle",
+      "outcome": "NOT-DETERMINED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "MASTER-QUERY input_5_the_L2_coincidence",
+      "outcome": "NOT-DETERMINED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the shape of the answer, if the inputs come back",
+      "outcome": "CANDIDATE-STATEMENT",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "CANDIDATE MECHANISM STATEMENT": "The generator of H_4(Y_1(C); Z) = Z (ADO: Y_1 ~ S^4) is represented by a cycle supported on the packet carrier -- the p = -1 component of the degenerate fibre, times A^1_H. The (p+1)-modification replaces the divisor D_4 by an A^1-bundle over the cusp locus C_4 which is EMPTY over the single point (-1,0,0,0,0) of that carrier. Deleting that point removes the carrier's compactly-supported contribution, and the target becomes contractible. ASSERTED OF NOTHING: this is the statement to be tested, not a result. The class ledger is consistent with it and does not establish it.",
+    "CERTIFIED (1)": "[Y_1] = L^4 + L^2 and chi_c(Y_1) = 2 (RS-1, two stratifications).",
+    "CERTIFIED (2)": "the +L^2 enters at arrow 3 and leaves at arrow 4 (RS-2), with [E]-[D] equal to +L^2 and -L^2 exactly.",
+    "CERTIFIED (3)": "the packet is carried, at class level, by the second component of the degenerate q=0 fibre of Q, times A^1_H.",
+    "CERTIFIED (4)": "the killing arrow's divisor meets that degenerate fibre exactly along the p = -1 component of the pair.",
+    "CERTIFIED (5)": "E_4 is an A^1-bundle over C_4 minus exactly one point, and EMPTY over that point; the point lies on the packet carrier.",
+    "CERTIFIED (6)": "chi_c(D_4) - chi_c(E_4) = 1 accounts for the entire Euler difference, and the missing point is its sole cause (counterfactual verified).",
+    "CERTIFIED (7)": "every E-polynomial in the square is Tate; the packet is of type (2,2), weight 4 -- the reduced motive of P^1 smash P^1 (RS-3).",
+    "DECLARED CAPS": "{\"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"note\": \"RS-4 certifies only what stratification certifies. No homology group is computed; the topology input needed is ROUTED as a MASTER-QUERY, not improvised.\", \"searches_run\": 0}",
+    "H15 COUNTERFACTUAL: a full A^1-bundle over C_4 would give chi_c(target) = 2, not 1": "counterfactual [target] = L**4 + L; the missing point is NECESSARY for contractibility to be possible",
+    "H15 boundary: over any OTHER point of C_4 the fibre is an A^1": "H != 0 at the cusp point gives Xs = 1/H, Ws free; Zs != 0 gives Ws determined",
+    "MASTER-QUERY input_1_properness": "IS sigma_4 : X x A^1 --> Y_1 PROPER? Affine modifications generally are not. This decides whether the square (E_4 -> X x A^1, C_4 -> Y_1) is an abstract-blowup / cdh square and therefore whether the descent exact triangle relating the four Borel-Moore homologies is available at all. First input needed; cheap to settle in the literature or by direct argument.",
+    "MASTER-QUERY input_2_two_localisation_triangles": "Y_1 and X x A^1 contain the SAME open U as the complement of D_4 and E_4 respectively. Comparing the two localisation triangles  H^BM(D_4) -> H^BM(Y_1) -> H^BM(U) -> [1]  and  H^BM(E_4) -> H^BM(X x A^1) -> H^BM(U) -> [1]  with the SAME middle term H^BM(U) is exactly the mechanism. Both outer terms are known abstractly: H^BM(X x A^1) is that of a contractible smooth affine fourfold, H^BM(Y_1) is that of S^4 (ADO).",
+    "MASTER-QUERY input_3_the_two_stratified_groups": "H^BM_*(D_4) and H^BM_*(E_4) as GROUPS. Our stratifications give their classes, chi_c and E-polynomials exactly, but not the groups -- the extension problems are unresolved and are outside symbolic scope.",
+    "MASTER-QUERY input_4_the_generator_as_a_cycle": "Does the generator of H_4(Y_1) restrict to zero in H_4(U), i.e. is it supported on D_4? If yes, the candidate statement reduces to a statement about D_4 -> E_4. ADO's model P^1 smash P^1 may already supply the generator explicitly -- worth asking before computing.",
+    "MASTER-QUERY input_5_the_L2_coincidence": "[C_4] = L^2 equals the packet class exactly, while arrow 1's centre also has class L^2 and removes nothing. Is that structural (a property of modifications whose exceptional locus drops a point) or a coincidence of these numbers?",
+    "THE MECHANISM, CERTIFIED AT chi_c LEVEL": "Y_1 and X x A^1 share the same open U. Y_1 completes it with a divisor of chi_c = 1; X x A^1 completes it with an exceptional locus of chi_c = 0. The whole of Y_1's excess chi_c -- the sphere's contribution -- is the difference chi_c(D_4) - chi_c(E_4) = 1. And chi_c(E_4) = 0 rather than 1 for exactly ONE reason: E_4 is an A^1-bundle over C_4 MINUS A SINGLE POINT and is EMPTY over that point. The missing point carries the whole Euler defect.",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "the common open U = Y_1 minus D_4 = (X x A^1) minus E_4": "[U] = L**4 - L**3 + L, from both sides",
+    "the exceptional fibre over it is EMPTY: Xs Hs = 1 with Hs = 0": "the constraint becomes -1 = 0, unsolvable",
+    "the packet carrier is the p = -1 line of the degenerate fibre, times A^1_H": "{p=-1, q=0, t=0} x A^2_{Z,H}, class L^2",
+    "the shape of the answer, if the inputs come back": "'The (p+1)-modification kills Y_1's motivic 4-sphere because its exceptional locus fails to cover exactly one point of the centre, and that point carries the sphere's generator.' One generator, one boundary map, one missing point. The class ledger has reduced the question to that sentence; only inputs 1-4 can promote it.",
+    "why it is not established": "chi_c and Grothendieck classes see Euler characteristics, not cycles. Two spaces can share a class ledger and differ in which cycle generates. Nothing computed here identifies the generator as a cycle, and RS-OPS forbids improvising it."
+  },
+  "plan": "RS-OPS.md (A28)",
+  "sections": {
+    "carrier": {
+      "centre_C4": "cusp x A^1_H, class L^2",
+      "empty_fibre_point": "(p,q,t,Z,H) = (-1,0,0,0,0)",
+      "packet_carrier": "{p=-1, q=0, t=0} x A^2_{Z,H}, class L^2",
+      "point_lies_on_carrier": true
+    },
+    "certified": {
+      "1": "[Y_1] = L^4 + L^2 and chi_c(Y_1) = 2 (RS-1, two stratifications).",
+      "2": "the +L^2 enters at arrow 3 and leaves at arrow 4 (RS-2), with [E]-[D] equal to +L^2 and -L^2 exactly.",
+      "3": "the packet is carried, at class level, by the second component of the degenerate q=0 fibre of Q, times A^1_H.",
+      "4": "the killing arrow's divisor meets that degenerate fibre exactly along the p = -1 component of the pair.",
+      "5": "E_4 is an A^1-bundle over C_4 minus exactly one point, and EMPTY over that point; the point lies on the packet carrier.",
+      "6": "chi_c(D_4) - chi_c(E_4) = 1 accounts for the entire Euler difference, and the missing point is its sole cause (counterfactual verified).",
+      "7": "every E-polynomial in the square is Tate; the packet is of type (2,2), weight 4 -- the reduced motive of P^1 smash P^1 (RS-3)."
+    },
+    "master_query": {
+      "input_1_properness": "IS sigma_4 : X x A^1 --> Y_1 PROPER? Affine modifications generally are not. This decides whether the square (E_4 -> X x A^1, C_4 -> Y_1) is an abstract-blowup / cdh square and therefore whether the descent exact triangle relating the four Borel-Moore homologies is available at all. First input needed; cheap to settle in the literature or by direct argument.",
+      "input_2_two_localisation_triangles": "Y_1 and X x A^1 contain the SAME open U as the complement of D_4 and E_4 respectively. Comparing the two localisation triangles  H^BM(D_4) -> H^BM(Y_1) -> H^BM(U) -> [1]  and  H^BM(E_4) -> H^BM(X x A^1) -> H^BM(U) -> [1]  with the SAME middle term H^BM(U) is exactly the mechanism. Both outer terms are known abstractly: H^BM(X x A^1) is that of a contractible smooth affine fourfold, H^BM(Y_1) is that of S^4 (ADO).",
+      "input_3_the_two_stratified_groups": "H^BM_*(D_4) and H^BM_*(E_4) as GROUPS. Our stratifications give their classes, chi_c and E-polynomials exactly, but not the groups -- the extension problems are unresolved and are outside symbolic scope.",
+      "input_4_the_generator_as_a_cycle": "Does the generator of H_4(Y_1) restrict to zero in H_4(U), i.e. is it supported on D_4? If yes, the candidate statement reduces to a statement about D_4 -> E_4. ADO's model P^1 smash P^1 may already supply the generator explicitly -- worth asking before computing.",
+      "input_5_the_L2_coincidence": "[C_4] = L^2 equals the packet class exactly, while arrow 1's centre also has class L^2 and removes nothing. Is that structural (a property of modifications whose exceptional locus drops a point) or a coincidence of these numbers?"
+    },
+    "mechanism_chi": {
+      "U_class": "L**4 - L**3 + L",
+      "cause": "E_4 is an A^1-bundle over C_4 minus one point, empty over that point",
+      "chi_D4": 1,
+      "chi_E4": 0,
+      "chi_U": 1,
+      "counterfactual": "a full bundle would give chi_c = 2, contradicting contractibility",
+      "difference": 1
+    }
+  },
+  "source": "ADO arXiv:2112.08241 for Y_1 ~ P^1 smash P^1 (cited, not reproved); DMJP arXiv:0903.4278 s7; the tracing is ours",
+  "tally": {
+    "CANDIDATE-STATEMENT": 2,
+    "MEASURED": 8,
+    "NOT-DETERMINED": 6,
+    "PASS": 33,
+    "THEOREM": 1
+  },
+  "total_checks": 50
+}

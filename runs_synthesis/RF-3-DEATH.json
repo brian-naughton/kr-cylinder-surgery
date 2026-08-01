@@ -1,0 +1,321 @@
+{
+  "block": "RF-3",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "cited_inputs": [
+      "ADO 2112.08241: Y_1 ~ S^4",
+      "H^BM_4(X x A^1) = 0 from the ORDINARY topological contractibility of X plus Poincare duality on a smooth fourfold; the motivic results are context, not input"
+    ],
+    "declared_scope": "algebra machine-certified; topology as numbered lemmas; cited inputs named at point of use.",
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "groebner_variables_max": 5,
+    "searches_run": 0
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0528
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1348
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1419
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0107
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0087
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0033
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.0187
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0101
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0799
+    },
+    {
+      "check": "RM carry-over: W = t^3 H - p - p^2 - qZ defines Y_1, irreducible",
+      "outcome": "PASS",
+      "wall_time_s": 0.0025
+    },
+    {
+      "check": "RM carry-over: Y_1 is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.0038
+    },
+    {
+      "check": "RM carry-over: X_1 x A^1 is SINGULAR along a line",
+      "outcome": "PASS",
+      "wall_time_s": 0.0021
+    },
+    {
+      "check": "RM carry-over: the transition identity holds in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.008
+    },
+    {
+      "check": "RM carry-over: R4  2(p+1)w = HZ + q  in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "RM carry-over: the compressed divisor F = t^3(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "RS carry-over: [Y_1] = L^4 + L^2 and chi_c(Y_1) = 2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "RS carry-over: Y_1 = V(W) is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "RS carry-over: the shear identities for P, p+1 and q",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "RS carry-over: on E_4 the image coordinate is q = -H Z",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "RS carry-over: E_4 lies over the cusp Z^2 + t^3 = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "DECLARED SCOPE / CAPS",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "B1: F_0 is DISJOINT from D_4 = {p+1 = 0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "B2: F_{-1} is CONTAINED in D_4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "LEMMA 6: sigma_4 is an isomorphism over F_0",
+      "outcome": "LEMMA",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "B3: on E_4 with Ts = 0 the cusp equation forces Zs = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "B4: and then q = -Hs Zs = 0 automatically",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "B5: the surviving constraint is Xs Hs = 1, with Ws free",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "LEMMA 7: sigma_4^{-1}(F_{-1}) = G_m x A^1",
+      "outcome": "LEMMA",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "B6: its image inside F_{-1} =~ A^2_{Z,H} is the PUNCTURED line {Z = 0, H != 0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "B7: every point of F_{-1} with Z != 0 has EMPTY preimage",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "B8: the puncture IS the defect point (p,q,t,Z,H) = (-1,0,0,0,0)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "H15 boundary: over any OTHER point of the line the fibre is an A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "THEOREM RF-3 (Parts 2 and 3, at cycle level)",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "what this adds to the chi_c statement of RS-4",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the origin fibre, before and after",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "C1: over t != 0 the exceptional part of the fibre is NON-EMPTY: Zs^2 = -t^3 has two roots",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "C2: and over t = 0, q != 0 the exceptional part is EMPTY",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "C3: so the divisor D_4 meets EVERY fibre of pi -- it is not concentrated over the origin",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "BOUNDARY OF THE PROOF",
+      "outcome": "BOUNDARY",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "STOP RULE 1 (noncanonical compactification)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "STOP RULE 2 (singular centre / IC programme)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THE ACTUAL LIMIT, and why we stop here anyway",
+      "outcome": "BOUNDARY",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "PRE-APPROVED FALLBACK (A30), for comparison",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "STRENGTHENED STATEMENT, ready for the paper",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "B1: F_0 is DISJOINT from D_4 = {p+1 = 0}": "F_0 has p = 0, the divisor has p = -1",
+    "B2: F_{-1} is CONTAINED in D_4": "p + 1 vanishes identically on F_{-1}",
+    "B6: its image inside F_{-1} =~ A^2_{Z,H} is the PUNCTURED line {Z = 0, H != 0}": "Z = Zs = 0 always; H = Hs must be non-zero since Xs Hs = 1",
+    "B7: every point of F_{-1} with Z != 0 has EMPTY preimage": "the cusp equation Zs^2 + Ts^3 = 0 fails at Ts = 0, Zs != 0",
+    "B8: the puncture IS the defect point (p,q,t,Z,H) = (-1,0,0,0,0)": "it lies on Y_1, and the exceptional constraint is unsolvable there",
+    "BOUNDARY OF THE PROOF": "The modification changes the fibre over EVERY point of A^2_{t,q} [C1-C3], not only over the origin: over t != 0 the plane loses its p = -1 line and gains two lines, and over t = 0 with q != 0 it simply loses that line. Therefore the comparison of the two localisation sequences is NOT supported at the defect alone, and H^BM_*(W~) is not obtainable from H^BM_*(W) by a local change. Consequently step (iv) of THEOREM RF-3 uses the contractibility of X x A^1 rather than deriving the vanishing from the modification geometry. Closing that gap needs H^BM_*(W~) computed independently -- a monodromy computation over A^2 minus the origin (the two exceptional lines over t != 0 are exchanged by the double cover Zs^2 = -t^3) -- which is beyond this visit's bound and is ROUTED, not attempted.",
+    "C1: over t != 0 the exceptional part of the fibre is NON-EMPTY: Zs^2 = -t^3 has two roots": "sampled at t = 2: Zs^2 = -8 has two distinct roots, both non-zero",
+    "C2: and over t = 0, q != 0 the exceptional part is EMPTY": "Ts = 0 forces Zs = 0 hence q = 0, so no point of E_4 lies over (0, q) with q != 0",
+    "C3: so the divisor D_4 meets EVERY fibre of pi -- it is not concentrated over the origin": "sampled: D_4 has points over (t,q) = (2,3)",
+    "DECLARED SCOPE / CAPS": "{\"cited_inputs\": [\"ADO 2112.08241: Y_1 ~ S^4\", \"H^BM_4(X x A^1) = 0 from the ORDINARY topological contractibility of X plus Poincare duality on a smooth fourfold; the motivic results are context, not input\"], \"declared_scope\": \"algebra machine-certified; topology as numbered lemmas; cited inputs named at point of use.\", \"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"groebner_variables_max\": 5, \"searches_run\": 0}",
+    "H15 boundary: over any OTHER point of the line the fibre is an A^1": "H != 0 gives Xs = 1/H with Ws free",
+    "LEMMA 6: sigma_4 is an isomorphism over F_0": "sigma_4 is an isomorphism over U = Y_1 minus D_4 [RF-1], and F_0 is a closed subvariety of U by B1. So F~_0 := sigma_4^{-1}(F_0) is closed in X x A^1 and sigma_4 restricts to an isomorphism F~_0 -> F_0 =~ A^2.",
+    "LEMMA 7: sigma_4^{-1}(F_{-1}) = G_m x A^1": "by B3-B5 the preimage is {Ts = 0, Zs = 0, Xs Hs = 1, Ws free}. Solving Hs = 1/Xs identifies it with G_m (coordinate Xs) x A^1 (coordinate Ws). Class (L-1)L = L^2 - L, matching the RS-2 ledger entry for the origin part of E_4.",
+    "PRE-APPROVED FALLBACK (A30), for comparison": "'the exceptional defect accounts exactly for the Euler and Grothendieck-class change, while its interpretation as the killing of the homotopy generator remains conjectural.'",
+    "STOP RULE 1 (noncanonical compactification)": "NOT TRIGGERED. No compactification was used at any point; Poincare duality, flat pullback and localisation are canonical.",
+    "STOP RULE 2 (singular centre / IC programme)": "NOT TRIGGERED. The singular centre was never entered: the whole argument runs on the fibre over the origin (two smooth planes) and on sigma_4^{-1}(F_{-1}) = G_m x A^1, also smooth. No intersection cohomology arose.",
+    "STRENGTHENED STATEMENT, ready for the paper": "H^BM_4(Y_1;Z) = Z is generated by the fundamental class of either component of the doubled fibre over the origin of A^2_{t,q}, with [F_0] = -[F_{-1}]. The generator is SUPPORTED ON the modification divisor -- it has the representative F_{-1} contained in it -- and restricts to zero on the common open. The inverse image of that representative is sigma_4^{-1}(F_{-1}) = G_m x A^1, the same plane with the fibre over the defect point (-1,0,0,0,0) deleted, and the fundamental class of that locus, pushed forward along its CLOSED IMMERSION, is zero since H^BM_4(X x A^1) = 0. Dually, and with no properness hypothesis, sigma_4^* PD[F_{-1}] = 0 in H^4. The exceptional defect thus accounts exactly for the Euler and Grothendieck-class change and LOCATES ITS CYCLE-LEVEL CONTENT at one named point; deriving the vanishing from the modification geometry alone, rather than from the known contractibility of X x A^1, requires the Borel-Moore homology of the modified punctured family, which we do not compute.",
+    "THE ACTUAL LIMIT, and why we stop here anyway": "Neither stop rule fired. The limit is the visit's BOUND, not a pathology: the remaining gap is a well-posed and elementary-but-sizeable monodromy computation, and RF-OPS authorises one bounded visit. Starting it here would be the failure mode the stop rules exist to prevent, in spirit if not in letter. Routed to master as the single MASTER-QUERY.",
+    "THEOREM RF-3 (Parts 2 and 3, at cycle level)": "(i) By RF-2, H^BM_4(Y_1) = Z with [F_0] = -[F_{-1}] and each a generator. (ii) F_{-1} is a closed subvariety of the modification divisor D_4 [B2]. Hence the generator is the pushforward of the fundamental class of F_{-1} under H^BM_4(D_4) -> H^BM_4(Y_1): THE GENERATOR HAS A REPRESENTATIVE INSIDE THE SURGERY LOCUS, even though it also has one (F_0) disjoint from it. (iii) By exactness of the localisation sequence for D_4 with open complement U, the generator therefore RESTRICTS TO ZERO in H^BM_4(U). (iv) The inverse image of that representative is sigma_4^{-1}(F_{-1}) = G_m x A^1 [LEMMA 7] -- the same plane with the fibre over the defect point deleted. It is a CLOSED subvariety of X x A^1, and the pushforward of its fundamental class along that CLOSED IMMERSION is zero, because H^BM_4(X x A^1) = 0 -- by Poincare duality on the smooth fourfold and the ordinary topological contractibility of X. NOTE: sigma_4 is NOT proper [LEMMA RF-1.1], so no class is pushed forward along it; the defect locates the cycle-level content of the change.",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "the origin fibre, before and after": "Y_1: F_0 disjoint-union F_{-1} = C^2 disjoint-union C^2, so H^BM_4 = Z^2 and H^BM_3 = 0. X x A^1: F~_0 disjoint-union G_m x A^1 = C^2 disjoint-union (C^* x C), so H^BM_4 = Z^2 but H^BM_3 = Z. The defect creates a degree-3 class where there was none -- the loop in G_m.",
+    "what this adds to the chi_c statement of RS-4": "RS-4 established the Euler bookkeeping: the whole difference is chi_c(D_4) - chi_c(E_4) = 1, caused by one missing point. RF-3 upgrades that to INTEGRAL homology and names the cycle: the generator of H^BM_4(Y_1) = Z is [F_{-1}] (equivalently -[F_0]), it lives inside the surgery divisor, and the surgery replaces it by a punctured plane. The 'missing point' is now the puncture of an explicit cycle, not a numerical shadow."
+  },
+  "plan": "RF-OPS.md (A30)",
+  "sections": {
+    "boundary": {
+      "what_is_cited": "H^BM_4(X x A^1) = 0, from the ORDINARY topological contractibility of X and duality on a smooth fourfold",
+      "what_is_derived": "the cycle identification, its containment in the divisor, its restriction to zero on U, and the explicit punctured replacement",
+      "what_is_missing": "H^BM_*(W~), needing a monodromy analysis of the double cover Zs^2 = -t^3 over A^2 minus the origin"
+    },
+    "defect": {
+      "F_0": "disjoint from D_4; carried isomorphically by sigma_4",
+      "F_{-1}": "contained in D_4",
+      "empty_over": "all of F_{-1} with Z != 0, and the puncture (Z,H) = (0,0) -- the defect point",
+      "image_inside_F_{-1}": "the punctured line {Z = 0, H != 0}",
+      "preimage_of_F_{-1}": "G_m x A^1 = {Ts=0, Zs=0, XsHs=1}"
+    },
+    "fallback": {
+      "achieved": "the cycle is IDENTIFIED and its fate is explicit; only the direction of inference remains cited rather than derived",
+      "pre_approved": "Euler/class change accounted for; homotopy interpretation conjectural"
+    },
+    "stop_rules_RF3": {
+      "actual_limit": "the visit bound; the residue is a well-posed monodromy computation, routed not attempted",
+      "rule_1": "not triggered",
+      "rule_2": "not triggered"
+    }
+  },
+  "source": "ADO arXiv:2112.08241; DMJP arXiv:0903.4278 s7; Dubouloz-Fasel 1512.01933 / HKO 1409.1293 (cited input); the cycle analysis is ours",
+  "tally": {
+    "BOUNDARY": 2,
+    "LEMMA": 2,
+    "MEASURED": 6,
+    "PASS": 37,
+    "THEOREM": 2
+  },
+  "total_checks": 49
+}

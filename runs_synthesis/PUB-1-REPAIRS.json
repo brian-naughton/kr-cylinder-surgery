@@ -1,0 +1,210 @@
+{
+ "block": "PUB-1",
+ "date": "2026-08-02",
+ "entries": [
+  {
+   "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0006
+  },
+  {
+   "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0003
+  },
+  {
+   "check": "carry-over: content is t^3 (RD-2)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0516
+  },
+  {
+   "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0003
+  },
+  {
+   "check": "carry-over: p and q are in ker partial (RD-3)",
+   "outcome": "PASS",
+   "wall_time_s": 0.1413
+  },
+  {
+   "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+   "outcome": "PASS",
+   "wall_time_s": 3.1621
+  },
+  {
+   "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+   "outcome": "PASS",
+   "wall_time_s": 0.0106
+  },
+  {
+   "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+   "outcome": "PASS",
+   "wall_time_s": 0.002
+  },
+  {
+   "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+   "outcome": "PASS",
+   "wall_time_s": 0.0011
+  },
+  {
+   "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+   "outcome": "PASS",
+   "wall_time_s": 0.0086
+  },
+  {
+   "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+   "outcome": "PASS",
+   "wall_time_s": 0.0032
+  },
+  {
+   "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+   "outcome": "PASS",
+   "wall_time_s": 0.0191
+  },
+  {
+   "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0101
+  },
+  {
+   "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0837
+  },
+  {
+   "check": "R1a  P vanishes when y is eliminated over A_x",
+   "outcome": "PASS",
+   "wall_time_s": 0.0004
+  },
+  {
+   "check": "R1a  P is degree 1 in y with leading coefficient x^2",
+   "outcome": "PASS",
+   "wall_time_s": 0.0004
+  },
+  {
+   "check": "R1a  hence A_x is a UFD (localisation of a polynomial ring)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0
+  },
+  {
+   "check": "R1b  P mod (x) = z^2 + t^3",
+   "outcome": "PASS",
+   "wall_time_s": 0.0001
+  },
+  {
+   "check": "R1b  z^2 + t^3 is irreducible over Q",
+   "outcome": "PASS",
+   "wall_time_s": 0.0005
+  },
+  {
+   "check": "R1b  H15 boundary: z^2 - t^2 IS reducible (control)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0007
+  },
+  {
+   "check": "LEMMA R1: A[w] is a UFD",
+   "outcome": "LEMMA",
+   "wall_time_s": 0.0
+  },
+  {
+   "check": "R4  relative differential is (-1-2p, -q, t^3)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0001
+  },
+  {
+   "check": "R4  it vanishes only where p = -1/2, q = 0, t = 0",
+   "outcome": "PASS",
+   "wall_time_s": 0.0
+  },
+  {
+   "check": "R4  W = 1/4 there, so no such point lies on Y_1",
+   "outcome": "PASS",
+   "wall_time_s": 0.0001
+  },
+  {
+   "check": "R4  H15 boundary: the t- and q-derivatives are not both zero on all of Y_1",
+   "outcome": "PASS",
+   "wall_time_s": 0.0
+  },
+  {
+   "check": "LEMMA R4: pi is a smooth morphism",
+   "outcome": "LEMMA",
+   "wall_time_s": 0.0
+  },
+  {
+   "check": "R2  scope",
+   "outcome": "MEASURED",
+   "wall_time_s": 0.0
+  },
+  {
+   "check": "R2  the crossing point lies on V(I)",
+   "outcome": "PASS",
+   "wall_time_s": 0.0
+  },
+  {
+   "check": "R2  linear parts at the crossing point",
+   "outcome": "MEASURED",
+   "wall_time_s": 0.0
+  },
+  {
+   "check": "R2  verdict",
+   "outcome": "NOT-ATTEMPTED",
+   "wall_time_s": 0.0
+  }
+ ],
+ "exit": 0,
+ "mode": "I",
+ "notes": {
+  "LEMMA R1: A[w] is a UFD": "Nagata's criterion: A[w] is a Noetherian domain, x is prime in it (R1b), and A[w]_x = C[x^{+-1},z,t][w] is a UFD (R1a). Hence A[w] is a UFD, which is what the gcd/content argument of the content proposition needs.",
+  "LEMMA R4: pi is a smooth morphism": "The relative differential of W over A^2_{t,q} in the fibre coordinates (p, Z, H) is (-1-2p, -q, t^3), which vanishes only at p = -1/2, q = t = 0; there W = 1/4, so the locus misses Y_1 = V(W) entirely. Hence pi is smooth of relative dimension 2, and in particular flat. Smooth is the hypothesis the Gysin map and the Borel-Moore localisation sequence of the final section actually require.",
+  "R1a  P is degree 1 in y with leading coefficient x^2": "so A_x = C[x^{+-1}, z, t], a localised polynomial ring",
+  "R1a  P vanishes when y is eliminated over A_x": "y = -(z^2 + x + t^3)/x^2",
+  "R1a  hence A_x is a UFD (localisation of a polynomial ring)": "C[x^{+-1}, z, t] = C[x,z,t] localised at the prime x",
+  "R1b  H15 boundary: z^2 - t^2 IS reducible (control)": "the irreducibility test is not vacuous",
+  "R1b  z^2 + t^3 is irreducible over Q": "so C[y,z,t,w]/(z^2+t^3) is a domain and x is prime in A[w]",
+  "R2  linear parts at the crossing point": "rank of the linear parts = 0; 4 of the 4 generators have zero linear part",
+  "R2  scope": "ONE bounded attempt authorised (A33 R2). The candidate point is the crossing point of the two components, (p,q,t,Z) = (-1,0,0,0), which lies on both minimal primes.",
+  "R2  the crossing point lies on V(I)": "(p,q,t,Z) = (-1,0,0,0)",
+  "R2  verdict": "The bounded attempt does NOT land. The linear-part rank is 0, so it gives the trivial bound mu >= 1, which does not exceed the codimension 2 and therefore certifies nothing. A real certificate needs mu(I_m) computed in the local ring, which is outside the exact symbolic machinery here. Per A33 R2 the complete-intersection sentence is DELETED from the paper; the rectification obstruction (the singular component) is untouched and survives without it.",
+  "R4  H15 boundary: the t- and q-derivatives are not both zero on all of Y_1": "smoothness of pi is a statement about the RELATIVE differential, and is strictly stronger than flatness here",
+  "R4  W = 1/4 there, so no such point lies on Y_1": "W == 1/4 identically on the degeneracy locus, Z and H free",
+  "R4  it vanishes only where p = -1/2, q = 0, t = 0": "1 solution locus, Z and H free",
+  "R4  relative differential is (-1-2p, -q, t^3)": "d/dp, d/dZ, d/dH of W",
+  "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)"
+ },
+ "plan": "PUB-OPS.md + A33 (revision round)",
+ "sections": {
+  "R1_factoriality": {
+   "R1a": "A_x = C[x^{+-1}, z, t]; P is degree 1 in y with unit coefficient x^2 after inverting x",
+   "R1b": "A[w]/(x) = C[y,z,t,w]/(z^2+t^3), a domain since z^2+t^3 is irreducible",
+   "conclusion": "A[w] is factorial; the content of a derivation is therefore well defined",
+   "criterion": "Nagata: R Noetherian domain, f prime, R_f a UFD => R a UFD"
+  },
+  "R2_complete_intersection": {
+   "action": "the complete-intersection sentence is deleted from the paper; the rectification obstruction does not depend on it",
+   "attempted": "once, as authorised",
+   "landed": false,
+   "method": "linear-part rank at the point (Nakayama)",
+   "outcome": "DOES NOT LAND -- the linear-part bound does not exceed the codimension",
+   "point": "the crossing point (p,q,t,Z) = (-1,0,0,0)"
+  },
+  "R4_smoothness": {
+   "conclusion": "pi is smooth of relative dimension 2, hence flat; this replaces the bare flatness appeal",
+   "degeneracy_locus": "p = -1/2, q = 0, t = 0 (Z, H free)",
+   "relative_differential": "(-1-2p, -q, t^3) in the fibre coordinates (p, Z, H)",
+   "value_of_W_there": "1/4, so the locus is disjoint from Y_1"
+  }
+ },
+ "source": {
+  "attribution": "the objects are DMJP's (arXiv:0903.4278 \u00a77) and ours as elsewhere; nothing new is introduced here beyond these three checks",
+  "purpose": "the three proof repairs mandated at A33 after the referee round: R1 factoriality (Nagata), R2 the complete-intersection sentence (one bounded attempt), R4 smoothness of pi"
+ },
+ "tally": {
+  "LEMMA": 2,
+  "MEASURED": 2,
+  "NOT-ATTEMPTED": 1,
+  "PASS": 25
+ },
+ "total_checks": 30
+}

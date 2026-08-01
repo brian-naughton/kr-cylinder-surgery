@@ -1,0 +1,397 @@
+{
+  "block": "RG-1",
+  "date": "2026-07-31",
+  "declared_caps": {
+    "fibre_dimension_variables": 5,
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "plinth_search_basis_size": 126,
+    "plinth_search_total_degree_in_xyztw": 4
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0538
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1363
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1799
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0107
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "partial_red(Z) = t^3(p+1) d/dZ applied: T_**3*(P_ + 1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0042
+    },
+    {
+      "check": "partial_red(x) = t^3(p+1) d/dZ applied: -2*T_**3*ZZ",
+      "outcome": "PASS",
+      "wall_time_s": 0.0035
+    },
+    {
+      "check": "partial_red(w) = t^3(p+1) d/dZ applied: (P_**2 + P_ + 2*Q_*ZZ)/2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0031
+    },
+    {
+      "check": "partial_red(H) = t^3(p+1) d/dZ applied: Q_*(P_ + 1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0039
+    },
+    {
+      "check": "H = -(y + w^2) really lies in A[w] and has Z-degree 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0249
+    },
+    {
+      "check": "WITNESS: partial_red(y + w^2) = -q(p+1)   [A[w] side]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "WITNESS: the same, read on the L side",
+      "outcome": "PASS",
+      "wall_time_s": 0.0122
+    },
+    {
+      "check": "y + w^2 is a local slice: partial_red^2(y + w^2) = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0867
+    },
+    {
+      "check": "q(p+1) is NOT in the ideal (t^3(p+1)) of C[p,q,t]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "H15 boundary: t^3(p+1) IS in it -- the membership test passes",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "MQ4(a): pl(partial_red) = (t^3(p+1)) is REFUTED",
+      "outcome": "REFUTED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: (p+1) itself is NOT in (p+1)(t^3,q)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "DECLARED CAPS (before the search ran)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "nullspace dimension of the Z-degree<=1 condition",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "plinth values found at the declared cap (7)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "every plinth value found lies in (p+1)(t^3, q)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "MQ4(a) residue",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "elimination measurement before any Groebner call",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "fibre dimensions over the sampled points",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the generic fibre is 1-dimensional (an A^1, per RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "SURJECTIVITY FAILS: the fibre over (-1,3,0) is EMPTY",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the missing locus: q vanishes identically on {p=-1, t=0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: x does NOT vanish on {p=-1,t=0} -- not everything does",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "EQUIDIMENSIONALITY FAILS: the fibre over the origin is a SURFACE",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: the dimension routine returns -1 on an empty ideal",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "H15 boundary: and returns 1 on a fibre that really is an A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the image is nonetheless DENSE: the eliminant is zero",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "IDENTITY in A[w]:  q Z + p + p^2 + t^3 (y + w^2) = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0076
+    },
+    {
+      "check": "H15 boundary: the same expression with q -> q+1 is NOT in (P)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0054
+    },
+    {
+      "check": "fibre dimensions over the t = 0 plane",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "over t=0 with q != 0: dim 1 everywhere EXCEPT p = -1 (empty)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "over t=0 with q = 0: EMPTY except p = 0 and p = -1 (dim 2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "and that is exactly what the identity predicts",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "over {t != 0} every sampled fibre is a 1-dimensional A^1, including p = -1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the {p+1 = 0} component is TAME; {t = 0} carries everything",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3: free Ga-action",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3: affine quotient exists and equals A^3",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3: quotient morphism surjective",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3: quotient morphism equidimensional",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3: A^3-fibration with factorial closed fibres",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "DECLARED CAPS (before the search ran)": "{\"fibre_dimension_variables\": 5, \"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"plinth_search_basis_size\": 126, \"plinth_search_total_degree_in_xyztw\": 4}",
+    "EQUIDIMENSIONALITY FAILS: the fibre over the origin is a SURFACE": "dim 2 against the generic dim 1",
+    "H = -(y + w^2) really lies in A[w] and has Z-degree 1": "H = (p + p^2 + q Z)/t^3",
+    "H15 boundary: (p+1) itself is NOT in (p+1)(t^3,q)": "consistent with RD-4's pl inside (p,q,t)",
+    "H15 boundary: and returns 1 on a fibre that really is an A^1": "so dim 2 and dim -1 above are findings, not artefacts",
+    "H15 boundary: x does NOT vanish on {p=-1,t=0} -- not everything does": "the radical test discriminates",
+    "IDENTITY in A[w]:  q Z + p + p^2 + t^3 (y + w^2) = 0": "Z = z+xw; this is the H-relation, rearranged",
+    "MQ4(a) residue": "pl(partial_red) CONTAINS (p+1)(t^3, q); at the declared cap nothing outside that ideal appeared. Whether the containment is equality is NOT decided -- a cap-bounded non-finding, not a negative.",
+    "MQ4(a): pl(partial_red) = (t^3(p+1)) is REFUTED": "pl contains q(p+1) = -partial_red(y + w^2), which is not in (t^3(p+1)). The R\u2202 observation that all five elements found there lay in t^3(p+1)C[p,q,t] was an artefact of computing only iterated images partial_red^k(generator); the local slice y + w^2 is not of that form. So pl STRICTLY CONTAINS (t^3(p+1)), and contains (p+1)(t^3, q).",
+    "Masuda 4.3: A^3-fibration with factorial closed fibres": "FAILS at the cusp -- Masuda's own Example 4.2 (verified reading, A21).",
+    "Masuda 4.3: affine quotient exists and equals A^3": "HOLDS -- ker partial = C[p,q,t] = C^[3] (RD-3).",
+    "Masuda 4.3: free Ga-action": "FAILS -- degeneracy locus non-empty, contains {x=z=t=w=0} (RD-4, re-verified in process here).",
+    "Masuda 4.3: quotient morphism equidimensional": "FAILS -- the fibre over the origin (and over (-1,0,0)) is a SURFACE, against the generic A^1. NEW at this visit.",
+    "Masuda 4.3: quotient morphism surjective": "FAILS -- the punctured line {p=-1, t=0, q!=0} has empty fibre (q lies in the radical of (P,p+1,t)). The image is dense but not all of A^3. NEW at this visit.",
+    "SURJECTIVITY FAILS: the fibre over (-1,3,0) is EMPTY": "a point of A^3 with no preimage in X x A^1",
+    "and that is exactly what the identity predicts": "setting t = 0 in q Z + p + p^2 + t^3(y+w^2) = 0 leaves q Z = -p(1+p). So q = 0 FORCES p(1+p) = 0 -- the exact pattern above, with the two exceptional points p = 0 and p = -1 carrying the dimension jump.",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "elimination measurement before any Groebner call": "fibres are cut in 5 variables against the frozen ceiling of 60 unknowns / 30 CPU-min; H7 alarm armed.",
+    "every plinth value found lies in (p+1)(t^3, q)": "no generator beyond the two known ones appeared at this cap",
+    "fibre dimensions over the sampled points": "{\"generic          (2,3,1)\": 1, \"origin           (0,0,0)\": 2, \"p=-1, q=0, t=0  (-1,0,0)\": 2, \"p=-1, t!=0      (-1,3,1)\": 1, \"p=-1, t=0       (-1,3,0)\": -1, \"q=0, t!=0        (2,0,1)\": 1, \"t=0, generic     (5,7,0)\": 1, \"t=0, q=0         (2,0,0)\": -1}",
+    "fibre dimensions over the t = 0 plane": "{\"p=-1,q=0\": 2, \"p=-1,q=1\": -1, \"p=-1,q=3\": -1, \"p=-2,q=0\": -1, \"p=-2,q=1\": 1, \"p=-2,q=3\": 1, \"p=0,q=0\": 2, \"p=0,q=1\": 1, \"p=0,q=3\": 1, \"p=1,q=0\": -1, \"p=1,q=1\": 1, \"p=1,q=3\": 1, \"p=2,q=0\": -1, \"p=2,q=1\": 1, \"p=2,q=3\": 1, \"p=5,q=0\": -1, \"p=5,q=1\": 1, \"p=5,q=3\": 1}",
+    "nullspace dimension of the Z-degree<=1 condition": "20 of 126 basis monomials survive",
+    "partial_red(H) = t^3(p+1) d/dZ applied: Q_*(P_ + 1)": "L-side and A[w]-side agree",
+    "partial_red(Z) = t^3(p+1) d/dZ applied: T_**3*(P_ + 1)": "L-side and A[w]-side agree",
+    "partial_red(w) = t^3(p+1) d/dZ applied: (P_**2 + P_ + 2*Q_*ZZ)/2": "L-side and A[w]-side agree",
+    "partial_red(x) = t^3(p+1) d/dZ applied: -2*T_**3*ZZ": "L-side and A[w]-side agree",
+    "plinth values found at the declared cap (7)": "-Q_*(P_ + 1); -Q_*T_*(P_ + 1); -Q_*T_**2*(P_ + 1); -T_**3*(P_ + 1); T_**3*(P_ + 1); T_**4*(P_ + 1); T_**5*(P_ + 1)",
+    "q(p+1) is NOT in the ideal (t^3(p+1)) of C[p,q,t]": "every element of (t^3(p+1)) dies at t=0; q(p+1) does not",
+    "the image is nonetheless DENSE: the eliminant is zero": "so pi misses only a lower-dimensional set",
+    "the missing locus: q vanishes identically on {p=-1, t=0}": "q^2 reduces to 0 there",
+    "the {p+1 = 0} component is TAME; {t = 0} carries everything": "RG-OPS \u00a71 asked this and said decide, don't assume. DECIDED: over t != 0 the fibres are A^1 even along p = -1, so the (p+1) component is well behaved on its own. Every failure -- non-surjectivity, the dimension jump, the degeneracy locus (RD-4) -- lives over {t = 0}. p = -1 only bites in COMBINATION with t = 0.",
+    "y + w^2 is a local slice: partial_red^2(y + w^2) = 0": "so -q(p+1) really is in the plinth"
+  },
+  "plan": "RG-OPS.md (A24)",
+  "sections": {
+    "masuda_reading": "The table is now complete, and it is much worse than R\u2202 left it. Only ONE of Masuda Thm 4.3's hypotheses holds for this pi: the affine quotient is A^3. FOUR fail -- freeness, surjectivity, equidimensionality, and factoriality of the closed fibres. R\u2202 recorded surjectivity and equidimensionality as NOT DECIDED and they have now decided AGAINST. Masuda's theorem is not merely inapplicable to this partial through one hypothesis; this Ga-action is far from his hypotheses. Mode I: this says nothing about X x A^1 = A^4 -- only that THIS action cannot be the vehicle for THAT theorem.",
+    "masuda_table": {
+      "A^3-fibration with factorial closed fibres": "FAILS at the cusp -- Masuda's own Example 4.2 (verified reading, A21).",
+      "affine quotient exists and equals A^3": "HOLDS -- ker partial = C[p,q,t] = C^[3] (RD-3).",
+      "free Ga-action": "FAILS -- degeneracy locus non-empty, contains {x=z=t=w=0} (RD-4, re-verified in process here).",
+      "quotient morphism equidimensional": "FAILS -- the fibre over the origin (and over (-1,0,0)) is a SURFACE, against the generic A^1. NEW at this visit.",
+      "quotient morphism surjective": "FAILS -- the punctured line {p=-1, t=0, q!=0} has empty fibre (q lies in the radical of (P,p+1,t)). The image is dense but not all of A^3. NEW at this visit."
+    },
+    "mq4a": {
+      "known_containment": "pl contains (p+1)(t^3, q), strictly bigger than (t^3(p+1))",
+      "verdict": "REFUTED",
+      "why_R-partial_missed_it": "R\u2202 sampled only iterated images partial_red^k(v) on the five generators; the local slice y+w^2 is not among them. Logged, not reworded.",
+      "witness": "partial_red(y + w^2) = -q(p+1); y + w^2 = -H is a local slice (partial_red^2 = 0)"
+    },
+    "mq4a_search": {
+      "all_inside_(p+1)(t^3,q)": true,
+      "caps": {
+        "fibre_dimension_variables": 5,
+        "groebner_cpu_ceiling_s": 1800,
+        "groebner_variable_ceiling": 60,
+        "plinth_search_basis_size": 126,
+        "plinth_search_total_degree_in_xyztw": 4
+      },
+      "values_found": [
+        "-Q_*(P_ + 1)",
+        "-Q_*T_*(P_ + 1)",
+        "-Q_*T_**2*(P_ + 1)",
+        "-T_**3*(P_ + 1)",
+        "T_**3*(P_ + 1)",
+        "T_**4*(P_ + 1)",
+        "T_**5*(P_ + 1)"
+      ]
+    },
+    "mq4b": {
+      "empty_fibre_samples": [
+        "p=-1, t=0       (-1,3,0)",
+        "t=0, q=0         (2,0,0)"
+      ],
+      "equidimensional": false,
+      "image_dense": true,
+      "jump_locus": "the fibre jumps from dimension 1 to dimension 2 over ['origin           (0,0,0)', 'p=-1, q=0, t=0  (-1,0,0)'] -- both sampled points have q = t = 0.",
+      "jump_locus_samples": [
+        "origin           (0,0,0)",
+        "p=-1, q=0, t=0  (-1,0,0)"
+      ],
+      "missing_locus": "the image misses (at least) the punctured line {p=-1, t=0, q!=0} -- q lies in the radical of (P,p+1,t) -- AND {t=0, q=0, p not in {0,-1}}; see the t=0 table below for the exact pattern. Everything missing lies over {t = 0}.",
+      "surjective": false
+    },
+    "mq4b_fibres": {
+      "generic          (2,3,1)": 1,
+      "origin           (0,0,0)": 2,
+      "p=-1, q=0, t=0  (-1,0,0)": 2,
+      "p=-1, t!=0      (-1,3,1)": 1,
+      "p=-1, t=0       (-1,3,0)": -1,
+      "q=0, t!=0        (2,0,1)": 1,
+      "t=0, generic     (5,7,0)": 1,
+      "t=0, q=0         (2,0,0)": -1
+    },
+    "partial_red_in_good_coordinates": {
+      "action": {
+        "H": "Q_*(P_ + 1)",
+        "Z": "T_**3*(P_ + 1)",
+        "w": "(P_**2 + P_ + 2*Q_*ZZ)/2",
+        "x": "-2*T_**3*ZZ"
+      },
+      "formula": "on L, partial_red = t^3 (p+1) d/dZ",
+      "note": "p, q, t are killed; these four are the moving generators"
+    },
+    "t0_slice": {
+      "identity": "q Z + p + p^2 + t^3 (y + w^2) = 0 in A[w]",
+      "image_over_t0": "{q != 0, p != -1} together with the two points (p,q) = (0,0) and (-1,0)",
+      "jump_locus": "exactly (p,q,t) = (0,0,0) and (-1,0,0), the two roots of p(1+p) -- fibre dimension 2",
+      "restricted_to_t0": "q Z = -p(1+p)",
+      "table": {
+        "p=-1,q=0": 2,
+        "p=-1,q=1": -1,
+        "p=-1,q=3": -1,
+        "p=-2,q=0": -1,
+        "p=-2,q=1": 1,
+        "p=-2,q=3": 1,
+        "p=0,q=0": 2,
+        "p=0,q=1": 1,
+        "p=0,q=3": 1,
+        "p=1,q=0": -1,
+        "p=1,q=1": 1,
+        "p=1,q=3": 1,
+        "p=2,q=0": -1,
+        "p=2,q=1": 1,
+        "p=2,q=3": 1,
+        "p=5,q=0": -1,
+        "p=5,q=1": 1,
+        "p=5,q=3": 1
+      }
+    },
+    "which_component": {
+      "p+1=0": "TAME on its own -- A^1 fibres over t != 0; only misbehaves where it meets {t = 0}",
+      "t=0": "carries the degeneracy locus, the empty fibres and the dimension jump"
+    }
+  },
+  "source": "derivation DMJP arXiv:0903.4278 Prop 7.2; hypothesis list Masuda arXiv:2512.06687 Thm 4.3; diagnostics ours",
+  "tally": {
+    "MEASURED": 14,
+    "PASS": 33,
+    "REFUTED": 1
+  },
+  "total_checks": 48
+}

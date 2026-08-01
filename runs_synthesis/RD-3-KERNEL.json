@@ -1,0 +1,204 @@
+{
+  "block": "RD-3",
+  "date": "2026-07-31",
+  "entries": [
+    {
+      "check": "tripwire: partial(x) = -2 t^6 (z + x w)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "S becomes x u + z^2 + t^3 under u = y + 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "Delta(y) = 0, Delta(t) = 0, Delta(w) = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "Delta(x) = -2 t^6 z and Delta(z) = t^6 u  (u = y+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "inverting u: x = -(z^2+t^3)/u solves the relation",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Delta = t^6 u d/dz on Bt[w][1/u]: reproduces Delta(x)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0018
+    },
+    {
+      "check": "z^2 + t^3 is irreducible over C[t^{+-1}] (u is prime)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0015
+    },
+    {
+      "check": "ker(Delta | Bt[w]) = C[t^{+-1}][y, w]",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial(p) = 0 in At[w]  [twin A]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0551
+    },
+    {
+      "check": "partial(p) = 0 in At[w]  [twin B]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0021
+    },
+    {
+      "check": "partial(q) = 0 in At[w]  [twin A]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0785
+    },
+    {
+      "check": "partial(q) = 0 in At[w]  [twin B]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0029
+    },
+    {
+      "check": "partial(t) = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "x is NOT in ker partial (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Psi(p) = y mod (S)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0079
+    },
+    {
+      "check": "Psi(q) = w mod (S)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0185
+    },
+    {
+      "check": "H15 boundary: partial(p + x) != 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0499
+    },
+    {
+      "check": "Jacobian rank of (p, q, t) in C[x^{+-1},z,t,w] is 3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: a dependent triple scores rank < 3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0862
+    },
+    {
+      "check": "A[w]/(t) is a domain: x^2 y + z^2 + x is irreducible",
+      "outcome": "PASS",
+      "wall_time_s": 0.0012
+    },
+    {
+      "check": "p mod t and q mod t stay algebraically independent",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: the mod-t rank test can fail",
+      "outcome": "PASS",
+      "wall_time_s": 0.0103
+    },
+    {
+      "check": "p is not in t*A[w] and q is not in t*A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0019
+    },
+    {
+      "check": "t-valuation of p q in A[w] is 0 (saturation spot-check)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0037
+    },
+    {
+      "check": "t-valuation of p^2 + q in A[w] is 0 (saturation spot-check)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0032
+    },
+    {
+      "check": "t-valuation of p^3 - q^2 in A[w] is 0 (saturation spot-check)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0094
+    },
+    {
+      "check": "t-valuation of pq + p in A[w] is 0 (saturation spot-check)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0036
+    },
+    {
+      "check": "ker(partial | A[w]) = C[p, q, t]",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "ker(partial_red) = ker(partial)  (t^3 is a kernel element)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "A[w] is strictly bigger than the kernel: x is outside",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "Delta = t^6 u d/dz on Bt[w][1/u]: reproduces Delta(x)": "so ker(Delta|Bt[w][1/u]) = C[t^{+-1}, w, u^{+-1}]",
+    "H15 boundary: a dependent triple scores rank < 3": "the rank test can fail",
+    "Jacobian rank of (p, q, t) in C[x^{+-1},z,t,w] is 3": "rank 3",
+    "Psi(p) = y mod (S)": "cleared of t-denominators before the membership test",
+    "ker(Delta | Bt[w]) = C[t^{+-1}][y, w]": "u = y+1 prime, so the u-saturation of C[t^{+-1}][w][u] inside Bt[w] is itself",
+    "ker(partial | A[w]) = C[p, q, t]": "the t-saturation of C[p,q,t] inside A[w] is itself, because p mod t and q mod t remain algebraically independent in the domain A[w]/(t)",
+    "ker(partial_red) = ker(partial)  (t^3 is a kernel element)": "content division does not change the kernel",
+    "p is not in t*A[w] and q is not in t*A[w]": "so p/t, q/t are not in A[w]",
+    "p mod t and q mod t stay algebraically independent": "Jacobian rank 2 in C[x^{+-1},z,w]",
+    "z^2 + t^3 is irreducible over C[t^{+-1}] (u is prime)": "Bt[w]/(u) is a domain"
+  },
+  "plan": "RD-OPS.md (A22)",
+  "sections": {
+    "consequences": {
+      "explicit_generators": {
+        "p": "-w**2*x - 2*w*z + x*y",
+        "q": "-w**3*x - 3*w**2*z + 3*w*x*y + 2*w + y*z",
+        "t": "t"
+      },
+      "kernel_is_polynomial": "ker(partial | A[w]) = C[p,q,t] = C^[3]. So the invariant ring of this Ga-action on X x A^1 IS a polynomial ring in three variables -- the RD-5 question 'is ker partial = C^[3]?' is answered YES, and the whole weight of the cancellation question moves onto the SLICE."
+    },
+    "independence": {
+      "jacobian_rank_pqt": 3
+    },
+    "ker_delta": {
+      "route": "u = y+1; Bt[w] = C[x,u,z,t^{+-1},w]/(xu+z^2+t^3); Bt[w][1/u] = C[t^{+-1},w,u^{+-1},z] with Delta = t^6 u d/dz; u prime since z^2+t^3 is irreducible over C[t^{+-1}].",
+      "statement": "ker(Delta | Bt[w]) = C[t^{+-1}][y, w]"
+    },
+    "saturation": {
+      "argument": "H in C[p,q,t] with H in t A[w] reduces mod t to H_0(pbar,qbar) = 0 in the DOMAIN A[w]/(t); algebraic independence of pbar, qbar forces H_0 = 0, i.e. t | H in C[p,q,t]. Induct. Hence A[w] cap C[t^{+-1}][p,q] = C[p,q,t].",
+      "conclusion": "ker(partial | A[w]) = C[p,q,t], a polynomial ring in three variables (C^[3]).",
+      "jacobian_rank_pbar_qbar": 2
+    },
+    "transport": {
+      "p": "-w**2*x - 2*w*z + x*y",
+      "q": "-w**3*x - 3*w**2*z + 3*w*x*y + 2*w + y*z",
+      "statement": "ker(partial | At[w]) = C[t^{+-1}][p, q]"
+    }
+  },
+  "source": "the derivation is DMJP arXiv:0903.4278 Prop 7.2; the kernel computation is ours",
+  "tally": {
+    "MEASURED": 2,
+    "PASS": 28
+  },
+  "total_checks": 30
+}

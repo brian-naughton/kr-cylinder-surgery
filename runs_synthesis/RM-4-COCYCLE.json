@@ -1,0 +1,343 @@
+{
+  "block": "RM-4",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "Y1_pool": [
+      "p",
+      "q",
+      "t",
+      "Z",
+      "H",
+      "qZ",
+      "t^3H",
+      "P'",
+      "Zq-t^3H",
+      "H+p"
+    ],
+    "Y1_tuples": "all C(10,4) = 210 four-subsets",
+    "filter": "exact Jacobian: det[grad(defining eq); grad a_i] nowhere zero on the variety; rejections carry an explicit witness point; POSITIVE CONTROL on a graph hypersurface",
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "k1_pool_AW": [
+      "p",
+      "q",
+      "t",
+      "Z",
+      "x",
+      "y",
+      "z",
+      "w",
+      "H",
+      "W",
+      "xH",
+      "qZ"
+    ],
+    "k1_tuples_AW": "all C(12,4) = 495 four-subsets",
+    "k2_pool_AW": [
+      "p",
+      "q",
+      "t",
+      "Z",
+      "x",
+      "y",
+      "z",
+      "w",
+      "H",
+      "W",
+      "xH",
+      "qZ",
+      "v",
+      "x+v",
+      "H+v",
+      "W+v"
+    ],
+    "k2_tuples_AW": "all C(16,5) = 4368 five-subsets",
+    "literature_gate": "Blanc-Poloni arXiv:2004.10739 fetched and read at primary source BEFORE this block; applicability assessed as METHOD-ONLY, not invoked as a theorem"
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0528
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1359
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1782
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0108
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0087
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0032
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.0188
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.01
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0801
+    },
+    {
+      "check": "DECLARED CAPS (before any search ran)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Blanc-Poloni arXiv:2004.10739 -- READ AT PRIMARY SOURCE",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "APPLICABILITY: METHOD ONLY, not invoked as a theorem",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "over D(t) the model is the X_1-cylinder: A[w][1/t] = B[w][1/t]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "over D(p+1) the model is Y_1: A[w][1/(p+1)] = C[H][1/(p+1)]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0033
+    },
+    {
+      "check": "THE TRANSITION DATUM",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "POSITIVE CONTROL: the k=1 filter passes on a genuine C^[4]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "k=1 sweep over all 495 four-subsets",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the filter discriminates (both rejection modes occur)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "POSITIVE CONTROL: the k=2 filter passes on a genuine C^[5]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "k=2 sweep over all 4368 five-subsets",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the k=2 filter discriminates",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "all Y_1 witness points lie on Y_1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0032
+    },
+    {
+      "check": "Y_1 sweep over all 210 four-subsets",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the Y_1 filter discriminates",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "is Y_1 = A^4? NOT DECIDED",
+      "outcome": "NOT-ATTEMPTED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "classification: k=1 on A[w]",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "classification: k=2 on A[w][v]",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "classification: the crossing",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "classification: Blanc-Poloni",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "classification: what_is_NOT_shown",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "APPLICABILITY: METHOD ONLY, not invoked as a theorem": "their objects are A^2-bundles over a punctured plane; ours is a birational modification of A^4 along a codim-2 centre, with 4-dimensional hypersurface models. No theorem of theirs applies to our situation. What transfers is the method -- compare the two trivialisations over the complement and ask whether the transition is elementary. Nothing below is load-bearing on their results.",
+    "Blanc-Poloni arXiv:2004.10739 -- READ AT PRIMARY SOURCE": "Title 'Bivariables and Venereau polynomials', Blanc and Poloni, arXiv Apr 2020, Ann. Fac. Sci. Toulouse Dec 2022. Abstract: they study the Daigle-Freudenburg family containing the Venereau polynomials, defining A^2-fibrations over A^2; following Kaliman-Zaidenberg they show these are locally trivial A^2-bundles over the PUNCTURED PLANE, all of the form X_f with f in k[a^{+-1},b^{+-1}][x]; they introduce BIVARIABLES and put them in bijection with those X_f that are trivial, reproving Lewis's theorem that the second Venereau polynomial is a variable.",
+    "DECLARED CAPS (before any search ran)": "{\"Y1_pool\": [\"p\", \"q\", \"t\", \"Z\", \"H\", \"qZ\", \"t^3H\", \"P'\", \"Zq-t^3H\", \"H+p\"], \"Y1_tuples\": \"all C(10,4) = 210 four-subsets\", \"filter\": \"exact Jacobian: det[grad(defining eq); grad a_i] nowhere zero on the variety; rejections carry an explicit witness point; POSITIVE CONTROL on a graph hypersurface\", \"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"k1_pool_AW\": [\"p\", \"q\", \"t\", \"Z\", \"x\", \"y\", \"z\", \"w\", \"H\", \"W\", \"xH\", \"qZ\"], \"k1_tuples_AW\": \"all C(12,4) = 495 four-subsets\", \"k2_pool_AW\": [\"p\", \"q\", \"t\", \"Z\", \"x\", \"y\", \"z\", \"w\", \"H\", \"W\", \"xH\", \"qZ\", \"v\", \"x+v\", \"H+v\", \"W+v\"], \"k2_tuples_AW\": \"all C(16,5) = 4368 five-subsets\", \"literature_gate\": \"Blanc-Poloni arXiv:2004.10739 fetched and read at primary source BEFORE this block; applicability assessed as METHOD-ONLY, not invoked as a theorem\"}",
+    "POSITIVE CONTROL: the k=1 filter passes on a genuine C^[4]": "graph hypersurface, det = -1",
+    "POSITIVE CONTROL: the k=2 filter passes on a genuine C^[5]": "det = -1",
+    "THE TRANSITION DATUM": "the two trivialisations are the two intermediate models of RM-3: over D(t) the singular X_1 x A^1, over D(p+1) the SMOOTH Y_1. They agree over U = D(t(p+1)) where both equal L. The transition is therefore not an automorphism of a bundle but a change of INTEGRAL MODEL, and the crossing V(t,p+1) -- where the compressed centre restricts to (qZ^2) -- is where the two disagree most.",
+    "Y_1 sweep over all 210 four-subsets": "rejected by witness point: 196; by the exact test: 14; survivors: none",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "classification: Blanc-Poloni": "method only; no theorem of theirs applies to a codim-2 crossing in A^4.",
+    "classification: k=1 on A[w]": "no candidate at the declared pool (12 elements, 495 subsets); MEASURED, not a negative. RG-3's two exact theorems already close the flow-compatible route.",
+    "classification: k=2 on A[w][v]": "no candidate at the declared pool (16 elements, 4368 subsets); MEASURED. RG-4.1 already shows the flow-compatible obstruction is 1-stable.",
+    "classification: the crossing": "the transition is a change of INTEGRAL MODEL between the singular X_1-cylinder (over D(t)) and the smooth Y_1 (over D(p+1)); the two disagree over the crossing, where the centre restricts to (qZ^2).",
+    "classification: what_is_NOT_shown": "nothing here bears on X x A^1 = A^4 or X x A^2 = A^5. Honest fence, A26.",
+    "is Y_1 = A^4? NOT DECIDED": "no four-subset of the declared ten-element pool passes the necessary Jacobian condition. That is a cap-bounded non-finding, NOT a negative: Y_1 is a smooth affine 4-fold given by one explicit equation, and deciding it needs a proper attempt, not a pool sweep. Routed to master as the natural successor question -- if Y_1 = A^4 then the whole tower collapses to a SINGLE (p+1)-modification.",
+    "k=1 sweep over all 495 four-subsets": "rejected by witness point: 470; by the exact test: 25; survivors: none",
+    "k=2 sweep over all 4368 five-subsets": "rejected by witness point: 4202; by the exact test: 166; survivors: none"
+  },
+  "plan": "RM-OPS.md (A26)",
+  "sections": {
+    "Y1": {
+      "pool": [
+        "p",
+        "q",
+        "t",
+        "Z",
+        "H",
+        "qZ",
+        "t^3H",
+        "P'",
+        "Zq-t^3H",
+        "H+p"
+      ],
+      "rejected_by_point": 196,
+      "rejected_exact": 14,
+      "status": "NOT DECIDED -- routed to master",
+      "survivors": []
+    },
+    "classification": {
+      "Blanc-Poloni": "method only; no theorem of theirs applies to a codim-2 crossing in A^4.",
+      "k=1 on A[w]": "no candidate at the declared pool (12 elements, 495 subsets); MEASURED, not a negative. RG-3's two exact theorems already close the flow-compatible route.",
+      "k=2 on A[w][v]": "no candidate at the declared pool (16 elements, 4368 subsets); MEASURED. RG-4.1 already shows the flow-compatible obstruction is 1-stable.",
+      "the crossing": "the transition is a change of INTEGRAL MODEL between the singular X_1-cylinder (over D(t)) and the smooth Y_1 (over D(p+1)); the two disagree over the crossing, where the centre restricts to (qZ^2).",
+      "what_is_NOT_shown": "nothing here bears on X x A^1 = A^4 or X x A^2 = A^5. Honest fence, A26."
+    },
+    "k1_AW": {
+      "pool": [
+        "p",
+        "q",
+        "t",
+        "Z",
+        "x",
+        "y",
+        "z",
+        "w",
+        "H",
+        "W",
+        "xH",
+        "qZ"
+      ],
+      "rejected_by_point": 470,
+      "rejected_exact": 25,
+      "survivors": []
+    },
+    "k2_AW": {
+      "pool": [
+        "H",
+        "H+v",
+        "W",
+        "W+v",
+        "Z",
+        "p",
+        "q",
+        "qZ",
+        "t",
+        "v",
+        "w",
+        "x",
+        "x+v",
+        "xH",
+        "y",
+        "z"
+      ],
+      "rejected_by_point": 4202,
+      "rejected_exact": 166,
+      "survivors": []
+    },
+    "literature_gate": {
+      "applies_as_theorem": false,
+      "paper": "Blanc & Poloni, Bivariables and Venereau polynomials, arXiv:2004.10739; Ann. Fac. Sci. Toulouse (2022)",
+      "read_at_source": true,
+      "transfers": "the gluing METHOD only"
+    },
+    "transition_datum": {
+      "nature": "a change of integral model, not a bundle automorphism",
+      "over_D(p+1)": "Y_1 (smooth)",
+      "over_D(t)": "X_1 x A^1 (singular)",
+      "overlap": "both equal L over U = D(t(p+1))"
+    }
+  },
+  "source": "DMJP arXiv:0903.4278 s7 for p,q,Z and the bridge; Blanc-Poloni arXiv:2004.10739 read at source (method only); the results are ours",
+  "tally": {
+    "MEASURED": 12,
+    "NOT-ATTEMPTED": 1,
+    "PASS": 22
+  },
+  "total_checks": 35
+}

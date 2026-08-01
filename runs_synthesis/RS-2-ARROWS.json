@@ -1,0 +1,443 @@
+{
+  "block": "RS-2",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "h15_rule": "every divisor and exceptional class is computed by TWO independent stratifications",
+    "note": "RS-2 is exact bookkeeping: stratifications with two-way parametrisations plus Groebner dimension calls in <= 5 variables. No coefficient search.",
+    "searches_run": 0
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.052
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1347
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.14
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0108
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0093
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0034
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.0191
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.01
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0787
+    },
+    {
+      "check": "RM carry-over: W = t^3 H - p - p^2 - qZ defines Y_1, irreducible",
+      "outcome": "PASS",
+      "wall_time_s": 0.0024
+    },
+    {
+      "check": "RM carry-over: Y_1 is SMOOTH",
+      "outcome": "PASS",
+      "wall_time_s": 0.0037
+    },
+    {
+      "check": "RM carry-over: X_1 x A^1 is SINGULAR along a line",
+      "outcome": "PASS",
+      "wall_time_s": 0.0021
+    },
+    {
+      "check": "RM carry-over: the transition identity holds in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0079
+    },
+    {
+      "check": "RM carry-over: R4  2(p+1)w = HZ + q  in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "RM carry-over: the compressed divisor F = t^3(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "DECLARED CAPS",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "sigma_1 off {p+1=0}: x is regular there",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "sigma_2 off {t=0}: H and 2w are regular there",
+      "outcome": "PASS",
+      "wall_time_s": 0.0026
+    },
+    {
+      "check": "sigma_3 off {t=0}: H is regular there",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "sigma_4 off {p+1=0}: x and 2w = (HZ+q)/(p+1) are regular",
+      "outcome": "PASS",
+      "wall_time_s": 0.0029
+    },
+    {
+      "check": "so [V'] - [V] = [E] - [D] for all four",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "P becomes Xs(1 - Xs Hs - 2 Ws Zs) + Zs^2 + Ts^3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "p + 1 becomes 1 - Xs Hs - 2 Ws Zs",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "q becomes 2Ws - 2 Hs Xs Ws - 4 Ws^2 Zs - Hs Zs",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "H15 boundary: the shear is invertible (y, z recovered)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "[D_1] = L^3: {p+1=0} in A^4 is a hyperplane A^3_{q,t,Z}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "E_1 = {p+1=0} in X_1 x A^1 is the cusp x A^2_{q,X}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "H15 cross-check on [E_1]: cusp = (L-1) + 1 gives the same",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "ARROW 1 LEDGER: [E_1] - [D_1] = 0, and [X_1 x A^1] - [A^4] = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "D_2 = {X(p+1) + Z^2 = 0} in A^4_{p,q,Z,X}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "D_2 stratum {p+1 != 0}: X determined",
+      "outcome": "PASS",
+      "wall_time_s": 0.0023
+    },
+    {
+      "check": "D_2 stratum {p+1 = 0}: Z^2 = 0, reduced locus Z = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "H15 cross-check on [D_2]: it equals L^3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "E_2 = {x^2 y + z^2 + x = 0} x A^1_w",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "E_2 stratum {x != 0}: y determined",
+      "outcome": "PASS",
+      "wall_time_s": 0.0005
+    },
+    {
+      "check": "E_2 stratum {x = 0}: z^2 = 0, reduced locus z = 0, y free",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "H15 cross-check on [E_2]: it equals L^3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "ARROW 2 LEDGER: [E_2] - [D_2] = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THE SINGULAR ROUTE IS K_0-NEUTRAL AT EACH STEP",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[D_3] = L^3: {t=0} in A^4 is A^3_{p,q,Z}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "E_3 = {t=0} in Y_1 = Q x A^1_H, Q = {qZ + p + p^2 = 0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "H15 cross-check on [Q], stratified by p instead of q",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "[E_3] = (L^2+L)L = L^3 + L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "ARROW 3 LEDGER: [E_3] - [D_3] = +L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "consistency: [Y_1] - [A^4] = +L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Q --> A^1_q has fibre A^1 over q != 0 and TWO disjoint lines over q = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "WHERE THE PACKET ENTERS",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "D_4 = {t^3 H = qZ} in A^4_{q,t,Z,H}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "D_4 stratum {q != 0}: Z determined",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "D_4 stratum {q = 0}: t^3 H = 0, reduced locus {tH = 0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "[{tH=0} in A^2] = 2L - 1 (inclusion-exclusion)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[D_4] = L^3 + L^2 - L",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "on E_4 the relation P collapses to Zs^2 + Ts^3 = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "H15 boundary: P itself is NOT in that ideal",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "E_4 stratum {Zs != 0}: Ws is determined by the constraint",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "E_4 stratum {Zs = 0}: then Ts = 0, the constraint is Xs Hs = 1 (a G_m), and Ws is free",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "[E_4] = L^3 - L",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "ARROW 4 LEDGER: [E_4] - [D_4] = -L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "consistency: [X x A^1] - [Y_1] = -L^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "on E_4 the image coordinate collapses to q = -H Z",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "H15 boundary: q + H Z is NOT identically zero off E_4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 cross-check on [E_4]: image (cusp x A^1_H minus a point) with A^1 fibres",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "WHERE THE PACKET DIES",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "D_4 cap E_3 = {p=-1, t=0, qZ=0} x A^1_H",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "its q = 0 branch IS the p = -1 line of the degenerate fibre, times A^1_H -- class L^2, exactly the packet",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "THE MECHANISM, AT CLASS LEVEL",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "ARROW 1 LEDGER: [E_1] - [D_1] = 0, and [X_1 x A^1] - [A^4] = 0": "K_0-neutral",
+    "ARROW 2 LEDGER: [E_2] - [D_2] = 0": "K_0-neutral",
+    "DECLARED CAPS": "{\"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"h15_rule\": \"every divisor and exceptional class is computed by TWO independent stratifications\", \"note\": \"RS-2 is exact bookkeeping: stratifications with two-way parametrisations plus Groebner dimension calls in <= 5 variables. No coefficient search.\", \"searches_run\": 0}",
+    "D_4 cap E_3 = {p=-1, t=0, qZ=0} x A^1_H": "W at p=-1, t=0 is -qZ",
+    "H15 cross-check on [D_2]: it equals L^3": "[D_2] = L**3",
+    "H15 cross-check on [E_1]: cusp = (L-1) + 1 gives the same": "[E_1] = L**3",
+    "H15 cross-check on [E_2]: it equals L^3": "[E_2] = L**3",
+    "H15 cross-check on [E_4]: image (cusp x A^1_H minus a point) with A^1 fibres": "[image] = L**2 - 1, fibres A^1, product = L**3 - L",
+    "H15 cross-check on [Q], stratified by p instead of q": "p in {0,-1} (2 values): qZ = 0, class 2L-1 each; p elsewhere (L-2 values): qZ = c != 0, a G_m, class L-1 each; total 2(2L-1) + (L-2)(L-1) = L^2 + L",
+    "THE MECHANISM, AT CLASS LEVEL": "the +L^2 packet is carried by the pair of lines in the degenerate q=0 fibre of Q (times A^1_H); the (p+1)-divisor of the killing arrow meets that fibre exactly along the p = -1 line of the pair. So the surgery is centred on ONE of the two components whose doubling created the packet. The Z-doubling seen at the crossing (RM-3's (qZ^2)) is the same phenomenon read scheme-theoretically.",
+    "THE SINGULAR ROUTE IS K_0-NEUTRAL AT EACH STEP": "arrows 1 and 2 both have [E] - [D] = 0, matching [X_1 x A^1] = [A^4] = [X x A^1] = L^4. Sol's prediction, certified.",
+    "WHERE THE PACKET DIES": "E_4 maps onto only the CUSP locus {Z^2+t^3 = 0, q = -HZ} inside the 3-fold D_4, missing the single point (q,t,Z,H) = (0,0,0,0), and is an A^1-bundle over it. So the arrow DELETES the rest of the divisor (class L^3 - L + 1) and replaces the cusp locus (class L^2 - 1) by an A^1-bundle. Net: (L^2-1)(L-1) - (L^3-L+1) = -L^2.",
+    "WHERE THE PACKET ENTERS": "[Q] = L^2 + L, against L^2 for a plane. The excess +L is the SECOND component of the degenerate q = 0 fibre: Q --> A^1_q has fibre A^1 over q != 0 but splits into the two disjoint lines {p=0} and {p=-1} over q = 0. Times A^1_H that excess is exactly the +L^2 packet. This is the class-level shadow of ADO's (deg P - 1) = 1 wedge summand of P^1 smash P^1.",
+    "[D_4] = L^3 + L^2 - L": "L**3 + L**2 - L",
+    "[E_4] = L^3 - L": "L**3 - L",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "on E_4 the image coordinate collapses to q = -H Z": "substituting Xs Hs = 1 - 2 Ws Zs makes every Ws term cancel",
+    "on E_4 the relation P collapses to Zs^2 + Ts^3 = 0": "P - (Zs^2+Ts^3) = -Xs * (Xs Hs + 2 Ws Zs - 1)",
+    "so [V'] - [V] = [E] - [D] for all four": "each sigma restricts to an isomorphism V' minus E --> V minus D, and the scissor relation follows"
+  },
+  "plan": "RS-OPS.md (A28)",
+  "sections": {
+    "arrow_3": {
+      "ADO_match": "deg P - 1 = 1 wedge summand",
+      "D": "L**3",
+      "E": "L**3 + L**2",
+      "E_minus_D": "L**2",
+      "carrier": "the second line of the degenerate q=0 fibre of Q, times A^1_H"
+    },
+    "arrow_4": {
+      "D": "L**3 + L**2 - L",
+      "E": "L**3 - L",
+      "E_minus_D": "-L**2",
+      "carrier": "the arrow keeps only the cusp locus and deletes the rest of the divisor",
+      "fibres": "A^1",
+      "image_of_E4": "{Z^2+t^3 = 0, q = -HZ} minus the point (q,t,Z,H) = (0,0,0,0)"
+    },
+    "ledger": {
+      "arrow_1": {
+        "D": "L**3",
+        "E": "L**3",
+        "diff": "0"
+      },
+      "arrow_2": {
+        "D": "L**3",
+        "E": "L**3",
+        "diff": "0"
+      },
+      "arrow_3": {
+        "D": "L**3",
+        "E": "L**3 + L**2",
+        "diff": "L**2"
+      },
+      "arrow_4": {
+        "D": "L**3 + L**2 - L",
+        "E": "L**3 - L",
+        "diff": "-L**2"
+      },
+      "reading": "singular route K_0-neutral twice; smooth route +L^2 then -L^2"
+    },
+    "mechanism_class_level": {
+      "crossing_link": "RM-3's (qZ^2) restriction is the same locus read with its multiplicity",
+      "packet_carrier": "the two-line degenerate fibre of Q --> A^1_q, times A^1_H",
+      "surgery_divisor_meets_it_in": "the p = -1 line of the pair"
+    }
+  },
+  "source": "ADO arXiv:2112.08241; DMJP arXiv:0903.4278 s7; the ledger and the carrier identification are ours",
+  "tally": {
+    "MEASURED": 6,
+    "PASS": 65
+  },
+  "total_checks": 71
+}

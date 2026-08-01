@@ -1,0 +1,189 @@
+{
+  "block": "RD-6",
+  "date": "2026-07-31",
+  "entries": [
+    {
+      "check": "tripwire: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "partial_1 annihilates P exactly (so it preserves (P))",
+      "outcome": "PASS",
+      "wall_time_s": 0.0023
+    },
+    {
+      "check": "partial_1 is locally nilpotent",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial_2 annihilates P exactly (so it preserves (P))",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "partial_2 is locally nilpotent",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "d/dw annihilates P exactly (so it preserves (P))",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "d/dw is locally nilpotent",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[partial_red, partial_1] != 0",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[partial_red, partial_2] != 0",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[partial_red, d/dw] != 0",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[partial_1, partial_2] = 0",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[partial_1, d/dw] = 0",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "[partial_2, d/dw] = 0",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "EXACTLY the three Cor-7.3 pairs commute",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "{partial_1, partial_2, d/dw} is a commuting triple",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the four derivations form a GENERIC FRAME on X x A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: dropping partial_red destroys the frame",
+      "outcome": "PASS",
+      "wall_time_s": 0.0584
+    },
+    {
+      "check": "w lies in Ker(partial_1) and in Ker(partial_2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "ERRATUM (venial) in DMJP Cor 7.3",
+      "outcome": "ERRATUM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "repair: x is killed by partial_1, partial_2 and d/dw",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "repair: partial_red(x) != 0, so ML(A[w]) = C follows",
+      "outcome": "PASS",
+      "wall_time_s": 0.001
+    },
+    {
+      "check": "partial_1(p) and partial_2(p) are not both zero",
+      "outcome": "PASS",
+      "wall_time_s": 0.0037
+    },
+    {
+      "check": "no triangular flag through partial_red was found",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "ERRATUM (venial) in DMJP Cor 7.3": "the text says 'Ker(partial_1) cap Ker(partial_2) = C[x]' for the derivations ON A[w]; but w lies in both kernels, so on A[w] the intersection contains C[x][w]. The classical statement is on A (Makar-Limanov); on A[w] one must adjoin d/dw, which the paper's own framework supplies. Cor 7.3's CONCLUSION is unaffected -- see the repair below.",
+    "EXACTLY the three Cor-7.3 pairs commute": "commuting: ['[partial_1, d/dw]', '[partial_1, partial_2]', '[partial_2, d/dw]']",
+    "H15 boundary: dropping partial_red destroys the frame": "the Cor-7.3 triple alone spans only 3 directions -- x is fixed",
+    "[partial_1, d/dw] = 0": "commuting pair",
+    "[partial_1, partial_2] = 0": "commuting pair",
+    "[partial_2, d/dw] = 0": "commuting pair",
+    "[partial_red, d/dw] != 0": "does not commute",
+    "[partial_red, partial_1] != 0": "does not commute",
+    "[partial_red, partial_2] != 0": "does not commute",
+    "d/dw is locally nilpotent": "depths {'x': 1, 'y': 1, 'z': 1, 't': 1, 'w': 2}",
+    "no triangular flag through partial_red was found": "partial_red commutes with none of partial_1, partial_2, d/dw, and the three that do commute have the structurally dead invariant ring C[x] (Lemma L1). No new candidate coordinate system came out of the bracket structure. Stated as a measurement of what these six brackets show, not as a claim that no flag exists.",
+    "partial_1 is locally nilpotent": "depths {'x': 1, 'y': 3, 'z': 2, 't': 1, 'w': 1}",
+    "partial_1(p) and partial_2(p) are not both zero": "the Cor-7.3 derivations do NOT preserve ker partial pointwise",
+    "partial_2 is locally nilpotent": "depths {'x': 1, 'y': 4, 'z': 1, 't': 2, 'w': 1}",
+    "repair: partial_red(x) != 0, so ML(A[w]) = C follows": "any f(x) in ML would need partial_red(f) = f'(x) partial_red(x) = 0 in a domain, forcing f constant",
+    "the four derivations form a GENERIC FRAME on X x A^1": "4x4 determinant in the model is nonzero",
+    "{partial_1, partial_2, d/dw} is a commuting triple": "so A[w] carries a Ga^3-action -- but its invariant ring is C[x] (DMJP Cor 7.3, repaired below), and our own Lemma L1 (M1-PREREG, frozen d423397) says x can NEVER be a coordinate of A^4, because A[w]/(x) is the NON-NORMAL cusp cylinder. So this flag is structurally dead as a coordinate system -- a banked lemma of ours closing a published structure."
+  },
+  "plan": "RD-OPS.md (A22)",
+  "sections": {
+    "brackets": {
+      "[partial_1, d/dw]": "0",
+      "[partial_1, partial_2]": "0",
+      "[partial_2, d/dw]": "0",
+      "[partial_red, d/dw]": {
+        "w": "2*w**3*x**2 + 6*w**2*x*z - 4*w*x**2*y - 3*w*x + 2*w*z**2 - 2*x*y*z - z",
+        "x": "2*t**3*x",
+        "y": "2*(2*w**3*x*z + 6*w**2*z**2 - 6*w*x*y*z - 5*w*z + 2*x**2*y**2 + 3*x*y + 1)",
+        "z": "2*t**3*w*x + 2*t**3*z - 2*w**3*x**3 - 6*w**2*x**2*z + 8*w*x**3*y + 7*w*x**2 + 2*w*x*z**2 + 4*x**2*y*z + 3*x*z + 2*z**3"
+      },
+      "[partial_red, partial_1]": {
+        "w": "-2*w**3*x**3 - 6*w**2*x**2*z + 2*w*x**3*y + w*x**2 - 4*w*x*z**2 - x*z - 2*z**3",
+        "x": "-2*t**3*x**2",
+        "y": "-2*(t**3*w**2*x + 2*t**3*w*z - t**3*x*y - t**3 + 2*w**3*x**2*z + w**2*x**3*y + w**2*x**2 + 7*w**2*x*z**2 - 4*w*x**2*y*z - 3*w*x*z + 2*w*z**3 + x**3*y**2 + x**2*y - x*y*z**2 - z**2)",
+        "z": "-x*(-2*t**3*w*x - 2*t**3*z - 2*w**3*x**3 - 6*w**2*x**2*z + 4*w*x**3*y + 3*w*x**2 - 2*w*x*z**2 - x*z - 2*z**3)"
+      },
+      "[partial_red, partial_2]": {
+        "t": "4*t**3*x*(w*x + z)",
+        "w": "-3*t**2*(4*w**2*x**2 + 4*w*x*z + 2*x**2*y + x + 2*z**2)/2",
+        "x": "-6*t**2*x**2*(w*x + z)",
+        "y": "3*t**2*(-6*w**2*x*z + 8*w*x**2*y + 6*w*x + 2*x*y*z + z)",
+        "z": "3*t**2*x*(-2*t**3 + 6*w**2*x**2 + 4*w*x*z + 4*x**2*y + 3*x + 2*z**2)/2"
+      }
+    },
+    "commuting_pairs": [
+      "[partial_1, d/dw]",
+      "[partial_1, partial_2]",
+      "[partial_2, d/dw]"
+    ],
+    "cor_7_3": {
+      "erratum": "as printed the intersection is stated on A[w] but omits w; adjoining d/dw repairs it and the conclusion ML(A[w]) = C stands."
+    },
+    "frame": {
+      "det_nonzero": true,
+      "reading": "partial_red is exactly the direction the Cor-7.3 triple cannot reach: the triple fixes x, the frame needs it. That is Cor 7.3's ML argument, seen as linear algebra."
+    },
+    "verdict": "The bracket structure yields no new coordinate route. The only commuting sub-algebra is the Cor-7.3 triple, whose invariants are C[x], and Lemma L1 rules x out as a coordinate. partial_red is precisely the direction that triple cannot reach."
+  },
+  "source": "partial, partial_1, partial_2 are DMJP arXiv:0903.4278 s7; the bracket analysis is ours",
+  "tally": {
+    "ERRATUM": 1,
+    "MEASURED": 8,
+    "PASS": 14
+  },
+  "total_checks": 23
+}

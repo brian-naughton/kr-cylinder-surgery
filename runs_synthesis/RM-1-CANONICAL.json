@@ -1,0 +1,385 @@
+{
+  "block": "RM-1",
+  "date": "2026-08-01",
+  "declared_caps": {
+    "divisor_minimality_tested": [
+      "t",
+      "t^2",
+      "t^3",
+      "p+1",
+      "(p+1)^2"
+    ],
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "note": "RM-1 is structural: no coefficient search runs, so no degree cap on unknowns applies. Every Groebner call is measured before running.",
+    "radical_power_cap": 8,
+    "saturation": "Rabinowitsch elimination, 5-6 variables"
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0523
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1411
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1432
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.011
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "RG carry-over: R1  x(p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "RG carry-over: R3  t^3 H = p + p^2 + q Z in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0085
+    },
+    {
+      "check": "RG carry-over: R2  2 t^3 w = p Z - x q in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0034
+    },
+    {
+      "check": "RG carry-over: the L-forms of x, w, H match the tower data",
+      "outcome": "PASS",
+      "wall_time_s": 0.0185
+    },
+    {
+      "check": "RG carry-over: pole orders x(0,-1)  H(-3,0)  w(-3,-1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0098
+    },
+    {
+      "check": "RG carry-over: the two plinth generators t^3(p+1) and q(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0796
+    },
+    {
+      "check": "DECLARED CAPS (before anything ran)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "X_1 x A^1 is a 4-fold (R1 is irreducible)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "its singular locus is NON-EMPTY and 1-dimensional",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the singular point of X_1 itself is exactly the origin",
+      "outcome": "PASS",
+      "wall_time_s": 0.0012
+    },
+    {
+      "check": "H15 boundary: a SMOOTH hypersurface gets an empty Sing",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "THEOREM RM-1.1 (A26's kill, formalised)",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "f_0 = p+1 lies in the centre I_0 (needed for A[I/f])",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "A_0[I_0/f_0] = A_0[X] with X = -(Z^2+t^3)/(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "f_0 is the SMALLEST usable divisor: x has (p+1)-order exactly -1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0014
+    },
+    {
+      "check": "the naive saturation I_0 : f_0^oo is VACUOUS -- it is (1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "(p+1) does NOT divide Z^2+t^3 in C[p,q,t,Z]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0018
+    },
+    {
+      "check": "I_0 = f_0 A_1 cap A_0 = (p+1, Z^2+t^3), EXACTLY",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the centre C_0 = V(p+1, Z^2+t^3) is a SURFACE in A^4",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the exceptional divisor E_0 = V(p+1) upstairs is a DIVISOR",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "E_0 -> C_0 has 1-dimensional fibres: E_0 = C_0 x A^1_X",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "H15 boundary: X is NOT forced on E_0 (the fibre is not a point)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "X_1 x A^1 is NORMAL: hypersurface (S2) with Sing of codim 3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "f_1 = t^3 lies in the centre I_1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "N1 and N2 are the numerators of H and 2w over t^3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0033
+    },
+    {
+      "check": "t^3 is the least power of t clearing the new generators",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "elimination measurement",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "f = t with the natural centre CANNOT give step 2",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: t^3 IS in that ideal -- the test can pass",
+      "outcome": "PASS",
+      "wall_time_s": 0.0147
+    },
+    {
+      "check": "t is PRIME in A_1: A_1/(t) is a domain",
+      "outcome": "PASS",
+      "wall_time_s": 0.0015
+    },
+    {
+      "check": "t divides neither N1 nor N2 in A_1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "H15 boundary: t DOES divide t^3 there -- the test can pass",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "t^3, N1, N2 all lie in t^3 A[w] (forward containment)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "I_1 = t^3 A_2 cap A_1 = (t^3, N1, N2), EXACTLY",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the step-2 centre is a SURFACE inside X_1 x A^1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the exceptional divisor E_1 = V(t) upstairs is a DIVISOR",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: the step-2 centre is NOT the whole of V(t)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the known plinth ideal is (p+1)(t^3, q)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0016
+    },
+    {
+      "check": "(p+1) is prime in C[p,q,t]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "(t, q) is prime in C[p,q,t]: the quotient is C[p]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "each claimed prime CONTAINS the plinth ideal",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "every generator of the intersection has a power in it",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: 1 has NO power in the plinth ideal",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "H15 boundary: p alone has no power in it either",
+      "outcome": "PASS",
+      "wall_time_s": 0.0016
+    },
+    {
+      "check": "sqrt of the KNOWN plinth = (p+1) cap (t,q)",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THEOREM RM-1.2 (the walls, unconditionally)",
+      "outcome": "THEOREM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THE CALIBRATION ANSWER",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "A_0[I_0/f_0] = A_0[X] with X = -(Z^2+t^3)/(p+1)": "the only new generator is the second one over f_0",
+    "DECLARED CAPS (before anything ran)": "{\"divisor_minimality_tested\": [\"t\", \"t^2\", \"t^3\", \"p+1\", \"(p+1)^2\"], \"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"note\": \"RM-1 is structural: no coefficient search runs, so no degree cap on unknowns applies. Every Groebner call is measured before running.\", \"radical_power_cap\": 8, \"saturation\": \"Rabinowitsch elimination, 5-6 variables\"}",
+    "E_0 -> C_0 has 1-dimensional fibres: E_0 = C_0 x A^1_X": "on p+1 = 0 the relation forces Z^2+t^3 = 0 and leaves X free",
+    "H15 boundary: 1 has NO power in the plinth ideal": "the radical test can fail",
+    "H15 boundary: a SMOOTH hypersurface gets an empty Sing": "so 'dim Sing = 1' above is a finding, not an artefact",
+    "H15 boundary: the step-2 centre is NOT the whole of V(t)": "the centre is a proper closed subscheme of the divisor",
+    "I_0 = f_0 A_1 cap A_0 = (p+1, Z^2+t^3), EXACTLY": "A_1 = A_0[X] = sum_j A_0 (Z^2+t^3)^j/(p+1)^j. If a/(p+1) = sum c_j X^j then a = c_0(p+1) - c_1(Z^2+t^3) + sum_{j>=2} (-1)^j c_j (Z^2+t^3)^j/(p+1)^{j-1}; since (p+1) is prime and does not divide Z^2+t^3, each j>=2 term forces (p+1)^{j-1} | c_j and then lands in (Z^2+t^3). So the centre is exactly (p+1, Z^2+t^3) -- already canonical.",
+    "I_1 = t^3 A_2 cap A_1 = (t^3, N1, N2), EXACTLY": "same argument as step 1: a/t^3 = sum c_jk H^j W^k gives a = c_00 t^3 + c_10 N1 + c_01 N2 + higher terms, and each higher term needs t^{3(j+k-1)} | c_jk N1^j N2^k; t is prime in A_1 and divides neither numerator, so it divides c_jk and the term lands in (N1, N2). Canonical.",
+    "THE CALIBRATION ANSWER": "the two minimal primes of sqrt of the KNOWN SUBIDEAL J = (p+1)(t^3,q) are of different kinds: (p+1) is divisorial, while (t,q) has codimension 2, cut against q = 0. THIS IS A STATEMENT ABOUT J, NOT ABOUT pl(partial_red), whose exact value is undetermined (MQ-D, parked at A25); a larger plinth could only shrink V(pl) further inside V(J), and NO claim is made about which of the two components survives in V(pl). What is unconditional is the ENCLOSURE recorded above. Read through Shakhmatov arXiv:2605.00138 (plinth zero locus = complement of the union of principal invariant cylinders), the surviving direction is: since V(pl) is inside V(p+1) u V(t,q), the principal invariant cylinders COVER the complement of those two loci. The converse reading would need the exact plinth and is not used.",
+    "THEOREM RM-1.1 (A26's kill, formalised)": "X_1 is singular (at the origin); singularity is preserved by x A^k; A^{3+k} is smooth. Hence X_1 x A^k is NOT isomorphic to A^{3+k} for any k >= 0. So NEITHER STEP of the tower can be an isomorphism, and any success must come from the COMPOSITE. Certified-trivial; no cancellation theory is used.",
+    "THEOREM RM-1.2 (the walls, unconditionally)": "pl(partial_red) CONTAINS (p+1)(t^3,q) (RG-1(a), re-verified in process), so its zero locus is CONTAINED in V(p+1) u V(t,q). Since a LARGER plinth means a SMALLER zero locus, this containment is unconditional and no hidden component can lie outside V(p+1) u V(t,q). And pl is inside (p,q,t) (RG-1), so the zero locus is non-empty -- it contains the origin.",
+    "X_1 x A^1 is NORMAL: hypersurface (S2) with Sing of codim 3": "Serre: S2 from the hypersurface, R1 since codim Sing >= 2",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "elimination measurement": "the f=t test is one Groebner call on 41 generators in 5 variables, against the frozen ceiling of 60; H7 alarm armed.",
+    "every generator of the intersection has a power in it": "{'Q_*(P_ + 1)': 1, 'T_*(P_ + 1)': 3}",
+    "f = t with the natural centre CANNOT give step 2": "N1 is not in I^3 + t I^2 + t^2 I + (t^3), so N1/t^3 is not reachable from elements a/t",
+    "f_0 is the SMALLEST usable divisor: x has (p+1)-order exactly -1": "no proper divisor of p+1 clears it; (p+1) is irreducible",
+    "its singular locus is NON-EMPTY and 1-dimensional": "dim Sing = 1: the line {p=-1, q free, t=Z=X=0} = {origin of X_1} x A^1_q",
+    "sqrt of the KNOWN plinth = (p+1) cap (t,q)": "minimal primes: (p+1) [codim 1] and (t,q) [codim 2]. Intersection generators ['Q_*(P_ + 1)', 'T_*(P_ + 1)'].",
+    "t is PRIME in A_1: A_1/(t) is a domain": "X(p+1) + Z^2 is irreducible (degree 1 in X, primitive)",
+    "t^3 is the least power of t clearing the new generators": "{'t^1': False, 't^2': False, 't^3': True}; H has t-order exactly -3",
+    "t^3, N1, N2 all lie in t^3 A[w] (forward containment)": "N1 = t^3 H and N2 = t^3 (2w), both with H, w in A[w]",
+    "the centre C_0 = V(p+1, Z^2+t^3) is a SURFACE in A^4": "the cuspidal curve Z^2+t^3 = 0 times A^1_q, at p = -1",
+    "the exceptional divisor E_0 = V(p+1) upstairs is a DIVISOR": "dim 3 inside the 4-fold X_1 x A^1",
+    "the naive saturation I_0 : f_0^oo is VACUOUS -- it is (1)": "because f_0 lies in I_0; so I : f^oo is the WRONG notion of saturated centre for a modification, and is not used",
+    "the singular point of X_1 itself is exactly the origin": "Jacobian (u, X, 2Z, 3t^2) vanishes only at the origin, which lies on X_1",
+    "the step-2 centre is a SURFACE inside X_1 x A^1": "dim = 2"
+  },
+  "plan": "RM-OPS.md (A26)",
+  "sections": {
+    "rm1a": {
+      "consequence": "neither tower step is an isomorphism; only the composite X x A^1 -> A^4 can be one",
+      "dim_Sing": 1,
+      "dim_X1_cylinder": 4,
+      "kill": "X_1 x A^k is never affine space, for every k >= 0"
+    },
+    "step1": {
+      "I_0": "(p+1, Z^2 + t^3)  -- canonical: equals f_0 A_1 cap A_0",
+      "arrow": "X_1 x A^1 -> A^4",
+      "centre": "V(I_0), a surface: the cuspidal curve times A^1_q at p = -1",
+      "dims": {
+        "ambient": 4,
+        "centre": 2,
+        "exceptional": 3
+      },
+      "exceptional": "V(p+1) upstairs, a divisor; E_0 -> C_0 is an A^1-bundle in the X-direction",
+      "f_0": "p+1  (smallest usable: x has (p+1)-order exactly -1)",
+      "normality": "X_1 x A^1 is normal (S2 + Sing of codim 3)"
+    },
+    "step2": {
+      "I_1": "(t^3, N1, N2),  N1 = p+p^2+qZ,  N2 = pZ - Xq",
+      "I_1_canonical": [
+        "t^3",
+        "P_**2 + P_ + Q_*ZZ",
+        "P_*ZZ - Q_*X_"
+      ],
+      "arrow": "X x A^1 -> X_1 x A^1",
+      "canonical_centre_note": "I : f^oo is vacuous when f is in I; the canonical centre is f*A_{i+1} cap A_i, and both come out already canonical",
+      "centre": "a surface inside the divisor V(t)",
+      "dims": {
+        "ambient": 4,
+        "centre": 2,
+        "exceptional": 3
+      },
+      "f_1": "t^3  -- reduced divisor {t=0}, multiplicity 3 forced by the exact pole order of H; f = t with the natural centre is decidably insufficient",
+      "note": "relative to X_1 x A^1 BOTH new generators are t^3-divisions, so step 2 is supported on {t = 0} alone"
+    },
+    "walls": {
+      "asymmetry": "of the KNOWN SUBIDEAL J = (p+1)(t^3,q) only: (p+1) is divisorial, (t,q) is codim 2 against q = 0. NOT asserted of pl itself, which is undetermined",
+      "citation": "Shakhmatov arXiv:2605.00138 (verified at A26)",
+      "known_plinth": "(p+1)(t^3, q)",
+      "minimal_primes": [
+        "(p+1)  codim 1",
+        "(t,q)  codim 2"
+      ],
+      "open": "whether pl = (p+1)(t^3,q) exactly (MQ-D)",
+      "radical": "(p+1) cap (t,q)",
+      "unconditional": "V(pl) is contained in V(p+1) u V(t,q); no hidden component outside it"
+    }
+  },
+  "source": "p, q, Z and the t-localised bridge are DMJP arXiv:0903.4278 s7; Shakhmatov arXiv:2605.00138 for the plinth reading; the tower data is ours",
+  "tally": {
+    "MEASURED": 6,
+    "PASS": 47,
+    "THEOREM": 2
+  },
+  "total_checks": 55
+}

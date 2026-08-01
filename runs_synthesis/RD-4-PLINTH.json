@@ -1,0 +1,298 @@
+{
+  "block": "RD-4",
+  "ceilings": {
+    "cpu_s": 1800,
+    "groebner_calls": 2,
+    "measured_before_running": true,
+    "vars": 60,
+    "vars_used": 5
+  },
+  "date": "2026-07-31",
+  "entries": [
+    {
+      "check": "tripwire: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "ERRATUM: partial_red(y) on {x=z=t=0} equals -2w, NOT 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "the other three components DO vanish on {x = z = t = 0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.001
+    },
+    {
+      "check": "elimination measurement before any Groebner call",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "THE LOCUS IS SUPPORTED ON {t = 0}: t is in the radical",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: x is NOT in the radical",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: z is NOT in the radical",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: y is NOT in the radical",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: w is NOT in the radical",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "the locus is NON-EMPTY: the line {x=z=t=w=0} lies in it",
+      "outcome": "PASS",
+      "wall_time_s": 0.0016
+    },
+    {
+      "check": "on {x != 0, t = 0} the locus is exactly V(Z^2 (Z^2 + x))",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "Z^2 + x = -x p  modulo (P, t):  so the locus is V(Z) u V(p)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "on {x = 0} cap X cap {t = 0} the fibre forces z = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "and there the locus is exactly {w = 0}: the line A^1_y",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "the x = 0 fibre of X is the cusp cylinder {z^2+t^3=0} x A^1_y",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "the cusp's singular edge is exactly {z = t = 0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "partial_red(A[w]) is inside (x, z, t, w) A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "H15 boundary: it is NOT inside the smaller (x, z, t) A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "(x,z,t,w) A[w] is a PROPER ideal: A[w]/(x,z,t,w) = C[y]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial_red^2(x) = F(p,q,t): two independent routes agree",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial_red^2(w) = F(p,q,t): two independent routes agree",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial_red^4(y) = F(p,q,t) in ker, and partial_red^5 = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial_red^4(z) = F(p,q,t) in ker, and partial_red^5 = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial_red(Z) = t^3 (p+1) is a plinth element, Z = z + xw",
+      "outcome": "PASS",
+      "wall_time_s": 0.0361
+    },
+    {
+      "check": "H15 boundary: a non-kernel element has no (p,q,t) form",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "p, q, t all map to 0 in A[w]/(x,z,t,w) = C[y]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "pl(partial_red) is inside (p, q, t) C[p,q,t]",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "observation, not a theorem",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Z := z + x w satisfies partial_red(Z) = t^3 (p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0023
+    },
+    {
+      "check": "the transported relation: x (p+1) + Z^2 + t^3 = 0 in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "x recovered from p, q, t, Z over the localisation",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "y recovered from p, q, t, Z over the localisation",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "z recovered from p, q, t, Z over the localisation",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "w recovered from p, q, t, Z over the localisation",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: the recovery formulas genuinely need 1/(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0028
+    },
+    {
+      "check": "A[w][1/(t(p+1))] = C[p,q,t][1/(t(p+1))][Z]",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3 grid: free Ga-action",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3 grid: affine quotient exists and is A^3",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3 grid: quotient morphism equidimensional / surjective",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Masuda 4.3 grid: A^3-fibration with factorial closed fibres",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "A[w][1/(t(p+1))] = C[p,q,t][1/(t(p+1))][Z]": "Z = z + xw is a slice after inverting t(p+1): partial_red(Z) = t^3(p+1). So X x A^1 IS a trivial A^1-bundle over the complement of the divisor {t(p+1) = 0} in A^3 = Spec(ker partial).",
+    "ERRATUM: partial_red(y) on {x=z=t=0} equals -2w, NOT 0": "so {x=z=t=0} is NOT the degeneracy locus",
+    "H15 boundary: a non-kernel element has no (p,q,t) form": "partial_red(x) is not in the kernel; the reader returns None",
+    "H15 boundary: it is NOT inside the smaller (x, z, t) A[w]": "the containment is sharp at this level",
+    "H15 boundary: the recovery formulas genuinely need 1/(p+1)": "x = -(Z^2+t^3)/(p+1), and y needs 1/t^6 as well",
+    "H15 boundary: w is NOT in the radical": "the radical test can fail; only t is forced",
+    "H15 boundary: x is NOT in the radical": "the radical test can fail; only t is forced",
+    "H15 boundary: y is NOT in the radical": "the radical test can fail; only t is forced",
+    "H15 boundary: z is NOT in the radical": "the radical test can fail; only t is forced",
+    "Masuda 4.3 grid: A^3-fibration with factorial closed fibres": "FAILS at the cusp -- Masuda's own Example 4.2, for the cylinder's induced fibration (verified reading, A21).",
+    "Masuda 4.3 grid: affine quotient exists and is A^3": "HOLDS -- ker partial = C[p,q,t] = C^[3] (RD-3). NEW.",
+    "Masuda 4.3 grid: free Ga-action": "FAILS -- the degeneracy locus is non-empty (it contains the line {x=z=t=w=0}) and is supported on {t=0} (RD-4a/b). NEW.",
+    "Masuda 4.3 grid: quotient morphism equidimensional / surjective": "NOT DECIDED here. The fixed line {x=z=t=w=0} maps to the origin of A^3; measuring fibre dimensions is a bounded follow-up.",
+    "THE LOCUS IS SUPPORTED ON {t = 0}: t is in the radical": "t^6 reduces to 0",
+    "Z^2 + x = -x p  modulo (P, t):  so the locus is V(Z) u V(p)": "from the transported relation x(p+1) + Z^2 + t^3 = 0",
+    "elimination measurement before any Groebner call": "5 variables, 5 generators -- against the frozen ceiling of 60 unknowns / 30 CPU-min. Far under; H7 in-process alarm armed anyway.",
+    "observation, not a theorem": "every plinth element computed here lies in t^3 (p+1) C[p,q,t]: t^3(p+1), q t^3(p+1), -2t^6(p+1), q t^3(p+1), -6 q^2 t^6 (p+1)^2, 12 q t^9 (p+1)^2. Whether pl(partial_red) = (t^3(p+1)) is NOT decided here.",
+    "on {x != 0, t = 0} the locus is exactly V(Z^2 (Z^2 + x))": "Z = z + xw; GB is the single generator (w*x + z)**2*(w**2*x**2 + 2*w*x*z + x + z**2)",
+    "partial_red(A[w]) is inside (x, z, t, w) A[w]": "chain rule: partial_red(F) = sum partial_red(v) dF/dv",
+    "partial_red(Z) = t^3 (p+1) is a plinth element, Z = z + xw": "in the image AND in the kernel: the lowest-degree one found",
+    "partial_red^2(w) = F(p,q,t): two independent routes agree": "F = q_*t**3*(p_ + 1)",
+    "partial_red^2(x) = F(p,q,t): two independent routes agree": "F = -2*t**6*(p_ + 1)",
+    "partial_red^4(y) = F(p,q,t) in ker, and partial_red^5 = 0": "F = -6*q_**2*t**6*(p_ + 1)**2",
+    "partial_red^4(z) = F(p,q,t) in ker, and partial_red^5 = 0": "F = 12*q_*t**9*(p_ + 1)**2",
+    "pl(partial_red) is inside (p, q, t) C[p,q,t]": "because partial_red(A[w]) subset (x,z,t,w)A[w] and the composite C[p,q,t] -> A[w]/(x,z,t,w) = C[y] kills p, q and t. A PROPER ideal, so 1 is not in the plinth.",
+    "the cusp's singular edge is exactly {z = t = 0}": "GB [t**2, z]",
+    "the locus is NON-EMPTY: the line {x=z=t=w=0} lies in it": "a whole A^1_y of common zeros -- so the action is NOT free",
+    "the transported relation: x (p+1) + Z^2 + t^3 = 0 in A[w]": "the image of S = xy + z^2 + x + t^3 under Phi"
+  },
+  "plan": "RD-OPS.md (A22)",
+  "sections": {
+    "degeneracy_locus": {
+      "erratum": "an in-session hand claim that the locus was the whole plane {x=z=t=0} was WRONG (partial_red(y) = -2w there) and was caught by the machine, not by re-reading.",
+      "non_empty": "contains the line {x = z = t = w = 0} = A^1_y",
+      "supported_on": "{t = 0} -- t^6 is in the degeneracy ideal"
+    },
+    "image_ideal": {
+      "containment": "partial_red(A[w]) subset (x,z,t,w) A[w], proper",
+      "independent_route": "the origin lies on X x A^1 and every component vanishes there, so partial_red(F)(0) = 0 for every F (used again in RD-5)",
+      "sharpness": "NOT contained in (x,z,t): partial_red(y) = -2w there"
+    },
+    "localisation_theorem": {
+      "reading": "the entire obstruction to X x A^1 = A^4 THROUGH THIS FLOW is concentrated on the divisor {t (p+1) = 0} of A^3. This is the boundary-globalisation question of FINAL_WORD A3 item 3, made explicit and elementary on the affine side.",
+      "recovery_formulas": {
+        "w": "(p_*(w*x + z) - q_*(-t**3 - (w*x + z)**2)/(p_ + 1))/(2*t**3)",
+        "x": "(-t**3 - (w*x + z)**2)/(p_ + 1)",
+        "y": "(-p_**2 - p_ - q_*(w*x + z))/t**3 - (p_*(w*x + z) - q_*(-t**3 - (w*x + z)**2)/(p_ + 1))**2/(4*t**6)",
+        "z": "w*x + z - (-t**3 - (w*x + z)**2)*(p_*(w*x + z) - q_*(-t**3 - (w*x + z)**2)/(p_ + 1))/(2*t**3*(p_ + 1))"
+      },
+      "slice_after_localisation": "Z = z + x w, partial_red(Z) = t^3 (p+1)",
+      "statement": "A[w][1/(t(p+1))] = C[p,q,t][1/(t(p+1))][Z]"
+    },
+    "locus_chart_by_chart": {
+      "answer_to_RD4_question": "YES -- the slice obstruction is supported entirely on {t = 0}; it meets the cusp fibre exactly in the w = 0 slice of the cuspidal edge.",
+      "why_it_matters": "Masuda 2512.06687 Thm 4.3 needs a FREE Ga-action; his Example 4.2 already records that the factoriality hypothesis fails at the cusp fibre of this same cylinder. For DMJP's partial the FREENESS hypothesis fails too, and inside the same cusp. The cusp is the escape hatch on both hypotheses at once.",
+      "x_nonzero_t_zero": "exactly V(Z) u V(p), Z = z + xw",
+      "x_zero": "exactly the line {x = z = t = w = 0} = A^1_y, which lies inside the cuspidal edge {z = t = 0} of the x = 0 fibre (its w = 0 slice)"
+    },
+    "masuda_grid": {
+      "A^3-fibration with factorial closed fibres": "FAILS at the cusp -- Masuda's own Example 4.2, for the cylinder's induced fibration (verified reading, A21).",
+      "affine quotient exists and is A^3": "HOLDS -- ker partial = C[p,q,t] = C^[3] (RD-3). NEW.",
+      "free Ga-action": "FAILS -- the degeneracy locus is non-empty (it contains the line {x=z=t=w=0}) and is supported on {t=0} (RD-4a/b). NEW.",
+      "quotient morphism equidimensional / surjective": "NOT DECIDED here. The fixed line {x=z=t=w=0} maps to the origin of A^3; measuring fibre dimensions is a bounded follow-up."
+    },
+    "plinth": {
+      "containment": "pl(partial_red) subset (p, q, t) C[p,q,t] -- proper",
+      "explicit_elements": {
+        "Z": "t**3*(p_ + 1)",
+        "w": "q_*t**3*(p_ + 1)",
+        "x": "-2*t**6*(p_ + 1)",
+        "y": "-6*q_**2*t**6*(p_ + 1)**2",
+        "z": "12*q_*t**9*(p_ + 1)**2"
+      },
+      "observation": "all computed elements lie in t^3 (p+1) C[p,q,t]; equality with (t^3(p+1)) is NOT decided here"
+    }
+  },
+  "source": "the derivation is DMJP arXiv:0903.4278 Prop 7.2; the plinth, locus and localisation results are ours",
+  "tally": {
+    "MEASURED": 8,
+    "PASS": 32
+  },
+  "total_checks": 40
+}

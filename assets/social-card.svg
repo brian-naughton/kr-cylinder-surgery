@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <!-- kr-cylinder-surgery social card — house aesthetic (matches dixmier-a3/
+       certified-inference/certified-grokking/verified-circuits).
+       Render: rsvg-convert -w 1280 -h 640 social-card.svg -o social-card.png -->
+  <rect width="1280" height="640" fill="#0d1117"/>
+
+  <!-- header: repo name + subtitle (left), URL (right) -->
+  <text x="70" y="75" font-family="Menlo, 'SF Mono', monospace" font-size="30" font-weight="bold" fill="#c9d1d9">kr-cylinder-surgery</text>
+  <text x="70" y="115" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#8b949e">the Koras&#8211;Russell cylinder as an affine modification of A&#8308;</text>
+  <text x="1210" y="75" text-anchor="end" font-family="Menlo, 'SF Mono', monospace" font-size="22" fill="#8b949e">github.com/brian-naughton/kr-cylinder-surgery</text>
+
+  <!-- headline -->
+  <text x="70" y="285" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="78" font-weight="bold" fill="#f0f6fc">one point, <tspan fill="#3fb950">one cycle</tspan></text>
+
+  <!-- the chain -->
+  <text x="70" y="356" font-family="Menlo, 'SF Mono', monospace" font-size="29" fill="#c9d1d9">A&#8308; &#10229; Y&#8321; <tspan fill="#8b949e">(a motivic S&#8308;)</tspan> &#10229; X &#215; A&#185; <tspan fill="#8b949e">(contractible)</tspan></text>
+
+  <!-- sublines -->
+  <text x="70" y="404" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="27" font-weight="bold" fill="#3fb950">the surgery&#8217;s exceptional locus misses exactly one point of its centre</text>
+  <text x="70" y="446" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="24" fill="#8b949e">and that point is the puncture of an explicit cycle representing the generator of H<tspan font-size="17" dy="-9">BM</tspan><tspan font-size="17" dy="18">4</tspan><tspan font-size="24" dy="-9">(Y&#8321;;&#8484;) &#8773; &#8484;</tspan></text>
+
+  <!-- chips -->
+  <g font-family="Menlo, 'SF Mono', monospace" font-size="19" fill="#c9d1d9">
+    <rect x="70" y="522" width="250" height="56" rx="12" fill="none" stroke="#30363d" stroke-width="2"/>
+    <text x="195" y="556" text-anchor="middle">883 checks &#183; 0 FAIL</text>
+    <rect x="350" y="522" width="290" height="56" rx="12" fill="none" stroke="#30363d" stroke-width="2"/>
+    <text x="495" y="556" text-anchor="middle">22 / 22 ledgers replay</text>
+    <rect x="670" y="522" width="540" height="56" rx="12" fill="none" stroke="#30363d" stroke-width="2"/>
+    <text x="940" y="556" text-anchor="middle">nothing claimed about X &#215; A&#185; &#8773; A&#8308;</text>
+  </g>
+</svg>

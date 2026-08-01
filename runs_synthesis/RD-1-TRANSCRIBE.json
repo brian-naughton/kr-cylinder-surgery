@@ -1,0 +1,218 @@
+{
+  "block": "RD-1",
+  "date": "2026-07-31",
+  "entries": [
+    {
+      "check": "7.1-i   Phi(S) = P",
+      "outcome": "PASS",
+      "wall_time_s": 0.0008
+    },
+    {
+      "check": "7.1-ii  Psi(P) = (1 - x y t^-3) S",
+      "outcome": "PASS",
+      "wall_time_s": 0.0039
+    },
+    {
+      "check": "7.1-iii PsiPhi(z) = z",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "7.1-iv  PsiPhi(y) = y - (y/t^3) S",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "7.1-v   PsiPhi(w) = w + ((xyw-y^2z-t^3w)/t^6) S",
+      "outcome": "PASS",
+      "wall_time_s": 0.0012
+    },
+    {
+      "check": "7.1-vii PhiPsi(z) = z + (xw/t^3) P",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "7.1-viii PhiPsi(y) = y - ((y-w^2)/t^3)P - (w^2/t^6)P^2",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "7.1-vi(as printed) PhiPsi(w) = w - (1/t^3) P  FAILS",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "7.1-vi  ERRATUM in DMJP Prop 7.1",
+      "outcome": "ERRATUM",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "Delta(S) = 0",
+      "outcome": "PASS",
+      "wall_time_s": 0.0026
+    },
+    {
+      "check": "Delta(P) != 0 (boundary, H15)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0018
+    },
+    {
+      "check": "Delta locally nilpotent on all 5 generators",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "(Phi Delta Psi)(t) = 0  (t is in the kernel)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "all four components are POLYNOMIAL (no negative t-powers)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "partial(x) = -2 t^6 (z + x w)   [printed in the proof]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "twin A (localisation-substitution): partial(P) in (P)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0437
+    },
+    {
+      "check": "twin B (pseudo-division):           partial(P) in (P)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0019
+    },
+    {
+      "check": "cofactor partial(P)/P is polynomial",
+      "outcome": "PASS",
+      "wall_time_s": 0.0011
+    },
+    {
+      "check": "model is consistent: D(iota y) = iota(partial y)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0248
+    },
+    {
+      "check": "partial locally nilpotent on all generators of A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15(i) rival reading of Psi(z) breaks PsiPhi(z) = z",
+      "outcome": "PASS",
+      "wall_time_s": 0.0013
+    },
+    {
+      "check": "H15(ii) perturbed partial (+x d/dx) is NOT nilpotent on x",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15(iii) perturbed partial does not preserve (P)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0425
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "7.1-vi  ERRATUM in DMJP Prop 7.1": "printed 'PhiPsi(w) = w - (1/t^3)P'; verified value is w - (w/t^3)P. Both are = w mod (P), so Prop 7.1's conclusion is UNAFFECTED. Typo, not a mathematical error.",
+    "7.1-vi(as printed) PhiPsi(w) = w - (1/t^3) P  FAILS": "true value w - (w/t^3) P; numerator w missing in print",
+    "Delta locally nilpotent on all 5 generators": "depths {'x': 3, 'y': 1, 'z': 2, 't': 1, 'w': 1}",
+    "Delta(P) != 0 (boundary, H15)": "Delta descends to Bt[w] only",
+    "H15(i) rival reading of Psi(z) breaks PsiPhi(z) = z": "the identity gate discriminates the two readings",
+    "H15(ii) perturbed partial (+x d/dx) is NOT nilpotent on x": "survived 12 iterations (cap 12)",
+    "all four components are POLYNOMIAL (no negative t-powers)": "min t-exponents {'x': 6, 'y': 0, 'z': 3, 't': None, 'w': 3}",
+    "cofactor partial(P)/P is polynomial": "= -2*t**3*w**2*x*z - 4*t**3*w*x**2*y - 2*t**3*w*x - 4*t**3*w*z**2 - 2*t**3*x*y*z - w**5*x**4 - 4*w**4*x**3*z + 4*w**3*x**4*y + 3*w**3*x**3 - 2*w**3*x**2*z**2 + 4*w**2*x**3*y*z + 2*w**2*x**2*z + w*x**4*y**2 + w*x**3*y + 2*w*x**2*y*z**2",
+    "model is consistent: D(iota y) = iota(partial y)": "independent second proof of ideal preservation",
+    "partial locally nilpotent on all generators of A[w]": "depths {'x': 3, 'y': 5, 'z': 5, 't': 1, 'w': 3}"
+  },
+  "plan": "RD-OPS.md (A22)",
+  "sections": {
+    "delta": {
+      "definition": "t^6(-2 z d/dx + (y+1) d/dz)",
+      "nilpotency_depths": {
+        "t": 1,
+        "w": 1,
+        "x": 3,
+        "y": 1,
+        "z": 2
+      }
+    },
+    "h15_boundaries": {
+      "perturbed_partial_ideal": "not in (P) as required",
+      "perturbed_partial_nilpotence": "survived cap 12 (k=12)",
+      "rival_Psi_z_reading": "FAILS PsiPhi(z)=z as required"
+    },
+    "ideal_preservation": {
+      "cofactor": "-2*t**3*w**2*x*z - 4*t**3*w*x**2*y - 2*t**3*w*x - 4*t**3*w*z**2 - 2*t**3*x*y*z - w**5*x**4 - 4*w**4*x**3*z + 4*w**3*x**4*y + 3*w**3*x**3 - 2*w**3*x**2*z**2 + 4*w**2*x**3*y*z + 2*w**2*x**2*z + w*x**4*y**2 + w*x**3*y + 2*w*x**2*y*z**2",
+      "twin_A": "PASS",
+      "twin_B": "PASS"
+    },
+    "local_nilpotence": {
+      "convention": "depth k means partial^k(v) = 0, partial^{k-1}(v) != 0",
+      "depths": {
+        "t": 1,
+        "w": 3,
+        "x": 3,
+        "y": 5,
+        "z": 5
+      },
+      "model": "A[w] --> C[x^{+-1},z,t,w], y |-> -(z^2+x+t^3)/x^2"
+    },
+    "partial_components": {
+      "min_t_exponents": {
+        "t": null,
+        "w": 3,
+        "x": 6,
+        "y": 0,
+        "z": 3
+      },
+      "partial_w": "Add(Mul(Integer(-1), Rational(1, 2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(4)), Pow(Symbol('x'), Integer(2))), Mul(Integer(-1), Integer(2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(3)), Symbol('x'), Symbol('z')), Mul(Integer(2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(2)), Pow(Symbol('x'), Integer(2)), Symbol('y')), Mul(Rational(3, 2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(2)), Symbol('x')), Mul(Integer(-1), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(2)), Pow(Symbol('z'), Integer(2))), Mul(Integer(2), Pow(Symbol('t'), Integer(3)), Symbol('w'), Symbol('x'), Symbol('y'), Symbol('z')), Mul(Pow(Symbol('t'), Integer(3)), Symbol('w'), Symbol('z')), Mul(Rational(1, 2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('x'), Integer(2)), Pow(Symbol('y'), Integer(2))), Mul(Rational(1, 2), Pow(Symbol('t'), Integer(3)), Symbol('x'), Symbol('y')), Mul(Pow(Symbol('t'), Integer(3)), Symbol('y'), Pow(Symbol('z'), Integer(2))))",
+      "partial_w_str": "t**3*(-w**4*x**2 - 4*w**3*x*z + 4*w**2*x**2*y + 3*w**2*x - 2*w**2*z**2 + 4*w*x*y*z + 2*w*z + x**2*y**2 + x*y + 2*y*z**2)/2",
+      "partial_x": "Add(Mul(Integer(-1), Integer(2), Pow(Symbol('t'), Integer(6)), Symbol('w'), Symbol('x')), Mul(Integer(-1), Integer(2), Pow(Symbol('t'), Integer(6)), Symbol('z')))",
+      "partial_x_str": "-2*t**6*(w*x + z)",
+      "partial_y": "Add(Mul(Integer(-1), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(5)), Pow(Symbol('x'), Integer(2))), Mul(Integer(-1), Integer(5), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(4)), Symbol('x'), Symbol('z')), Mul(Integer(4), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(3)), Pow(Symbol('x'), Integer(2)), Symbol('y')), Mul(Integer(3), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(3)), Symbol('x')), Mul(Integer(-1), Integer(6), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(3)), Pow(Symbol('z'), Integer(2))), Mul(Integer(10), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(2)), Symbol('x'), Symbol('y'), Symbol('z')), Mul(Integer(7), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(2)), Symbol('z')), Mul(Integer(-1), Integer(3), Pow(Symbol('t'), Integer(3)), Symbol('w'), Pow(Symbol('x'), Integer(2)), Pow(Symbol('y'), Integer(2))), Mul(Integer(-1), Integer(5), Pow(Symbol('t'), Integer(3)), Symbol('w'), Symbol('x'), Symbol('y')), Mul(Integer(2), Pow(Symbol('t'), Integer(3)), Symbol('w'), Symbol('y'), Pow(Symbol('z'), Integer(2))), Mul(Integer(-1), Integer(2), Pow(Symbol('t'), Integer(3)), Symbol('w')), Mul(Integer(-1), Pow(Symbol('t'), Integer(3)), Symbol('x'), Pow(Symbol('y'), Integer(2)), Symbol('z')), Mul(Integer(-1), Pow(Symbol('t'), Integer(3)), Symbol('y'), Symbol('z')), Mul(Integer(-1), Pow(Symbol('w'), Integer(5)), Pow(Symbol('x'), Integer(4)), Symbol('y')), Mul(Integer(-1), Pow(Symbol('w'), Integer(5)), Pow(Symbol('x'), Integer(3))), Mul(Integer(-1), Pow(Symbol('w'), Integer(5)), Pow(Symbol('x'), Integer(2)), Pow(Symbol('z'), Integer(2))), Mul(Integer(-1), Integer(4), Pow(Symbol('w'), Integer(4)), Pow(Symbol('x'), Integer(3)), Symbol('y'), Symbol('z')), Mul(Integer(-1), Integer(4), Pow(Symbol('w'), Integer(4)), Pow(Symbol('x'), Integer(2)), Symbol('z')), Mul(Integer(-1), Integer(4), Pow(Symbol('w'), Integer(4)), Symbol('x'), Pow(Symbol('z'), Integer(3))), Mul(Integer(4), Pow(Symbol('w'), Integer(3)), Pow(Symbol('x'), Integer(4)), Pow(Symbol('y'), Integer(2))), Mul(Integer(7), Pow(Symbol('w'), Integer(3)), Pow(Symbol('x'), Integer(3)), Symbol('y')), Mul(Integer(2), Pow(Symbol('w'), Integer(3)), Pow(Symbol('x'), Integer(2)), Symbol('y'), Pow(Symbol('z'), Integer(2))), Mul(Integer(3), Pow(Symbol('w'), Integer(3)), Pow(Symbol('x'), Integer(2))), Mul(Pow(Symbol('w'), Integer(3)), Symbol('x'), Pow(Symbol('z'), Integer(2))), Mul(Integer(-1), Integer(2), Pow(Symbol('w'), Integer(3)), Pow(Symbol('z'), Integer(4))), Mul(Integer(4), Pow(Symbol('w'), Integer(2)), Pow(Symbol('x'), Integer(3)), Pow(Symbol('y'), Integer(2)), Symbol('z')), Mul(Integer(6), Pow(Symbol('w'), Integer(2)), Pow(Symbol('x'), Integer(2)), Symbol('y'), Symbol('z')), Mul(Integer(4), Pow(Symbol('w'), Integer(2)), Symbol('x'), Symbol('y'), Pow(Symbol('z'), Integer(3))), Mul(Integer(2), Pow(Symbol('w'), Integer(2)), Symbol('x'), Symbol('z')), Mul(Integer(2), Pow(Symbol('w'), Integer(2)), Pow(Symbol('z'), Integer(3))), Mul(Symbol('w'), Pow(Symbol('x'), Integer(4)), Pow(Symbol('y'), Integer(3))), Mul(Integer(2), Symbol('w'), Pow(Symbol('x'), Integer(3)), Pow(Symbol('y'), Integer(2))), Mul(Integer(3), Symbol('w'), Pow(Symbol('x'), Integer(2)), Pow(Symbol('y'), Integer(2)), Pow(Symbol('z'), Integer(2))), Mul(Symbol('w'), Pow(Symbol('x'), Integer(2)), Symbol('y')), Mul(Integer(3), Symbol('w'), Symbol('x'), Symbol('y'), Pow(Symbol('z'), Integer(2))), Mul(Integer(2), Symbol('w'), Symbol('y'), Pow(Symbol('z'), Integer(4))))",
+      "partial_y_str": "-t**3*w**5*x**2 - 5*t**3*w**4*x*z + 4*t**3*w**3*x**2*y + 3*t**3*w**3*x - 6*t**3*w**3*z**2 + 10*t**3*w**2*x*y*z + 7*t**3*w**2*z - 3*t**3*w*x**2*y**2 - 5*t**3*w*x*y + 2*t**3*w*y*z**2 - 2*t**3*w - t**3*x*y**2*z - t**3*y*z - w**5*x**4*y - w**5*x**3 - w**5*x**2*z**2 - 4*w**4*x**3*y*z - 4*w**4*x**2*z - 4*w**4*x*z**3 + 4*w**3*x**4*y**2 + 7*w**3*x**3*y + 2*w**3*x**2*y*z**2 + 3*w**3*x**2 + w**3*x*z**2 - 2*w**3*z**4 + 4*w**2*x**3*y**2*z + 6*w**2*x**2*y*z + 4*w**2*x*y*z**3 + 2*w**2*x*z + 2*w**2*z**3 + w*x**4*y**3 + 2*w*x**3*y**2 + 3*w*x**2*y**2*z**2 + w*x**2*y + 3*w*x*y*z**2 + 2*w*y*z**4",
+      "partial_z": "Add(Mul(Integer(-1), Pow(Symbol('t'), Integer(6)), Pow(Symbol('w'), Integer(2)), Symbol('x')), Mul(Integer(-1), Integer(2), Pow(Symbol('t'), Integer(6)), Symbol('w'), Symbol('z')), Mul(Pow(Symbol('t'), Integer(6)), Symbol('x'), Symbol('y')), Pow(Symbol('t'), Integer(6)), Mul(Rational(1, 2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(4)), Pow(Symbol('x'), Integer(3))), Mul(Integer(2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(3)), Pow(Symbol('x'), Integer(2)), Symbol('z')), Mul(Integer(-1), Integer(4), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(2)), Pow(Symbol('x'), Integer(3)), Symbol('y')), Mul(Integer(-1), Rational(7, 2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(2)), Pow(Symbol('x'), Integer(2))), Mul(Integer(-1), Pow(Symbol('t'), Integer(3)), Pow(Symbol('w'), Integer(2)), Symbol('x'), Pow(Symbol('z'), Integer(2))), Mul(Integer(-1), Integer(4), Pow(Symbol('t'), Integer(3)), Symbol('w'), Pow(Symbol('x'), Integer(2)), Symbol('y'), Symbol('z')), Mul(Integer(-1), Integer(3), Pow(Symbol('t'), Integer(3)), Symbol('w'), Symbol('x'), Symbol('z')), Mul(Integer(-1), Integer(2), Pow(Symbol('t'), Integer(3)), Symbol('w'), Pow(Symbol('z'), Integer(3))), Mul(Integer(-1), Rational(1, 2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('x'), Integer(3)), Pow(Symbol('y'), Integer(2))), Mul(Integer(-1), Rational(1, 2), Pow(Symbol('t'), Integer(3)), Pow(Symbol('x'), Integer(2)), Symbol('y')), Mul(Integer(-1), Pow(Symbol('t'), Integer(3)), Symbol('x'), Symbol('y'), Pow(Symbol('z'), Integer(2))))",
+      "partial_z_str": "-t**3*(2*t**3*w**2*x + 4*t**3*w*z - 2*t**3*x*y - 2*t**3 - w**4*x**3 - 4*w**3*x**2*z + 8*w**2*x**3*y + 7*w**2*x**2 + 2*w**2*x*z**2 + 8*w*x**2*y*z + 6*w*x*z + 4*w*z**3 + x**3*y**2 + x**2*y + 2*x*y*z**2)/2",
+      "term_counts": {
+        "w": 10,
+        "x": 2,
+        "y": 36,
+        "z": 15
+      },
+      "total_degrees": {
+        "w": 9,
+        "x": 8,
+        "y": 10,
+        "z": 10
+      }
+    },
+    "prop_7_1": {
+      "direction_of_the_algebra_maps": "Phi(S)=P so Phi induces R/(S)=Bt[w] --> R/(P)=At[w]; Psi(P)=(1-xy t^-3)S in (S) so Psi induces At[w] --> Bt[w]. Hence ker(partial | At[w]) = PHI(ker(Delta | Bt[w])).",
+      "erratum": "PhiPsi(w): printed 1/t^3, true w/t^3; = w mod (P)",
+      "identities_failing_as_printed": 1,
+      "identities_verified_verbatim": 7
+    }
+  },
+  "source": {
+    "arxiv": "0903.4278v1",
+    "attribution": "Phi, Psi, Delta, partial, partial_1, partial_2 are DMJP's. No novelty claimed on the derivation (W2).",
+    "authors": "Dubouloz, Moser-Jauslin, Poloni",
+    "extraction": "pypdf 6.14.2, layout + default modes, cross-read 2026-07-31",
+    "pages": "11-12",
+    "section": "7",
+    "title": "Inequivalent embeddings of the Koras-Russell cubic threefold"
+  },
+  "tally": {
+    "ERRATUM": 1,
+    "PASS": 22
+  },
+  "total_checks": 23
+}

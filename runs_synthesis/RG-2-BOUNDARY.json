@@ -1,0 +1,338 @@
+{
+  "block": "RG-2",
+  "date": "2026-07-31",
+  "declared_caps": {
+    "groebner_calls": 3,
+    "groebner_cpu_ceiling_s": 1800,
+    "groebner_variable_ceiling": 60,
+    "groebner_variables": 5,
+    "note": "RG-2 verifies identities and measures orders; it runs no search, so no degree cap applies.",
+    "searches_run": 0
+  },
+  "entries": [
+    {
+      "check": "carry-over: Phi(S) = P (DMJP Prop 7.1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0006
+    },
+    {
+      "check": "carry-over: partial(x) = -2 t^6 (z + x w) (DMJP Prop 7.2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "carry-over: content is t^3 (RD-2)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0533
+    },
+    {
+      "check": "carry-over: partial_red(x) = -2 t^3 (x w + z)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "carry-over: p and q are in ker partial (RD-3)",
+      "outcome": "PASS",
+      "wall_time_s": 0.1367
+    },
+    {
+      "check": "carry-over: the L-images of x,y,z,t,w are correct (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 3.1742
+    },
+    {
+      "check": "carry-over: partial_red(Z) = t^3 (p+1), Z = z + x w",
+      "outcome": "PASS",
+      "wall_time_s": 0.011
+    },
+    {
+      "check": "carry-over: the degeneracy line {x=z=t=w=0} is fixed (RD-4)",
+      "outcome": "PASS",
+      "wall_time_s": 0.002
+    },
+    {
+      "check": "declared caps",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "p, q, t, Z are polynomials in x,y,z,t,w, hence in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0007
+    },
+    {
+      "check": "p, q, t, Z are algebraically independent (they generate C^[4])",
+      "outcome": "PASS",
+      "wall_time_s": 0.0825
+    },
+    {
+      "check": "both rings localise to the SAME L at t(p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0707
+    },
+    {
+      "check": "x has a pole ONLY along {p+1=0}, of order exactly 1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H has a pole ONLY along {t=0}, of order exactly 3",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "w is the MIXED one: order 3 along {t=0} AND 1 along {p+1=0}",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "H15 boundary: p, q, t, Z have no pole along either component",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "z = Z - x w   (so z needs nothing new)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0089
+    },
+    {
+      "check": "y = -H - w^2  (so y needs nothing new)",
+      "outcome": "PASS",
+      "wall_time_s": 0.013
+    },
+    {
+      "check": "H, x, w all lie in A[w] (as polynomials in x,y,z,t,w)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0134
+    },
+    {
+      "check": "A[w] = C[p,q,t,Z][x, w, H]",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "x is NOT in C[p,q,t,Z]: it has an explicit pole",
+      "outcome": "PASS",
+      "wall_time_s": 0.0013
+    },
+    {
+      "check": "w is NOT in C[p,q,t,Z]: it has an explicit pole",
+      "outcome": "PASS",
+      "wall_time_s": 0.0026
+    },
+    {
+      "check": "H is NOT in C[p,q,t,Z]: it has an explicit pole",
+      "outcome": "PASS",
+      "wall_time_s": 0.001
+    },
+    {
+      "check": "H15 boundary: Z IS in C[p,q,t,Z] -- the test can pass",
+      "outcome": "PASS",
+      "wall_time_s": 0.0001
+    },
+    {
+      "check": "A[w] has UNBOUNDED pole order along {p+1=0}: ord(x^k) = -k",
+      "outcome": "PASS",
+      "wall_time_s": 0.0168
+    },
+    {
+      "check": "A[w] has UNBOUNDED pole order along {t=0}: ord(H^k) = -3k",
+      "outcome": "PASS",
+      "wall_time_s": 0.0137
+    },
+    {
+      "check": "R1:  x(p+1) + Z^2 + t^3 = 0   in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0013
+    },
+    {
+      "check": "R2:  2 t^3 w = p Z - x q       in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0035
+    },
+    {
+      "check": "R3:  t^3 H = p + p^2 + q Z     in A[w]",
+      "outcome": "PASS",
+      "wall_time_s": 0.0091
+    },
+    {
+      "check": "R4:  2 (p+1) w = H Z + q       in A[w]  (the mixed form)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0009
+    },
+    {
+      "check": "H15 boundary: R4 with the 2 dropped is NOT an identity",
+      "outcome": "PASS",
+      "wall_time_s": 0.0042
+    },
+    {
+      "check": "elimination measurement before any Groebner call",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "R1 IS DMJP's S, renamed (y -> p, z -> Z, u = p+1)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0003
+    },
+    {
+      "check": "H15 boundary: P does NOT rename to R1 the same way",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    },
+    {
+      "check": "X_1 is a 3-fold and IS SINGULAR, at exactly one point",
+      "outcome": "PASS",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "N1 and N2 lie in B[w] (they involve only p,q,Z,x)",
+      "outcome": "PASS",
+      "wall_time_s": 0.0028
+    },
+    {
+      "check": "THE TOWER",
+      "outcome": "MEASURED",
+      "wall_time_s": 0.0
+    },
+    {
+      "check": "t is a NON-UNIT in A[w]: 1/t is not there",
+      "outcome": "PASS",
+      "wall_time_s": 0.0004
+    },
+    {
+      "check": "(p+1) is a NON-UNIT in A[w]: 1/(p+1) is not there",
+      "outcome": "PASS",
+      "wall_time_s": 0.0019
+    },
+    {
+      "check": "H15 boundary: a UNIT would give dimension -1",
+      "outcome": "PASS",
+      "wall_time_s": 0.0002
+    }
+  ],
+  "exit": 0,
+  "mode": "I",
+  "notes": {
+    "(p+1) is a NON-UNIT in A[w]: 1/(p+1) is not there": "A[w]/(p+1) is non-zero",
+    "A[w] = C[p,q,t,Z][x, w, H]": "forward: x, w, H are polynomials in x,y,z,t,w. backward: z = Z - xw and y = -H - w^2, and p,q,t,Z are polynomials too, so the five original generators are recovered.",
+    "H15 boundary: P does NOT rename to R1 the same way": "the check discriminates S from P",
+    "H15 boundary: p, q, t, Z have no pole along either component": "the order routine distinguishes; it does not report poles everywhere",
+    "N1 and N2 lie in B[w] (they involve only p,q,Z,x)": "N1 = p+p^2+qZ; N2 = pZ - xq with x a B[w] generator",
+    "R1 IS DMJP's S, renamed (y -> p, z -> Z, u = p+1)": "S = xy + z^2 + x + t^3, so B[w] = C[X_1 x A^1] with q the free cylinder coordinate",
+    "R1:  x(p+1) + Z^2 + t^3 = 0   in A[w]": "the image of DMJP's S under Phi",
+    "R4:  2 (p+1) w = H Z + q       in A[w]  (the mixed form)": "so w is a (p+1)-division of H,Z,q as well as a t^3-division",
+    "THE TOWER": "C[p,q,t,Z] = C^[4]  subset  B[w] = C[X_1 x A^1]  subset  A[w] = C[X x A^1], all inside L. Step 1 is a modification along {p+1 = 0} with centre (p+1, Z^2+t^3); step 2 is a modification along {t = 0} ONLY, with centre (t^3, N1, N2) -- because relative to B[w] BOTH remaining generators H = N1/t^3 and w = N2/(2t^3) are t^3-divisions. Dually: birational morphisms X x A^1 -> X_1 x A^1 -> A^4, each an isomorphism off ONE component of the divisor.",
+    "X_1 is a 3-fold and IS SINGULAR, at exactly one point": "dim X_1 = 3, dim Sing(X_1) = 0 (the origin)",
+    "both rings localise to the SAME L at t(p+1)": "every A[w] generator is L-regular after clearing t^6 (p+1)^3",
+    "carry-over: the L-images of x,y,z,t,w are correct (RD-4)": "each recovery formula re-substituted and tested in (P)",
+    "declared caps": "{\"groebner_calls\": 3, \"groebner_cpu_ceiling_s\": 1800, \"groebner_variable_ceiling\": 60, \"groebner_variables\": 5, \"note\": \"RG-2 verifies identities and measures orders; it runs no search, so no degree cap applies.\", \"searches_run\": 0}",
+    "elimination measurement before any Groebner call": "3 calls in 5 variables against the frozen ceiling of 60; H7 alarm armed.",
+    "p, q, t, Z are algebraically independent (they generate C^[4])": "Jacobian rank 4 in the model",
+    "t is a NON-UNIT in A[w]: 1/t is not there": "A[w]/(t) is non-zero -- an honest non-membership certificate"
+  },
+  "plan": "RG-OPS.md (A24)",
+  "sections": {
+    "c4_side": {
+      "cut_out_of_L_by": "no pole along EITHER component: it is exactly the set of elements of L regular along both {t=0} and {p+1=0}",
+      "is_polynomial_ring": true,
+      "ring": "C[p,q,t,Z], Z = z + x w"
+    },
+    "difference_data": {
+      "not_a_valuation_condition": "pole orders are unbounded on both sides, so no order bound cuts A[w] out of L",
+      "per_component": {
+        "{p+1 = 0}": "one primitive division, x = -(Z^2+t^3)/(p+1); this is the whole of step 1 of the tower and it produces the SINGULAR X_1 x A^1",
+        "{t = 0}": "two divisions, H = (p+p^2+qZ)/t^3 and w = (pZ-xq)/(2t^3); this is step 2, and it is where RG-1 located every failure of Masuda's hypotheses"
+      },
+      "raw_form": "A[w] / C[p,q,t,Z] is generated by exactly three fractions: x (pole on {p+1=0} only), H (pole on {t=0} only), w (pole on both)."
+    },
+    "intrinsic_characterisation": {
+      "answer": "A[w] is NOT cut out of L by valuation conditions. It contains elements of unbounded pole order along BOTH components (x^k has (p+1)-order -k; H^k has t-order -3k). What cuts it out is an AFFINE MODIFICATION: it is the subalgebra generated by C[p,q,t,Z] together with three explicit fractions.",
+      "generators_beyond_C4": {
+        "H": "(p+p^2+qZ)/t^3     -- pole only along {t=0}, order 3",
+        "w": "(pZ - xq)/(2t^3)   -- mixed: t-order -3, (p+1)-order -1",
+        "x": "-(Z^2+t^3)/(p+1)   -- pole only along {p+1=0}, order 1"
+      }
+    },
+    "pole_orders": {
+      "H = -(y+w^2)": {
+        "Z_degree": 1,
+        "ord_p+1": 0,
+        "ord_t": -3
+      },
+      "Z": {
+        "Z_degree": 1,
+        "ord_p+1": 0,
+        "ord_t": 0
+      },
+      "p": {
+        "Z_degree": 0,
+        "ord_p+1": 0,
+        "ord_t": 0
+      },
+      "q": {
+        "Z_degree": 0,
+        "ord_p+1": 0,
+        "ord_t": 0
+      },
+      "t": {
+        "Z_degree": 0,
+        "ord_p+1": 0,
+        "ord_t": 1
+      },
+      "w": {
+        "Z_degree": 2,
+        "ord_p+1": -1,
+        "ord_t": -3
+      },
+      "x": {
+        "Z_degree": 2,
+        "ord_p+1": -1,
+        "ord_t": 0
+      },
+      "y": {
+        "Z_degree": 4,
+        "ord_p+1": -2,
+        "ord_t": -6
+      },
+      "z": {
+        "Z_degree": 4,
+        "ord_p+1": -2,
+        "ord_t": -3
+      }
+    },
+    "relations": {
+      "R1": "x(p+1) + Z^2 + t^3 = 0",
+      "R2": "2 t^3 w = p Z - x q",
+      "R3": "t^3 H = p + p^2 + q Z",
+      "R4": "2 (p+1) w = H Z + q"
+    },
+    "tower": {
+      "middle_term_is_singular": {
+        "dim_Sing_X1": 0,
+        "dim_X1": 3
+      },
+      "reading": "the (p+1) component and the t component are carried by DIFFERENT steps of the tower, and the cost of the (p+1) step is that the middle term X_1 x A^1 is SINGULAR while both ends are smooth.",
+      "step_1": {
+        "adjoins": "x = -(Z^2+t^3)/(p+1)",
+        "along": "{p+1 = 0}",
+        "centre": "(p+1, Z^2 + t^3)",
+        "from": "C[p,q,t,Z] = C^[4]",
+        "to": "B[w] = C[X_1 x A^1]"
+      },
+      "step_2": {
+        "adjoins": "H = N1/t^3 and w = N2/(2t^3)",
+        "along": "{t = 0} ONLY",
+        "centre": "(t^3, N1, N2), N1 = p+p^2+qZ, N2 = pZ - xq",
+        "from": "B[w]",
+        "to": "A[w] = C[X x A^1]"
+      }
+    }
+  },
+  "source": "X_1 and the conjugacy are DMJP arXiv:0903.4278 s7; the tower and its certificates are ours",
+  "tally": {
+    "MEASURED": 4,
+    "PASS": 36
+  },
+  "total_checks": 40
+}
