@@ -1,5 +1,7 @@
 ![kr-cylinder-surgery — one point, one cycle](assets/social-card.png)
 
+[![DOI](assets/doi-badge.svg)](https://doi.org/10.5281/zenodo.21745579)
+
 # The Koras–Russell cylinder as an affine modification of 𝔸⁴
 
 **A commuting square through a motivic 4-sphere, and a one-point Borel–Moore
@@ -191,7 +193,10 @@ appeared earlier elsewhere, tell us and it will be cited prominently.
 
 ## Citing
 
-See [`CITATION.cff`](CITATION.cff).
+Archived on Zenodo: **[10.5281/zenodo.21745579](https://doi.org/10.5281/zenodo.21745579)**
+— that is the concept DOI and always resolves to the latest version; the v1.0
+release is [10.5281/zenodo.21745580](https://doi.org/10.5281/zenodo.21745580).
+Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
 
 ## Licence
 
